@@ -42,11 +42,11 @@ export function generateStaticParams() {
 
 type LocaleLayoutProps = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function LocaleLayout(props: LocaleLayoutProps) {
-  const { locale } = props.params;
+export default async function LocaleLayout(props: LocaleLayoutProps) {
+  const { locale } = await props.params;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();

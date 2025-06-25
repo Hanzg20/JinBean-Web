@@ -5,9 +5,9 @@ import { BaseTemplate } from '@/templates/BaseTemplate';
 
 export default async function Layout(props: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,

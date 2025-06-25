@@ -7,11 +7,11 @@ import type { ReactNode } from 'react';
 
 type DashboardLayoutProps = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function DashboardLayout(props: DashboardLayoutProps) {
-  const { locale } = props.params;
+export default async function DashboardLayout(props: DashboardLayoutProps) {
+  const { locale } = await props.params;
   setRequestLocale(locale);
 
   return (

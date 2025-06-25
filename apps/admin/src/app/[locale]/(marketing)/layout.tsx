@@ -7,11 +7,11 @@ import type { ReactNode } from 'react';
 
 type MarketingLayoutProps = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export default async function MarketingLayout(props: MarketingLayoutProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,

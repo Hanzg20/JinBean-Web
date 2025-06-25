@@ -5,11 +5,11 @@ import { ClerkLocalizations } from '@/utils/AppConfig';
 
 type AuthLayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export default function AuthLayout(props: AuthLayoutProps) {
-  const { locale } = props.params;
+export default async function AuthLayout(props: AuthLayoutProps) {
+  const { locale } = await props.params;
   setRequestLocale(locale);
 
   const clerkLocale = ClerkLocalizations.supportedLocales[locale] ?? ClerkLocalizations.defaultLocale;

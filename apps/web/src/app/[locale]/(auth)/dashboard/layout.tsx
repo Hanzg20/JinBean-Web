@@ -6,11 +6,11 @@ import { BaseTemplate } from '@/templates/BaseTemplate';
 
 type DashboardLayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export default async function DashboardLayout(props: DashboardLayoutProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,
