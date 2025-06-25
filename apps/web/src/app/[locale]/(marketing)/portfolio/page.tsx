@@ -3,11 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 type IPortfolioProps = {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export async function generateMetadata(props: IPortfolioProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   const t = await getTranslations({
     locale,
     namespace: 'Portfolio',
@@ -20,7 +20,7 @@ export async function generateMetadata(props: IPortfolioProps) {
 }
 
 export default async function Portfolio(props: IPortfolioProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,
