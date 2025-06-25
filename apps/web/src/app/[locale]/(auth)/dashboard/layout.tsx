@@ -9,7 +9,7 @@ type DashboardLayoutProps = {
   params: { locale: string };
 };
 
-export default function DashboardLayout(props: DashboardLayoutProps) {
+export default async function DashboardLayout(props: DashboardLayoutProps) {
   const { locale } = props.params;
   setRequestLocale(locale);
   const t = await getTranslations({

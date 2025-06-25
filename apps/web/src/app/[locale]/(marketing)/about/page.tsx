@@ -1,3 +1,4 @@
+"use client";
 import { setRequestLocale } from 'next-intl/server';
 
 type IAboutProps = {
