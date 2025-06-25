@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
-export default async function DashboardLayout(props: {
+type DashboardLayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
+  params: { locale: string };
+};
+
+export default function DashboardLayout(props: DashboardLayoutProps) {
+  const { locale } = props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,

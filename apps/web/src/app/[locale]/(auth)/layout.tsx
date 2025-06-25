@@ -3,11 +3,13 @@ import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/libs/I18nRouting';
 import { ClerkLocalizations } from '@/utils/AppConfig';
 
-export default async function AuthLayout(props: {
+type AuthLayoutProps = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
+  params: { locale: string };
+};
+
+export default function AuthLayout(props: AuthLayoutProps) {
+  const { locale } = props.params;
   setRequestLocale(locale);
 
   const clerkLocale = ClerkLocalizations.supportedLocales[locale] ?? ClerkLocalizations.defaultLocale;

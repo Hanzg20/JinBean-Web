@@ -1,10 +1,12 @@
 import { getTranslations } from 'next-intl/server';
 import { Hello } from '@/components/Hello';
 
-export async function generateMetadata(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
+type IDashboardProps = {
+  params: { locale: string };
+};
+
+export async function generateMetadata(props: IDashboardProps) {
+  const { locale } = props.params;
   const t = await getTranslations({
     locale,
     namespace: 'Dashboard',
@@ -15,7 +17,8 @@ export async function generateMetadata(props: {
   };
 }
 
-export default function Dashboard() {
+export default async function Dashboard(props: IDashboardProps) {
+  const { locale } = props.params;
   return (
     <div className="py-5 [&_p]:my-6">
       <Hello />

@@ -2,12 +2,12 @@ import { SignUp } from '@clerk/nextjs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getI18nPath } from '@/utils/Helpers';
 
-type ISignUpPageProps = {
-  params: Promise<{ locale: string }>;
+type ISignUpProps = {
+  params: { locale: string };
 };
 
-export async function generateMetadata(props: ISignUpPageProps) {
-  const { locale } = await props.params;
+export async function generateMetadata(props: ISignUpProps) {
+  const { locale } = props.params;
   const t = await getTranslations({
     locale,
     namespace: 'SignUp',
@@ -19,8 +19,8 @@ export async function generateMetadata(props: ISignUpPageProps) {
   };
 }
 
-export default async function SignUpPage(props: ISignUpPageProps) {
-  const { locale } = await props.params;
+export default async function SignUp(props: ISignUpProps) {
+  const { locale } = props.params;
   setRequestLocale(locale);
 
   return (
