@@ -10,7 +10,7 @@ type MarketingLayoutProps = {
   params: { locale: string };
 };
 
-export default function MarketingLayout(props: MarketingLayoutProps) {
+export default async function MarketingLayout(props: MarketingLayoutProps) {
   const { locale } = props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
