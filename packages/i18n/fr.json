@@ -1,0 +1,23 @@
+{
+  "home": {
+    "title": "JinBean",
+    "description": "Une plateforme de services de vie pratique et efficace pour les Chinois d'outre-mer et les résidents locaux."
+  },
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "community": "Communauté",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact",
+    "login": "Connexion"
+  },
+  "button": {
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "download": "Télécharger l'App"
+  },
+  "footer": {
+    "copyright": "Droits d'auteur © 2024 JinBean"
+  }
+} 

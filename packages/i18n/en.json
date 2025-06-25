@@ -1,0 +1,23 @@
+{
+  "home": {
+    "title": "JinBean",
+    "description": "A convenient and efficient life service platform for overseas Chinese and local residents."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "community": "Community",
+    "blog": "Blog",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "login": "Login"
+  },
+  "button": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "download": "Download App"
+  },
+  "footer": {
+    "copyright": "Copyright © 2024 JinBean"
+  }
+} 

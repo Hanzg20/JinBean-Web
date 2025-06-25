@@ -1,0 +1,51 @@
+import { SignOutButton } from '@clerk/nextjs';
+import { setRequestLocale } from 'next-intl/server';
+import Link from 'next/link';
+import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { BaseTemplate } from '@/templates/BaseTemplate';
+import type { ReactNode } from 'react';
+
+type DashboardLayoutProps = {
+  children: ReactNode;
+  params: { locale: string };
+};
+
+export default function DashboardLayout(props: DashboardLayoutProps) {
+  const { locale } = props.params;
+  setRequestLocale(locale);
+
+  return (
+    <BaseTemplate
+      leftNav={(
+        <>
+          <li>
+            <Link href={`/${locale}/dashboard/`} className="border-none text-gray-700 hover:text-gray-900">
+              仪表盘
+            </Link>
+          </li>
+          <li>
+            <Link href={`/${locale}/dashboard/user-profile/`} className="border-none text-gray-700 hover:text-gray-900">
+              用户资料
+            </Link>
+          </li>
+        </>
+      )}
+      rightNav={(
+        <>
+          <li>
+            <SignOutButton>
+              <button className="border-none text-gray-700 hover:text-gray-900" type="button">
+                退出登录
+              </button>
+            </SignOutButton>
+          </li>
+          <li>
+            <LocaleSwitcher />
+          </li>
+        </>
+      )}
+    >
+      {props.children}
+    </BaseTemplate>
+  );
+}
