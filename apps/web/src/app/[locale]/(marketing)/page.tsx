@@ -3,11 +3,11 @@ import Logo from '@/../../libs/ui/components/Logo';
 import Button from '@/../../libs/ui/components/Button';
 
 type IIndexProps = {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export async function generateMetadata(props: IIndexProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   const t = await getTranslations({
     locale,
     namespace: 'Index',
@@ -20,7 +20,7 @@ export async function generateMetadata(props: IIndexProps) {
 }
 
 export default async function Index(props: IIndexProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,

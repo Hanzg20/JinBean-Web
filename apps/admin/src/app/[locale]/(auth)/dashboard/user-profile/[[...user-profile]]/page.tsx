@@ -3,11 +3,11 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getI18nPath } from '@/utils/Helpers';
 
 type IUserProfilePageProps = {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export async function generateMetadata(props: IUserProfilePageProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   const t = await getTranslations({
     locale,
     namespace: 'UserProfile',
@@ -19,7 +19,7 @@ export async function generateMetadata(props: IUserProfilePageProps) {
 }
 
 export default async function UserProfilePage(props: IUserProfilePageProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   setRequestLocale(locale);
 
   return (

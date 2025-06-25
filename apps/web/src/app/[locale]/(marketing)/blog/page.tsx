@@ -1,11 +1,11 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IBlogProps = {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export async function generateMetadata(props: IBlogProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
 
   return {
     title: '博客 - 金豆荚 JinBean',
@@ -14,7 +14,7 @@ export async function generateMetadata(props: IBlogProps) {
 }
 
 export default async function Blog(props: IBlogProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   setRequestLocale(locale);
 
   return (

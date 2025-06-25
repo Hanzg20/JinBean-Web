@@ -2,11 +2,11 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 
 type IAboutProps = {
-  params: Promise<{ locale: string }>;
+  params: { locale: string };
 };
 
 export async function generateMetadata(props: IAboutProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   const t = await getTranslations({
     locale,
     namespace: 'About',
@@ -19,7 +19,7 @@ export async function generateMetadata(props: IAboutProps) {
 }
 
 export default async function About(props: IAboutProps) {
-  const { locale } = await props.params;
+  const { locale } = props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
     locale,
