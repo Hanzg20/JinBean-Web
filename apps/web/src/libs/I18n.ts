@@ -24,3 +24,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
     messages: (await import(`../locales/${locale}.json`)).default,
   };
 });
+// Fallback mechanism added
