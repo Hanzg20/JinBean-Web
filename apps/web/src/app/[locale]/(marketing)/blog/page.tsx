@@ -1,4 +1,4 @@
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from "next-intl/server";
 
 type IBlogProps = {
   params: Promise<{ locale: string }>;
@@ -8,8 +8,8 @@ export async function generateMetadata(props: IBlogProps) {
   await props.params; // 确保params被解析，但不需要使用locale
 
   return {
-    title: '博客 - 金豆荚 JinBean',
-    description: '分享生活技巧、社区故事和平台动态，让生活更美好',
+    title: "博客 - 金豆荚 JinBean",
+    description: "分享生活技巧、社区故事和平台动态，让生活更美好",
   };
 }
 
@@ -36,19 +36,19 @@ export default async function Blog(props: IBlogProps) {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center">
             {[
-              { name: '全部', active: true },
-              { name: '生活技巧', active: false },
-              { name: '社区故事', active: false },
-              { name: '平台动态', active: false },
-              { name: '健康生活', active: false },
-              { name: '育儿经验', active: false },
-            ].map(category => (
+              { name: "全部", active: true },
+              { name: "生活技巧", active: false },
+              { name: "社区故事", active: false },
+              { name: "平台动态", active: false },
+              { name: "健康生活", active: false },
+              { name: "育儿经验", active: false },
+            ].map((category) => (
               <button
                 key={category.name}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
                   category.active
-                    ? 'bg-[#2E8B57] text-white'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    ? "bg-[#2E8B57] text-white"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                 }`}
                 type="button"
               >
@@ -72,8 +72,12 @@ export default async function Blog(props: IBlogProps) {
               </div>
               <div className="md:w-1/2 p-8">
                 <div className="flex items-center mb-4">
-                  <span className="bg-[#2E8B57] text-white px-3 py-1 rounded-full text-sm">生活技巧</span>
-                  <span className="text-gray-500 text-sm ml-4">2024年1月15日</span>
+                  <span className="bg-[#2E8B57] text-white px-3 py-1 rounded-full text-sm">
+                    生活技巧
+                  </span>
+                  <span className="text-gray-500 text-sm ml-4">
+                    2024年1月15日
+                  </span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   海外华人居家生活必备技能指南
@@ -90,7 +94,10 @@ export default async function Blog(props: IBlogProps) {
                     </div>
                     <span className="ml-3 text-gray-700">金豆荚编辑团队</span>
                   </div>
-                  <button className="bg-[#2E8B57] text-white px-6 py-2 rounded-lg hover:bg-[#276947] transition-colors" type="button">
+                  <button
+                    className="bg-[#2E8B57] text-white px-6 py-2 rounded-lg hover:bg-[#276947] transition-colors"
+                    type="button"
+                  >
                     阅读全文
                   </button>
                 </div>
@@ -112,8 +119,12 @@ export default async function Blog(props: IBlogProps) {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <span className="bg-[#FFD700] text-[#2E8B57] px-2 py-1 rounded-full text-xs font-medium">生活技巧</span>
-                  <span className="text-gray-500 text-xs ml-3">2024年1月12日</span>
+                  <span className="bg-[#FFD700] text-[#2E8B57] px-2 py-1 rounded-full text-xs font-medium">
+                    生活技巧
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月12日
+                  </span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   10道简单易学的家常菜，让海外生活更有家的味道
@@ -124,7 +135,10 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：8分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
                     阅读全文 →
                   </button>
                 </div>
@@ -138,8 +152,12 @@ export default async function Blog(props: IBlogProps) {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <span className="bg-[#B22222] text-white px-2 py-1 rounded-full text-xs font-medium">社区故事</span>
-                  <span className="text-gray-500 text-xs ml-3">2024年1月10日</span>
+                  <span className="bg-[#B22222] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    社区故事
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月10日
+                  </span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   从陌生人到邻居：金豆荚社区里的温暖故事
@@ -149,8 +167,13 @@ export default async function Blog(props: IBlogProps) {
                   到现在的亲密邻居，这些故事见证了社区的成长...
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">阅读时间：12分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
+                  <span className="text-sm text-gray-500">
+                    阅读时间：12分钟
+                  </span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
                     阅读全文 →
                   </button>
                 </div>
@@ -164,8 +187,12 @@ export default async function Blog(props: IBlogProps) {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <span className="bg-[#4A90E2] text-white px-2 py-1 rounded-full text-xs font-medium">平台动态</span>
-                  <span className="text-gray-500 text-xs ml-3">2024年1月8日</span>
+                  <span className="bg-[#4A90E2] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    平台动态
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月8日
+                  </span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   金豆荚App 2.0版本发布：全新界面，更好体验
@@ -176,7 +203,10 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：5分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
                     阅读全文 →
                   </button>
                 </div>
@@ -190,8 +220,12 @@ export default async function Blog(props: IBlogProps) {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <span className="bg-[#50C878] text-white px-2 py-1 rounded-full text-xs font-medium">健康生活</span>
-                  <span className="text-gray-500 text-xs ml-3">2024年1月5日</span>
+                  <span className="bg-[#50C878] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    健康生活
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月5日
+                  </span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   海外就医指南：如何选择合适的医疗服务
@@ -201,8 +235,13 @@ export default async function Blog(props: IBlogProps) {
                   以及就医时需要注意的事项...
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">阅读时间：15分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
+                  <span className="text-sm text-gray-500">
+                    阅读时间：15分钟
+                  </span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
                     阅读全文 →
                   </button>
                 </div>
@@ -216,8 +255,12 @@ export default async function Blog(props: IBlogProps) {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <span className="bg-[#8B4513] text-white px-2 py-1 rounded-full text-xs font-medium">育儿经验</span>
-                  <span className="text-gray-500 text-xs ml-3">2024年1月3日</span>
+                  <span className="bg-[#8B4513] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    育儿经验
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月3日
+                  </span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   双语教育：如何在海外培养孩子的中文能力
@@ -227,8 +270,13 @@ export default async function Blog(props: IBlogProps) {
                   本文分享一些实用的双语教育方法和经验...
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">阅读时间：10分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
+                  <span className="text-sm text-gray-500">
+                    阅读时间：10分钟
+                  </span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
                     阅读全文 →
                   </button>
                 </div>
@@ -242,8 +290,12 @@ export default async function Blog(props: IBlogProps) {
               </div>
               <div className="p-6">
                 <div className="flex items-center mb-3">
-                  <span className="bg-[#FF69B4] text-white px-2 py-1 rounded-full text-xs font-medium">生活技巧</span>
-                  <span className="text-gray-500 text-xs ml-3">2024年1月1日</span>
+                  <span className="bg-[#FF69B4] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    生活技巧
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月1日
+                  </span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   居家装饰：用中国元素打造温馨的海外之家
@@ -254,7 +306,10 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：7分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
                     阅读全文 →
                   </button>
                 </div>
@@ -279,7 +334,10 @@ export default async function Blog(props: IBlogProps) {
               placeholder="输入您的邮箱地址"
               className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-opacity-50"
             />
-            <button className="bg-white text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" type="button">
+            <button
+              className="bg-white text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+              type="button"
+            >
               订阅
             </button>
           </div>
@@ -289,11 +347,14 @@ export default async function Blog(props: IBlogProps) {
       {/* Load More */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <button className="bg-white border-2 border-[#2E8B57] text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-[#2E8B57] hover:text-white transition-colors font-semibold" type="button">
+          <button
+            className="bg-white border-2 border-[#2E8B57] text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-[#2E8B57] hover:text-white transition-colors font-semibold"
+            type="button"
+          >
             加载更多文章
           </button>
         </div>
       </section>
     </div>
   );
-} 
+}
