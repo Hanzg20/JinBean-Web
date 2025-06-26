@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../styles/global.css";
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import '../styles/global.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "JinBean - 金豆荚",
-  description: "为海外华人及本地居民提供便捷高效的生活服务平台",
+  title: 'JinBean - 金豆荚',
+  description: '为海外华人及本地居民提供便捷高效的生活服务平台',
 };
 
 export default function RootLayout({

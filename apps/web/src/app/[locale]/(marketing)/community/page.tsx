@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from 'next-intl/server';
 
 type ICommunityProps = {
   params: Promise<{ locale: string }>;
@@ -8,8 +8,8 @@ export async function generateMetadata(props: ICommunityProps) {
   await props.params; // 确保params被解析，但不需要使用locale
 
   return {
-    title: "金豆圈社区 - 金豆荚 JinBean",
-    description: "加入金豆圈社区，与邻里分享生活经验，参与社区活动",
+    title: '金豆圈社区 - 金豆荚 JinBean',
+    description: '加入金豆圈社区，与邻里分享生活经验，参与社区活动',
   };
 }
 

@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from 'next-intl/server';
 
 type IBlogProps = {
   params: Promise<{ locale: string }>;
@@ -8,8 +8,8 @@ export async function generateMetadata(props: IBlogProps) {
   await props.params; // 确保params被解析，但不需要使用locale
 
   return {
-    title: "博客 - 金豆荚 JinBean",
-    description: "分享生活技巧、社区故事和平台动态，让生活更美好",
+    title: '博客 - 金豆荚 JinBean',
+    description: '分享生活技巧、社区故事和平台动态，让生活更美好',
   };
 }
 
@@ -36,19 +36,19 @@ export default async function Blog(props: IBlogProps) {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-4 justify-center">
             {[
-              { name: "全部", active: true },
-              { name: "生活技巧", active: false },
-              { name: "社区故事", active: false },
-              { name: "平台动态", active: false },
-              { name: "健康生活", active: false },
-              { name: "育儿经验", active: false },
+              { name: '全部', active: true },
+              { name: '生活技巧', active: false },
+              { name: '社区故事', active: false },
+              { name: '平台动态', active: false },
+              { name: '健康生活', active: false },
+              { name: '育儿经验', active: false },
             ].map((category) => (
               <button
                 key={category.name}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
                   category.active
-                    ? "bg-[#2E8B57] text-white"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? 'bg-[#2E8B57] text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
                 type="button"
               >

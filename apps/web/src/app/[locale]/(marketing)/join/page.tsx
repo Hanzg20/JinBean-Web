@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from 'next-intl/server';
 
 type IJoinProps = {
   params: Promise<{ locale: string }>;
@@ -8,8 +8,8 @@ export async function generateMetadata(props: IJoinProps) {
   await props.params; // 确保params被解析，但不需要使用locale
 
   return {
-    title: "成为服务提供者 - 金豆荚 JinBean",
-    description: "加入金豆荚平台，成为服务提供者，为社区提供优质服务",
+    title: '成为服务提供者 - 金豆荚 JinBean',
+    description: '加入金豆荚平台，成为服务提供者，为社区提供优质服务',
   };
 }
 
@@ -197,14 +197,14 @@ export default async function Join(props: IJoinProps) {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { name: "家政保洁", icon: "🧹", color: "bg-blue-500" },
-              { name: "维修保养", icon: "🔧", color: "bg-green-500" },
-              { name: "园艺护理", icon: "🌱", color: "bg-yellow-500" },
-              { name: "搬家服务", icon: "📦", color: "bg-purple-500" },
-              { name: "宠物护理", icon: "🐕", color: "bg-pink-500" },
-              { name: "教育培训", icon: "📚", color: "bg-indigo-500" },
-              { name: "健康医疗", icon: "🏥", color: "bg-red-500" },
-              { name: "法律服务", icon: "⚖️", color: "bg-gray-500" },
+              { name: '家政保洁', icon: '🧹', color: 'bg-blue-500' },
+              { name: '维修保养', icon: '🔧', color: 'bg-green-500' },
+              { name: '园艺护理', icon: '🌱', color: 'bg-yellow-500' },
+              { name: '搬家服务', icon: '📦', color: 'bg-purple-500' },
+              { name: '宠物护理', icon: '🐕', color: 'bg-pink-500' },
+              { name: '教育培训', icon: '📚', color: 'bg-indigo-500' },
+              { name: '健康医疗', icon: '🏥', color: 'bg-red-500' },
+              { name: '法律服务', icon: '⚖️', color: 'bg-gray-500' },
             ].map((service) => (
               <div
                 key={service.name}

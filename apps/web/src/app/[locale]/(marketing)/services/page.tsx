@@ -1,4 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from 'next-intl/server';
 
 type IServicesProps = {
   params: Promise<{ locale: string }>;
@@ -8,8 +8,8 @@ export async function generateMetadata(props: IServicesProps) {
   await props.params; // 确保params被解析，但不需要使用locale
 
   return {
-    title: "服务类型 - 金豆荚 JinBean",
-    description: "金豆荚提供家政服务、工具租赁、社区互动等多种便民服务",
+    title: '服务类型 - 金豆荚 JinBean',
+    description: '金豆荚提供家政服务、工具租赁、社区互动等多种便民服务',
   };
 }
 

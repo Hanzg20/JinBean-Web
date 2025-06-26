@@ -1,5 +1,5 @@
-import { getTranslations } from "next-intl/server";
-import { Hello } from "@/components/Hello";
+import { getTranslations } from 'next-intl/server';
+import { Hello } from '@/components/Hello';
 
 type IDashboardProps = {
   params: Promise<{ locale: string }>;
@@ -9,11 +9,11 @@ export async function generateMetadata(props: IDashboardProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
-    namespace: "Dashboard",
+    namespace: 'Dashboard',
   });
 
   return {
-    title: t("meta_title"),
+    title: t('meta_title'),
   };
 }
 

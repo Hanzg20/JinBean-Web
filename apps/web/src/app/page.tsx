@@ -1,18 +1,18 @@
-import { headers } from "next/headers";
-import { redirect } from "next/navigation";
-import { AppConfig } from "@/utils/AppConfig";
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { AppConfig } from '@/utils/AppConfig';
 
 export default async function RootPage() {
   const headersList = await headers();
-  const acceptLanguage = headersList.get("accept-language") || "";
+  const acceptLanguage = headersList.get('accept-language') || '';
 
   // 解析浏览器语言偏好
   const parseAcceptLanguage = (acceptLanguage: string): string[] => {
     return acceptLanguage
-      .split(",")
+      .split(',')
       .map((lang: string) => {
-        const trimmed = lang.split(";")[0]?.trim().toLowerCase();
-        return trimmed || "";
+        const trimmed = lang.split(';')[0]?.trim().toLowerCase();
+        return trimmed || '';
       })
       .filter((lang: string) => lang.length > 0);
   };
@@ -21,19 +21,19 @@ export default async function RootPage() {
   const detectLanguage = (browserLanguages: string[]): string => {
     // 支持的语言映射
     const languageMap: Record<string, string> = {
-      zh: "zh", // 中文
-      "zh-cn": "zh", // 简体中文
-      "zh-tw": "zh", // 繁体中文
-      "zh-hk": "zh", // 香港中文
-      "zh-sg": "zh", // 新加坡中文
-      en: "en", // 英文
-      "en-us": "en",
-      "en-gb": "en",
-      "en-ca": "en",
-      "en-au": "en",
-      fr: "fr", // 法文
-      "fr-fr": "fr",
-      "fr-ca": "fr",
+      zh: 'zh', // 中文
+      'zh-cn': 'zh', // 简体中文
+      'zh-tw': 'zh', // 繁体中文
+      'zh-hk': 'zh', // 香港中文
+      'zh-sg': 'zh', // 新加坡中文
+      en: 'en', // 英文
+      'en-us': 'en',
+      'en-gb': 'en',
+      'en-ca': 'en',
+      'en-au': 'en',
+      fr: 'fr', // 法文
+      'fr-fr': 'fr',
+      'fr-ca': 'fr',
     };
 
     // 查找匹配的语言
