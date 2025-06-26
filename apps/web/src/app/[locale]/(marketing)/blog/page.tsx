@@ -42,9 +42,9 @@ export default async function Blog(props: IBlogProps) {
               { name: '平台动态', active: false },
               { name: '健康生活', active: false },
               { name: '育儿经验', active: false },
-            ].map((category, index) => (
+            ].map((category) => (
               <button
-                key={index}
+                key={category.name}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
                   category.active
                     ? 'bg-[#2E8B57] text-white'
