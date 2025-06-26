@@ -18,7 +18,7 @@ export async function generateMetadata(props: IUserProfileProps) {
   };
 }
 
-export default async function UserProfile(props: IUserProfileProps) {
+export default async function UserProfilePage(props: IUserProfileProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
