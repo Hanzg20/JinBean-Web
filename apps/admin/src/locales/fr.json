@@ -71,5 +71,13 @@
     "dashboard_link": "Tableau de bord",
     "user_profile_link": "Gérer votre compte",
     "sign_out": "Se déconnecter"
-  }
+  },
+  "register": "S'inscrire",
+  "about": "À Propos",
+  "join": "Rejoindre",
+  "login": "Connexion",
+  "home": "Accueil",
+  "services": "Services",
+  "community": "Communauté",
+  "blog": "Blog"
 }
