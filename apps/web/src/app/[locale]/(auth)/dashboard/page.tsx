@@ -20,7 +20,7 @@ export async function generateMetadata(props: IDashboardProps) {
 export default async function Dashboard(props: IDashboardProps) {
   await props.params; // 确保params被解析，但不需要使用locale
   return (
-    <div className="py-5 [&_p]:my-6">
+    <div className='py-5 [&_p]:my-6'>
       <Hello />
     </div>
   );
