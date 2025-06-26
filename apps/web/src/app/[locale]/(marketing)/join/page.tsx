@@ -1,11 +1,11 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 
 type IJoinProps = {
   params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata(props: IJoinProps) {
-  const { locale } = await props.params;
+  await props.params; // 确保params被解析，但不需要使用locale
 
   return {
     title: '成为服务提供者 - 金豆荚 JinBean',

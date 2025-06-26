@@ -1,11 +1,11 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 
 type IBlogProps = {
   params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata(props: IBlogProps) {
-  const { locale } = await props.params;
+  await props.params; // 确保params被解析，但不需要使用locale
 
   return {
     title: '博客 - 金豆荚 JinBean',
