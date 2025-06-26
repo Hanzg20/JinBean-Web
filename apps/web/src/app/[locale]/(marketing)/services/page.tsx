@@ -49,7 +49,7 @@ export default async function Services(props: IServicesProps) {
                   <li>• 园艺护理</li>
                   <li>• 宠物护理</li>
                 </ul>
-                <button className="w-full bg-[#2E8B57] text-white py-3 rounded-lg hover:bg-[#276947] transition-colors">
+                <button type="button" className="w-full bg-[#2E8B57] text-white py-3 rounded-lg hover:bg-[#276947] transition-colors">
                   立即预约
                 </button>
               </div>
@@ -69,7 +69,7 @@ export default async function Services(props: IServicesProps) {
                   <li>• 园艺工具</li>
                   <li>• 搬运设备</li>
                 </ul>
-                <button className="w-full bg-[#FFD700] text-[#2E8B57] py-3 rounded-lg hover:bg-[#FFC300] transition-colors font-semibold">
+                <button type="button" className="w-full bg-[#FFD700] text-[#2E8B57] py-3 rounded-lg hover:bg-[#FFC300] transition-colors font-semibold">
                   查看工具
                 </button>
               </div>
@@ -89,7 +89,7 @@ export default async function Services(props: IServicesProps) {
                   <li>• 活动组织</li>
                   <li>• 技能交换</li>
                 </ul>
-                <button className="w-full bg-[#B22222] text-white py-3 rounded-lg hover:bg-[#8B0000] transition-colors">
+                <button type="button" className="w-full bg-[#B22222] text-white py-3 rounded-lg hover:bg-[#8B0000] transition-colors">
                   加入社区
                 </button>
               </div>
@@ -109,7 +109,7 @@ export default async function Services(props: IServicesProps) {
                   <li>• 职业发展</li>
                   <li>• 兴趣培养</li>
                 </ul>
-                <button className="w-full bg-[#4A90E2] text-white py-3 rounded-lg hover:bg-[#357ABD] transition-colors">
+                <button type="button" className="w-full bg-[#4A90E2] text-white py-3 rounded-lg hover:bg-[#357ABD] transition-colors">
                   查看课程
                 </button>
               </div>
@@ -129,7 +129,7 @@ export default async function Services(props: IServicesProps) {
                   <li>• 康复护理</li>
                   <li>• 心理健康</li>
                 </ul>
-                <button className="w-full bg-[#50C878] text-white py-3 rounded-lg hover:bg-[#3CB371] transition-colors">
+                <button type="button" className="w-full bg-[#50C878] text-white py-3 rounded-lg hover:bg-[#3CB371] transition-colors">
                   健康服务
                 </button>
               </div>
@@ -149,7 +149,7 @@ export default async function Services(props: IServicesProps) {
                   <li>• 移民服务</li>
                   <li>• 纠纷调解</li>
                 </ul>
-                <button className="w-full bg-[#8B4513] text-white py-3 rounded-lg hover:bg-[#654321] transition-colors">
+                <button type="button" className="w-full bg-[#8B4513] text-white py-3 rounded-lg hover:bg-[#654321] transition-colors">
                   法律咨询
                 </button>
               </div>
@@ -168,10 +168,10 @@ export default async function Services(props: IServicesProps) {
             如果您有特殊需求，请联系我们，我们将为您提供定制化服务
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            <button type="button" className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               联系我们
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold">
+            <button type="button" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold">
               成为服务提供者
             </button>
           </div>

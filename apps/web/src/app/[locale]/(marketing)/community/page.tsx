@@ -232,7 +232,7 @@ export default async function Community(props: ICommunityProps) {
                   <span>📅 本周六 14:00</span>
                   <span>📍 社区中心</span>
                 </div>
-                <button className="w-full bg-[#2E8B57] text-white py-2 rounded-lg hover:bg-[#276947] transition-colors">
+                <button className="w-full bg-[#2E8B57] text-white py-2 rounded-lg hover:bg-[#276947] transition-colors" type="button">
                   立即报名
                 </button>
               </div>
@@ -252,7 +252,7 @@ export default async function Community(props: ICommunityProps) {
                   <span>📅 下周日 16:00</span>
                   <span>📍 社区厨房</span>
                 </div>
-                <button className="w-full bg-[#FFD700] text-[#2E8B57] py-2 rounded-lg hover:bg-[#FFC300] transition-colors font-semibold">
+                <button className="w-full bg-[#FFD700] text-[#2E8B57] py-2 rounded-lg hover:bg-[#FFC300] transition-colors font-semibold" type="button">
                   立即报名
                 </button>
               </div>
@@ -272,7 +272,7 @@ export default async function Community(props: ICommunityProps) {
                   <span>📅 下周六 19:00</span>
                   <span>📍 音乐厅</span>
                 </div>
-                <button className="w-full bg-[#B22222] text-white py-2 rounded-lg hover:bg-[#8B0000] transition-colors">
+                <button className="w-full bg-[#B22222] text-white py-2 rounded-lg hover:bg-[#8B0000] transition-colors" type="button">
                   立即报名
                 </button>
               </div>
@@ -291,10 +291,10 @@ export default async function Community(props: ICommunityProps) {
             下载金豆荚 App，立即加入我们的社区，与邻里分享生活，参与精彩活动
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            <button className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold" type="button">
               下载 App
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold">
+            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold" type="button">
               了解更多
             </button>
           </div>

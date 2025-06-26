@@ -50,6 +50,7 @@ export default async function Blog(props: IBlogProps) {
                     ? 'bg-[#2E8B57] text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
+                type="button"
               >
                 {category.name}
               </button>
@@ -89,7 +90,7 @@ export default async function Blog(props: IBlogProps) {
                     </div>
                     <span className="ml-3 text-gray-700">金豆荚编辑团队</span>
                   </div>
-                  <button className="bg-[#2E8B57] text-white px-6 py-2 rounded-lg hover:bg-[#276947] transition-colors">
+                  <button className="bg-[#2E8B57] text-white px-6 py-2 rounded-lg hover:bg-[#276947] transition-colors" type="button">
                     阅读全文
                   </button>
                 </div>
@@ -123,7 +124,7 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：8分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm">
+                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
                     阅读全文 →
                   </button>
                 </div>
@@ -149,7 +150,7 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：12分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm">
+                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
                     阅读全文 →
                   </button>
                 </div>
@@ -175,7 +176,7 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：5分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm">
+                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
                     阅读全文 →
                   </button>
                 </div>
@@ -201,7 +202,7 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：15分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm">
+                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
                     阅读全文 →
                   </button>
                 </div>
@@ -227,7 +228,7 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：10分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm">
+                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
                     阅读全文 →
                   </button>
                 </div>
@@ -253,7 +254,7 @@ export default async function Blog(props: IBlogProps) {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">阅读时间：7分钟</span>
-                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm">
+                  <button className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm" type="button">
                     阅读全文 →
                   </button>
                 </div>
@@ -278,7 +279,7 @@ export default async function Blog(props: IBlogProps) {
               placeholder="输入您的邮箱地址"
               className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-opacity-50"
             />
-            <button className="bg-white text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            <button className="bg-white text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" type="button">
               订阅
             </button>
           </div>
@@ -288,7 +289,7 @@ export default async function Blog(props: IBlogProps) {
       {/* Load More */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <button className="bg-white border-2 border-[#2E8B57] text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-[#2E8B57] hover:text-white transition-colors font-semibold">
+          <button className="bg-white border-2 border-[#2E8B57] text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-[#2E8B57] hover:text-white transition-colors font-semibold" type="button">
             加载更多文章
           </button>
         </div>

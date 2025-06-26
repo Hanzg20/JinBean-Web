@@ -25,7 +25,7 @@ export const LocaleSwitcher = () => {
     >
       {routing.locales.map(elt => (
         <option key={elt} value={elt}>
-          {elt.toUpperCase()}
+          {elt === 'zh' ? '中文' : elt.toUpperCase()}
         </option>
       ))}
     </select>

@@ -48,19 +48,14 @@
       }
     }
   },
-  "home": {
-    "title": "JinBean",
-    "description": "构建可信、便捷、互助的智慧社区生活平台"
-  },
-  "nav": {
-    "home": "首页",
-    "services": "服务",
-    "community": "社区",
-    "blog": "博客",
-    "about": "关于我们",
-    "contact": "联系我们",
-    "login": "登录"
-  },
+  "home": "首页",
+  "services": "服务",
+  "community": "社区",
+  "blog": "博客",
+  "about": "关于我们",
+  "join": "入驻",
+  "login": "登录",
+  "register": "注册",
   "button": {
     "submit": "提交",
     "cancel": "取消",

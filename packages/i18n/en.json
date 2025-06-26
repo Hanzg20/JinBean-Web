@@ -48,19 +48,14 @@
       }
     }
   },
-  "home": {
-    "title": "JinBean",
-    "description": "Canada's All-in-One Smart Living & Community Services Platform"
-  },
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "community": "Community",
-    "blog": "Blog",
-    "about": "About Us",
-    "contact": "Contact Us",
-    "login": "Login"
-  },
+  "home": "Home",
+  "services": "Services",
+  "community": "Community",
+  "blog": "Blog",
+  "about": "About Us",
+  "join": "Join",
+  "login": "Login",
+  "register": "Register",
   "button": {
     "submit": "Submit",
     "cancel": "Cancel",

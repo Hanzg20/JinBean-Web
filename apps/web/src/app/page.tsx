@@ -10,11 +10,11 @@ export default async function RootPage() {
   const parseAcceptLanguage = (acceptLanguage: string): string[] => {
     return acceptLanguage
       .split(',')
-      .map(lang => {
+      .map((lang) => {
         const trimmed = lang.split(';')[0]?.trim().toLowerCase();
         return trimmed || '';
       })
-      .filter(lang => lang.length > 0);
+      .filter((lang) => lang.length > 0);
   };
 
   // 检测最佳匹配的语言

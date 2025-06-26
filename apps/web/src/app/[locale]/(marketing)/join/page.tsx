@@ -207,10 +207,10 @@ export default async function Join(props: IJoinProps) {
             加入金豆荚，成为社区服务的一份子，让我们一起创造更美好的社区生活
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+            <button type="button" className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               立即申请
             </button>
-            <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold">
+            <button type="button" className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold">
               了解更多
             </button>
           </div>

@@ -48,19 +48,14 @@
       }
     }
   },
-  "home": {
-    "title": "JinBean",
-    "description": "Plateforme Canadienne de Services de Vie Intelligente et Communautaire Tout-en-Un"
-  },
-  "nav": {
-    "home": "Accueil",
-    "services": "Services",
-    "community": "Communauté",
-    "blog": "Blog",
-    "about": "À Propos",
-    "contact": "Contact",
-    "login": "Connexion"
-  },
+  "home": "Accueil",
+  "services": "Services",
+  "community": "Communauté",
+  "blog": "Blog",
+  "about": "À Propos",
+  "join": "Rejoindre",
+  "login": "Connexion",
+  "register": "S'inscrire",
   "button": {
     "submit": "Soumettre",
     "cancel": "Annuler",
