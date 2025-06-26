@@ -4,6 +4,6 @@ type CenterLayoutProps = {
 };
 
 export default async function CenterLayout(props: CenterLayoutProps) {
-  const { locale } = await props.params;
+  await props.params; // 确保params被解析，但不需要使用locale
   return <>{props.children}</>;
 }
