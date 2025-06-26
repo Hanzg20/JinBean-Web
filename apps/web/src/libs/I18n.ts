@@ -19,7 +19,7 @@ export default getRequestConfig(async ({ requestLocale }) => {
     ? requested
     : routing.defaultLocale;
 
-    // 加载当前语言和默认语言
+  // 加载当前语言和默认语言
   const messages = (await import(`../locales/${locale}.json`)).default;
   const fallbackMessages = (await import(`../locales/${routing.defaultLocale}.json`)).default;
 
