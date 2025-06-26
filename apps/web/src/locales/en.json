@@ -12,9 +12,54 @@
     "made_with": "Made with <author></author>."
   },
   "Index": {
-    "meta_title": "Next.js Boilerplate Presentation",
-    "meta_description": "Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.",
-    "sponsors_title": "Sponsors"
+    "meta_title": "JinBean - Life Service Platform for Overseas Chinese",
+    "meta_description": "A convenient and efficient life service platform for overseas Chinese and local residents, including housekeeping services, tool rentals, and community interaction",
+    "sponsors_title": "Sponsors",
+    "hero": {
+      "description": "A convenient and efficient life service platform for overseas Chinese and local residents",
+      "download_app": "Download App",
+      "learn_more": "Learn More"
+    },
+    "services": {
+      "title": "Our Services",
+      "housekeeping": {
+        "title": "Housekeeping Services",
+        "description": "Professional cleaning, maintenance, and moving services to make your home life more comfortable"
+      },
+      "tools": {
+        "title": "Tool Rental",
+        "description": "Share lawn tools, maintenance equipment, and more. Use as needed and save costs"
+      },
+      "community": {
+        "title": "Community Interaction",
+        "description": "JinBean Circle community, share life experiences, and make neighborhood friends"
+      }
+    },
+    "join": {
+      "title": "Become a Service Provider",
+      "description": "If you have professional skills, welcome to join our service team and provide quality services to the community",
+      "cta": "Join Now"
+    },
+    "community": {
+      "title": "JinBean Circle Highlights",
+      "posts": {
+        "post1": {
+          "author": "Aunt Zhang",
+          "time": "2 hours ago",
+          "content": "Today I helped my neighbor trim the lawn using JinBean's tool rental service, very convenient!"
+        },
+        "post2": {
+          "author": "Master Li",
+          "time": "5 hours ago",
+          "content": "Getting more and more maintenance orders through the JinBean platform, thank you for your trust!"
+        },
+        "post3": {
+          "author": "Ms. Wang",
+          "time": "1 day ago",
+          "content": "JinBean's cleaning service is very professional, the house looks brand new, highly recommended!"
+        }
+      }
+    }
   },
   "Counter": {
     "meta_title": "Counter",

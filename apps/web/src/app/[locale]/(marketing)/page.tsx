@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import Logo from '@/../../libs/ui/components/Logo';
 import Button from '@/../../libs/ui/components/Button';
+import Logo from '@/../../libs/ui/components/Logo';
 
 type IIndexProps = {
   params: Promise<{ locale: string }>;
@@ -40,14 +40,14 @@ export default async function Index(props: IIndexProps) {
             <span className="text-[#FFD700]"> JinBean</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            为海外华人及本地居民提供便捷高效的生活服务平台
+            {t('hero.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-4">
-              下载 App
+              {t('hero.download_app')}
             </Button>
             <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
-              了解更多
+              {t('hero.learn_more')}
             </Button>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default async function Index(props: IIndexProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            我们的服务
+            {t('services.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service Card 1 */}
@@ -65,9 +65,9 @@ export default async function Index(props: IIndexProps) {
               <div className="w-16 h-16 bg-[#2E8B57] rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-2xl">🏠</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">家政服务</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('services.housekeeping.title')}</h3>
               <p className="text-gray-600">
-                专业的保洁、维修、搬家等服务，让您的居家生活更加舒适
+                {t('services.housekeeping.description')}
               </p>
             </div>
 
@@ -76,9 +76,9 @@ export default async function Index(props: IIndexProps) {
               <div className="w-16 h-16 bg-[#FFD700] rounded-lg flex items-center justify-center mb-4">
                 <span className="text-[#2E8B57] text-2xl">🔧</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">工具租赁</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('services.tools.title')}</h3>
               <p className="text-gray-600">
-                共享草坪工具、维修设备等，按需使用，节省成本
+                {t('services.tools.description')}
               </p>
             </div>
 
@@ -87,9 +87,9 @@ export default async function Index(props: IIndexProps) {
               <div className="w-16 h-16 bg-[#B22222] rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-2xl">👥</span>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">社区互动</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">{t('services.community.title')}</h3>
               <p className="text-gray-600">
-                金豆圈社区，分享生活经验，结识邻里朋友
+                {t('services.community.description')}
               </p>
             </div>
           </div>
@@ -100,13 +100,13 @@ export default async function Index(props: IIndexProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            成为服务提供者
+            {t('join.title')}
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            如果您有专业技能，欢迎加入我们的服务团队，为社区提供优质服务
+            {t('join.description')}
           </p>
           <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
-            立即入驻
+            {t('join.cta')}
           </Button>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default async function Index(props: IIndexProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            金豆圈精选
+            {t('community.title')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Community Post 1 */}
@@ -125,12 +125,12 @@ export default async function Index(props: IIndexProps) {
                   张
                 </div>
                 <div className="ml-3">
-                  <p className="font-semibold text-gray-900">张阿姨</p>
-                  <p className="text-sm text-gray-500">2小时前</p>
+                  <p className="font-semibold text-gray-900">{t('community.posts.post1.author')}</p>
+                  <p className="text-sm text-gray-500">{t('community.posts.post1.time')}</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                今天帮邻居修剪草坪，用到了金豆荚的工具租赁服务，非常方便！
+                {t('community.posts.post1.content')}
               </p>
             </div>
 
@@ -141,12 +141,12 @@ export default async function Index(props: IIndexProps) {
                   李
                 </div>
                 <div className="ml-3">
-                  <p className="font-semibold text-gray-900">李师傅</p>
-                  <p className="text-sm text-gray-500">5小时前</p>
+                  <p className="font-semibold text-gray-900">{t('community.posts.post2.author')}</p>
+                  <p className="text-sm text-gray-500">{t('community.posts.post2.time')}</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                通过金豆荚平台接到的维修订单越来越多，感谢大家的信任！
+                {t('community.posts.post2.content')}
               </p>
             </div>
 
@@ -157,12 +157,12 @@ export default async function Index(props: IIndexProps) {
                   王
                 </div>
                 <div className="ml-3">
-                  <p className="font-semibold text-gray-900">王女士</p>
-                  <p className="text-sm text-gray-500">1天前</p>
+                  <p className="font-semibold text-gray-900">{t('community.posts.post3.author')}</p>
+                  <p className="text-sm text-gray-500">{t('community.posts.post3.time')}</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                金豆荚的保洁服务很专业，家里焕然一新，强烈推荐！
+                {t('community.posts.post3.content')}
               </p>
             </div>
           </div>
