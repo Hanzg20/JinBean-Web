@@ -205,7 +205,7 @@ export default async function Join(props: IJoinProps) {
               { name: '教育培训', icon: '📚', color: 'bg-indigo-500' },
               { name: '健康医疗', icon: '🏥', color: 'bg-red-500' },
               { name: '法律服务', icon: '⚖️', color: 'bg-gray-500' },
-            ].map((service) => (
+            ].map(service => (
               <div
                 key={service.name}
                 className="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition-shadow"

@@ -16,8 +16,8 @@ const createDbConnection = () => {
     connection: {
       connectionString: databaseUrl,
       ssl:
-        !databaseUrl.includes('localhost') &&
-        !databaseUrl.includes('127.0.0.1'),
+        !databaseUrl.includes('localhost')
+        && !databaseUrl.includes('127.0.0.1'),
     },
     schema,
   });

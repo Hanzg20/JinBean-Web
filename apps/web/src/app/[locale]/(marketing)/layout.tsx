@@ -13,7 +13,7 @@ export default async function Layout(props: {
 
   return (
     <BaseTemplate
-      leftNav={
+      leftNav={(
         <>
           <li>
             <Link
@@ -56,8 +56,8 @@ export default async function Layout(props: {
             </Link>
           </li>
         </>
-      }
-      rightNav={
+      )}
+      rightNav={(
         <>
           <li>
             <Link
@@ -87,7 +87,7 @@ export default async function Layout(props: {
             <LocaleSwitcher />
           </li>
         </>
-      }
+      )}
     >
       {props.children}
     </BaseTemplate>

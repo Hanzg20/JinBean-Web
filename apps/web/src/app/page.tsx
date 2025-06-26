@@ -21,17 +21,17 @@ export default async function RootPage() {
   const detectLanguage = (browserLanguages: string[]): string => {
     // 支持的语言映射
     const languageMap: Record<string, string> = {
-      zh: 'zh', // 中文
+      'zh': 'zh', // 中文
       'zh-cn': 'zh', // 简体中文
       'zh-tw': 'zh', // 繁体中文
       'zh-hk': 'zh', // 香港中文
       'zh-sg': 'zh', // 新加坡中文
-      en: 'en', // 英文
+      'en': 'en', // 英文
       'en-us': 'en',
       'en-gb': 'en',
       'en-ca': 'en',
       'en-au': 'en',
-      fr: 'fr', // 法文
+      'fr': 'fr', // 法文
       'fr-fr': 'fr',
       'fr-ca': 'fr',
     };
