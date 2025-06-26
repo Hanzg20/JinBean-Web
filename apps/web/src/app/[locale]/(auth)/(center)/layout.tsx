@@ -1,5 +1,3 @@
-import { setRequestLocale } from 'next-intl/server';
-
 type CenterLayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
