@@ -1,0 +1,67 @@
+{
+  "Index": {
+    "meta_title": "JinBean – 构建可信、便捷、互助的智慧社区生活平台",
+    "meta_description": "JinBean 是一个融合\"服务聚合 + 共享租赁 + 社区互助\"于一体的智慧生活平台，专注为加拿大各地多元文化背景的居民，提供便捷、可信、低门槛的日常服务与技能互助网络。",
+    "hero": {
+      "description": "构建可信、便捷、互助的智慧社区生活平台",
+      "download_app": "下载 App",
+      "learn_more": "了解更多"
+    },
+    "services": {
+      "title": "我们的服务",
+      "housekeeping": {
+        "title": "家政服务",
+        "description": "专业的保洁、维修、搬家等服务，让您的居家生活更加舒适"
+      },
+      "tools": {
+        "title": "工具租赁",
+        "description": "共享草坪工具、维修设备等，按需使用，节省成本"
+      },
+      "community": {
+        "title": "社区互动",
+        "description": "金豆圈社区，分享生活经验，结识邻里朋友"
+      }
+    },
+    "join": {
+      "title": "成为服务提供者",
+      "description": "如果您有专业技能，欢迎加入我们的服务团队，为社区提供优质服务",
+      "cta": "立即入驻"
+    },
+    "community": {
+      "title": "金豆圈精选",
+      "posts": {
+        "post1": {
+          "author": "陈雅丽",
+          "time": "2小时前",
+          "content": "今天帮邻居修剪草坪，用到了金豆荚的工具租赁服务，非常方便！"
+        },
+        "post2": {
+          "author": "罗德里格斯",
+          "time": "5小时前",
+          "content": "通过金豆荚平台接到的维修订单越来越多，感谢大家的信任！"
+        },
+        "post3": {
+          "author": "艾玛·汤普森",
+          "time": "1天前",
+          "content": "金豆荚的保洁服务很专业，家里焕然一新，强烈推荐！"
+        }
+      }
+    }
+  },
+  "home": "首页",
+  "services": "服务",
+  "community": "社区",
+  "blog": "博客",
+  "about": "关于我们",
+  "join": "入驻",
+  "login": "登录",
+  "register": "注册",
+  "button": {
+    "submit": "提交",
+    "cancel": "取消",
+    "download": "下载 App"
+  },
+  "footer": {
+    "copyright": "版权所有 © 2024 金豆荚"
+  }
+} 
