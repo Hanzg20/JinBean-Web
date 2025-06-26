@@ -1,11 +1,11 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type ICommunityProps = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata(props: ICommunityProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
 
   return {
     title: '金豆圈社区 - 金豆荚 JinBean',
@@ -14,7 +14,7 @@ export async function generateMetadata(props: ICommunityProps) {
 }
 
 export default async function Community(props: ICommunityProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   setRequestLocale(locale);
 
   return (

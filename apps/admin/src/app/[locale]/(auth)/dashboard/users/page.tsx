@@ -1,11 +1,11 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IUsersProps = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata(props: IUsersProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
 
   return {
     title: '用户管理 - 金豆荚 JinBean',
@@ -14,7 +14,7 @@ export async function generateMetadata(props: IUsersProps) {
 }
 
 export default async function Users(props: IUsersProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   setRequestLocale(locale);
 
   return (

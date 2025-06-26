@@ -2,11 +2,11 @@ import { getTranslations } from 'next-intl/server';
 import { Hello } from '@/components/Hello';
 
 type IDashboardProps = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata(props: IDashboardProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   const t = await getTranslations({
     locale,
     namespace: 'Dashboard',
@@ -18,7 +18,7 @@ export async function generateMetadata(props: IDashboardProps) {
 }
 
 export default async function Dashboard(props: IDashboardProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   return (
     <div className="py-5 [&_p]:my-6">
       <Hello />

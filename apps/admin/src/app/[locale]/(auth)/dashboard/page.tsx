@@ -1,11 +1,11 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IDashboardProps = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata(props: IDashboardProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
 
   return {
     title: '管理后台 - 金豆荚 JinBean',
@@ -14,7 +14,7 @@ export async function generateMetadata(props: IDashboardProps) {
 }
 
 export default async function Dashboard(props: IDashboardProps) {
-  const { locale } = props.params;
+  const { locale } = await props.params;
   setRequestLocale(locale);
 
   return (
