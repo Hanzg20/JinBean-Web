@@ -19,7 +19,7 @@ export async function generateMetadata(props: ISignUpProps) {
   };
 }
 
-export default async function SignUp(props: ISignUpProps) {
+export default async function SignUpPage(props: ISignUpProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
