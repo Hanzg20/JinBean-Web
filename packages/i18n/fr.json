@@ -1,14 +1,63 @@
 {
+  "Index": {
+    "meta_title": "JinBean - Plateforme Canadienne de Services de Vie Intelligente et Communautaire Tout-en-Un",
+    "meta_description": "JinBean est une plateforme de services d'entraide et de style de vie de nouvelle génération, conçue pour unifier les services locaux fragmentés, permettre aux gens ordinaires de participer à la création de valeur, et favoriser des écosystèmes de soutien communautaire de confiance et à faible barrière.",
+    "hero": {
+      "description": "Plateforme Canadienne de Services de Vie Intelligente et Communautaire Tout-en-Un",
+      "download_app": "Télécharger l'App",
+      "learn_more": "En Savoir Plus"
+    },
+    "services": {
+      "title": "Nos Services",
+      "housekeeping": {
+        "title": "Services de Ménage",
+        "description": "Services de nettoyage, maintenance et déménagement professionnels pour rendre votre vie à la maison plus confortable"
+      },
+      "tools": {
+        "title": "Location d'Outils",
+        "description": "Partagez des outils de jardinage, équipements de maintenance et plus. Utilisez selon vos besoins et économisez"
+      },
+      "community": {
+        "title": "Interaction Communautaire",
+        "description": "Communauté JinBean Circle, partagez des expériences de vie et faites des amis dans le quartier"
+      }
+    },
+    "join": {
+      "title": "Devenez Prestataire de Services",
+      "description": "Si vous avez des compétences professionnelles, bienvenue pour rejoindre notre équipe de services et fournir des services de qualité à la communauté",
+      "cta": "Rejoindre Maintenant"
+    },
+    "community": {
+      "title": "Points Forts de JinBean Circle",
+      "posts": {
+        "post1": {
+          "author": "Sarah Chen",
+          "time": "Il y a 2 heures",
+          "content": "Aujourd'hui, j'ai aidé mon voisin à tailler la pelouse en utilisant le service de location d'outils de JinBean, très pratique !"
+        },
+        "post2": {
+          "author": "Michael Rodriguez",
+          "time": "Il y a 5 heures",
+          "content": "De plus en plus de commandes de maintenance via la plateforme JinBean, merci pour votre confiance !"
+        },
+        "post3": {
+          "author": "Emma Thompson",
+          "time": "Il y a 1 jour",
+          "content": "Le service de nettoyage de JinBean est très professionnel, la maison est comme neuve, fortement recommandé !"
+        }
+      }
+    }
+  },
   "home": {
     "title": "JinBean",
-    "description": "Une plateforme de services de vie pratique et efficace pour les Chinois d'outre-mer et les résidents locaux."
+    "description": "Plateforme Canadienne de Services de Vie Intelligente et Communautaire Tout-en-Un"
   },
   "nav": {
     "home": "Accueil",
     "services": "Services",
     "community": "Communauté",
     "blog": "Blog",
-    "about": "À propos",
+    "about": "À Propos",
     "contact": "Contact",
     "login": "Connexion"
   },
@@ -18,6 +67,6 @@
     "download": "Télécharger l'App"
   },
   "footer": {
-    "copyright": "Droits d'auteur © 2024 JinBean"
+    "copyright": "Copyright © 2024 JinBean"
   }
 } 

@@ -12,11 +12,11 @@
     "made_with": "Made with <author></author>."
   },
   "Index": {
-    "meta_title": "JinBean - Life Service Platform for Overseas Chinese",
-    "meta_description": "A convenient and efficient life service platform for overseas Chinese and local residents, including housekeeping services, tool rentals, and community interaction",
+    "meta_title": "JinBean - Canada's All-in-One Smart Living & Community Services Platform",
+    "meta_description": "JinBean is a next-generation mutual-aid and lifestyle services platform, designed to unify fragmented local services, empower everyday people to participate in value creation, and foster trusted, low-barrier community support ecosystems.",
     "sponsors_title": "Sponsors",
     "hero": {
-      "description": "A convenient and efficient life service platform for overseas Chinese and local residents",
+      "description": "Canada's All-in-One Smart Living & Community Services Platform",
       "download_app": "Download App",
       "learn_more": "Learn More"
     },
@@ -44,17 +44,17 @@
       "title": "JinBean Circle Highlights",
       "posts": {
         "post1": {
-          "author": "Aunt Zhang",
+          "author": "Sarah Chen",
           "time": "2 hours ago",
           "content": "Today I helped my neighbor trim the lawn using JinBean's tool rental service, very convenient!"
         },
         "post2": {
-          "author": "Master Li",
+          "author": "Michael Rodriguez",
           "time": "5 hours ago",
           "content": "Getting more and more maintenance orders through the JinBean platform, thank you for your trust!"
         },
         "post3": {
-          "author": "Ms. Wang",
+          "author": "Emma Thompson",
           "time": "1 day ago",
           "content": "JinBean's cleaning service is very professional, the house looks brand new, highly recommended!"
         }

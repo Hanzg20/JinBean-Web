@@ -12,11 +12,11 @@
     "made_with": "Fait avec <author></author>."
   },
   "Index": {
-    "meta_title": "JinBean - Plateforme de Services de Vie pour les Chinois d'Outre-mer",
-    "meta_description": "Une plateforme de services de vie pratique et efficace pour les Chinois d'outre-mer et les résidents locaux, incluant les services de ménage, la location d'outils et l'interaction communautaire",
+    "meta_title": "JinBean - Plateforme Canadienne de Services de Vie Intelligente et Communautaire Tout-en-Un",
+    "meta_description": "JinBean est une plateforme de services d'entraide et de style de vie de nouvelle génération, conçue pour unifier les services locaux fragmentés, permettre aux gens ordinaires de participer à la création de valeur, et favoriser des écosystèmes de soutien communautaire de confiance et à faible barrière.",
     "sponsors_title": "Sponsors",
     "hero": {
-      "description": "Une plateforme de services de vie pratique et efficace pour les Chinois d'outre-mer et les résidents locaux",
+      "description": "Plateforme Canadienne de Services de Vie Intelligente et Communautaire Tout-en-Un",
       "download_app": "Télécharger l'App",
       "learn_more": "En Savoir Plus"
     },
@@ -44,17 +44,17 @@
       "title": "Points Forts de JinBean Circle",
       "posts": {
         "post1": {
-          "author": "Tante Zhang",
+          "author": "Sarah Chen",
           "time": "Il y a 2 heures",
           "content": "Aujourd'hui, j'ai aidé mon voisin à tailler la pelouse en utilisant le service de location d'outils de JinBean, très pratique !"
         },
         "post2": {
-          "author": "Maître Li",
+          "author": "Michael Rodriguez",
           "time": "Il y a 5 heures",
           "content": "De plus en plus de commandes de maintenance via la plateforme JinBean, merci pour votre confiance !"
         },
         "post3": {
-          "author": "Mme Wang",
+          "author": "Emma Thompson",
           "time": "Il y a 1 jour",
           "content": "Le service de nettoyage de JinBean est très professionnel, la maison est comme neuve, fortement recommandé !"
         }
