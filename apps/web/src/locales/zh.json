@@ -1,20 +1,7 @@
 {
-  "RootLayout": {
-    "home_link": "首页",
-    "about_link": "关于",
-    "counter_link": "计数器",
-    "portfolio_link": "作品集",
-    "sign_in_link": "登录",
-    "sign_up_link": "注册"
-  },
-  "BaseTemplate": {
-    "description": "使用 Tailwind CSS 的 Nextjs 样板启动代码",
-    "made_with": "由 <author></author> 制作。"
-  },
   "Index": {
     "meta_title": "JinBean – 构建可信、便捷、互助的智慧社区生活平台",
     "meta_description": "JinBean 是一个融合\"服务聚合 + 共享租赁 + 社区互助\"于一体的智慧生活平台，专注为加拿大各地多元文化背景的居民，提供便捷、可信、低门槛的日常服务与技能互助网络。",
-    "sponsors_title": "赞助商",
     "hero": {
       "description": "构建可信、便捷、互助的智慧社区生活平台",
       "download_app": "下载 App",
@@ -61,64 +48,20 @@
       }
     }
   },
-  "Counter": {
-    "meta_title": "计数器",
-    "meta_description": "数据库操作示例",
-    "loading_counter": "加载计数器中...",
-    "security_powered_by": "安全、机器人检测和速率限制由"
-  },
-  "CounterForm": {
-    "presentation": "计数器存储在数据库中，并通过您提供的值递增。",
-    "label_increment": "递增值",
-    "button_increment": "递增"
-  },
-  "CurrentCount": {
-    "count": "计数: {count}"
-  },
-  "About": {
-    "meta_title": "关于",
-    "meta_description": "关于页面描述",
-    "about_paragraph": "欢迎来到我们的关于页面！我们是一个充满激情的团队，致力于创造令人惊叹的软件。",
-    "translation_powered_by": "翻译由"
-  },
-  "Portfolio": {
-    "meta_title": "作品集",
-    "meta_description": "欢迎来到我的作品集页面！",
-    "presentation": "欢迎来到我的作品集页面！在这里您将找到我精心策划的作品和成就集合。通过这个作品集，我旨在展示我的专业知识、创造力以及我能为您的项目带来的价值。",
-    "portfolio_name": "作品集 {name}",
-    "error_reporting_powered_by": "错误报告由",
-    "coverage_powered_by": "代码覆盖率由"
-  },
-  "PortfolioSlug": {
-    "meta_title": "作品集 {slug}",
-    "meta_description": "作品集 {slug} 描述",
-    "header": "作品集 {slug}",
-    "content": "为企业活动创建了一套宣传材料和品牌元素。制作了视觉统一的主题，包括标志、海报、横幅和数字资产。整合了客户的品牌身份，同时注入了现代和创新的方法。",
-    "code_review_powered_by": "代码审查由"
-  },
-  "SignIn": {
-    "meta_title": "登录",
-    "meta_description": "通过我们用户友好的登录流程无缝登录您的账户。"
-  },
-  "SignUp": {
-    "meta_title": "注册",
-    "meta_description": "通过我们直观的注册流程轻松创建账户。"
-  },
-  "Dashboard": {
-    "meta_title": "仪表板",
-    "hello_message": "你好 {email}！",
-    "alternative_message": "想使用相同的技术栈更快地构建您的 SaaS？试试 <url></url>。"
-  },
-  "UserProfile": {
-    "meta_title": "用户资料"
-  },
-  "DashboardLayout": {
-    "dashboard_link": "仪表板",
-    "user_profile_link": "管理您的账户",
-    "sign_out": "退出登录"
-  },
   "home": "首页",
   "services": "服务",
   "community": "社区",
-  "blog": "博客"
-}
+  "blog": "博客",
+  "about": "关于我们",
+  "join": "入驻",
+  "login": "登录",
+  "register": "注册",
+  "button": {
+    "submit": "提交",
+    "cancel": "取消",
+    "download": "下载 App"
+  },
+  "footer": {
+    "copyright": "版权所有 © 2024 金豆荚"
+  }
+} 
