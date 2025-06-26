@@ -116,5 +116,9 @@
     "dashboard_link": "仪表板",
     "user_profile_link": "管理您的账户",
     "sign_out": "退出登录"
-  }
+  },
+  "home": "首页",
+  "services": "服务",
+  "community": "社区",
+  "blog": "博客"
 }
