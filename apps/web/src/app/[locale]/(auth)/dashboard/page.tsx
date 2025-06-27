@@ -6,7 +6,8 @@ type IDashboardProps = {
 };
 
 export async function generateMetadata(props: IDashboardProps) {
-  const { locale } = await props.params;
+  // const { locale } = await props.params;
+  await props.params;
   // const t = await getTranslations({
   //   locale,
   //   namespace: 'Dashboard',

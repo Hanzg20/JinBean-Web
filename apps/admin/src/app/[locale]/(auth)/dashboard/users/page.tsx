@@ -5,7 +5,7 @@ type IUsersProps = {
 };
 
 export async function generateMetadata(props: IUsersProps) {
-  const { locale } = await props.params;
+  await props.params;
 
   return {
     title: '用户管理 - 金豆荚 JinBean',
