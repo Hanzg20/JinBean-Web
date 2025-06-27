@@ -1,5 +1,4 @@
 import React from 'react';
-import { getTranslations } from 'next-intl/server';
 import { Hello } from '@/components/Hello';
 
 type IDashboardProps = {
@@ -8,13 +7,13 @@ type IDashboardProps = {
 
 export async function generateMetadata(props: IDashboardProps) {
   const { locale } = await props.params;
-  const t = await getTranslations({
-    locale,
-    namespace: 'Dashboard',
-  });
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Dashboard',
+  // });
 
   return {
-    title: t('meta_title'),
+    title: 'Dashboard',
   };
 }
 

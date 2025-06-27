@@ -35,7 +35,7 @@ export default function CounterPage() {
       </div>
 
       <div className="mt-5 text-center text-sm">
-        {`${t('security_powered_by')} `}
+        {`${t('security_powered_by' as any)} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://launch.arcjet.com/Q6eLbRE"
