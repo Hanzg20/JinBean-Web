@@ -84,5 +84,9 @@
   "UserProfile": {
     "meta_title": "Profil Utilisateur",
     "meta_description": "Consultez et modifiez vos informations personnelles."
+  },
+  "Counter": {
+    "meta_title": "Compteur",
+    "meta_description": "Une page de compteur simple."
   }
 } 

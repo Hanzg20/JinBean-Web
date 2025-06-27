@@ -84,5 +84,9 @@
   "UserProfile": {
     "meta_title": "User Profile",
     "meta_description": "View and edit your personal information."
+  },
+  "Counter": {
+    "meta_title": "Counter",
+    "meta_description": "A simple counter page."
   }
 } 
