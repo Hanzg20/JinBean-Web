@@ -71,5 +71,10 @@
   "SignUp": {
     "meta_title": "注册",
     "meta_description": "通过我们直观的注册流程轻松创建账户。"
+  },
+  "DashboardLayout": {
+    "dashboard_link": "仪表板",
+    "user_profile_link": "用户资料",
+    "sign_out": "退出登录"
   }
 } 
