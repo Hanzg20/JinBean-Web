@@ -76,5 +76,9 @@
     "dashboard_link": "仪表板",
     "user_profile_link": "用户资料",
     "sign_out": "退出登录"
+  },
+  "Dashboard": {
+    "meta_title": "仪表板",
+    "meta_description": "管理您的账户和服务。"
   }
 } 

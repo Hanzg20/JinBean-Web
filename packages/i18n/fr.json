@@ -76,5 +76,9 @@
     "dashboard_link": "Tableau de Bord",
     "user_profile_link": "Profil Utilisateur",
     "sign_out": "Se Déconnecter"
+  },
+  "Dashboard": {
+    "meta_title": "Tableau de Bord",
+    "meta_description": "Gérez votre compte et vos services."
   }
 } 

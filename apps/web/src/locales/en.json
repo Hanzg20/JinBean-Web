@@ -76,5 +76,9 @@
     "dashboard_link": "Dashboard",
     "user_profile_link": "User Profile",
     "sign_out": "Sign Out"
+  },
+  "Dashboard": {
+    "meta_title": "Dashboard",
+    "meta_description": "Manage your account and services."
   }
 } 
