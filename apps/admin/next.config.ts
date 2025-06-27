@@ -61,3 +61,4 @@ if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
 
 const nextConfig = configWithPlugins;
 export default nextConfig;
+export const output = 'export';

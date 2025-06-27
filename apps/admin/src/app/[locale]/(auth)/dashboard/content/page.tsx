@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 
 type IContentProps = {
@@ -344,3 +345,6 @@ export default async function Content(props: IContentProps) {
     </div>
   );
 } 
+=======
+import { setRequestLocale } from 'next-intl/server'; 
+>>>>>>> 6bc7551 (fix(i18n): monorepo 根目录纳入所有语言包和子包，自动修复并保持一致性)
