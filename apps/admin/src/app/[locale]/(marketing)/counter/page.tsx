@@ -21,7 +21,7 @@ export async function generateMetadata(props: {
 }
 
 export default function Counter() {
-  const t = useTranslations('Counter');
+  const t = useTranslations('Counter' as any);
 
   return (
     <>

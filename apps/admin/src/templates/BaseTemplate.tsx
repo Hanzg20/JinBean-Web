@@ -6,7 +6,7 @@ export const BaseTemplate = (props: {
   rightNav?: React.ReactNode;
   children: React.ReactNode;
 }) => {
-  const t = useTranslations('BaseTemplate');
+  const t = useTranslations('BaseTemplate' as any);
 
   return (
     <div className="w-full px-1 text-gray-700 antialiased">
@@ -16,7 +16,7 @@ export const BaseTemplate = (props: {
             <h1 className="text-3xl font-bold text-gray-900">
               {AppConfig.name}
             </h1>
-            <h2 className="text-xl">{t('description')}</h2>
+            <h2 className="text-xl">{(t as any)('description')}</h2>
           </div>
 
           <div className="flex justify-between">
@@ -38,7 +38,7 @@ export const BaseTemplate = (props: {
 
         <footer className="border-t border-gray-300 py-8 text-center text-sm">
           {`© Copyright ${new Date().getFullYear()} ${AppConfig.name}. `}
-          {t.rich('made_with', {
+          {(t as any).rich('made_with', {
             author: () => (
               <a
                 href="https://creativedesignsguru.com"
