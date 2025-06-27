@@ -25,8 +25,8 @@ export async function generateMetadata(props: IPortfolioDetailProps) {
   });
 
   return {
-    title: t('meta_title', { slug }),
-    description: t('meta_description', { slug }),
+    title: (t as any)('meta_title', { slug }),
+    description: (t as any)('meta_description', { slug }),
   };
 }
 
@@ -39,11 +39,11 @@ export default async function PortfolioDetail(props: IPortfolioDetailProps) {
 
   return (
     <>
-      <h1 className="capitalize">{t('header', { slug })}</h1>
-      <p>{t('content')}</p>
+      <h1 className="capitalize">{(t as any)('header', { slug })}</h1>
+      <p>{(t as any)('content')}</p>
 
       <div className="mt-5 text-center text-sm">
-        {`${t('code_review_powered_by')} `}
+        {`${(t as any)('code_review_powered_by')} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"

@@ -13,8 +13,8 @@ export async function generateMetadata(props: IAboutProps) {
   });
 
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: (t as any)('meta_title'),
+    description: (t as any)('meta_description'),
   };
 }
 
@@ -28,10 +28,10 @@ export default async function About(props: IAboutProps) {
 
   return (
     <>
-      <p>{t('about_paragraph')}</p>
+      <p>{(t as any)('about_paragraph')}</p>
 
       <div className="mt-2 text-center text-sm">
-        {`${t('translation_powered_by')} `}
+        {`${(t as any)('translation_powered_by')} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://l.crowdin.com/next-js"

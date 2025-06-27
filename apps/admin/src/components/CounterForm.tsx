@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { CounterValidation } from '@/validations/CounterValidation';
 
 export const CounterForm = () => {
-  const t = useTranslations('CounterForm');
+  const t = useTranslations('CounterForm' as any);
   const form = useForm({
     resolver: zodResolver(CounterValidation),
     defaultValues: {
@@ -31,10 +31,10 @@ export const CounterForm = () => {
 
   return (
     <form onSubmit={handleIncrement}>
-      <p>{t('presentation')}</p>
+      <p>{(t as any)('presentation')}</p>
       <div>
         <label className="text-sm font-bold text-gray-700" htmlFor="increment">
-          {t('label_increment')}
+          {(t as any)('label_increment')}
           <input
             id="increment"
             type="number"
@@ -54,7 +54,7 @@ export const CounterForm = () => {
           type="submit"
           disabled={form.formState.isSubmitting}
         >
-          {t('button_increment')}
+          {(t as any)('button_increment')}
         </button>
       </div>
     </form>

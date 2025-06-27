@@ -28,13 +28,13 @@ export default function Counter() {
       <CounterForm />
 
       <div className="mt-3">
-        <Suspense fallback={<p>{t('loading_counter')}</p>}>
+        <Suspense fallback={<p>{(t as any)('loading_counter')}</p>}>
           <CurrentCount />
         </Suspense>
       </div>
 
       <div className="mt-5 text-center text-sm">
-        {`${t('security_powered_by' as any)} `}
+        {`${(t as any)('security_powered_by')} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://launch.arcjet.com/Q6eLbRE"

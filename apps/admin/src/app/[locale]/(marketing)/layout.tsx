@@ -29,7 +29,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {t('home_link')}
+                {(t as any)('home_link')}
               </Link>
             </li>
             <li>
@@ -37,7 +37,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/about/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {t('about_link')}
+                {(t as any)('about_link')}
               </Link>
             </li>
             <li>
@@ -45,7 +45,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/counter/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {t('counter_link')}
+                {(t as any)('counter_link')}
               </Link>
             </li>
             <li>
@@ -53,7 +53,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/portfolio/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {t('portfolio_link')}
+                {(t as any)('portfolio_link')}
               </Link>
             </li>
             <li>
@@ -73,7 +73,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/sign-in/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {t('sign_in_link')}
+                {(t as any)('sign_in_link')}
               </Link>
             </li>
 
@@ -82,7 +82,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/sign-up/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {t('sign_up_link')}
+                {(t as any)('sign_up_link')}
               </Link>
             </li>
 
