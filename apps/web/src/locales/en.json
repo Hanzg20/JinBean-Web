@@ -87,7 +87,8 @@
   },
   "Counter": {
     "meta_title": "Counter",
-    "meta_description": "A simple counter page."
+    "meta_description": "A simple counter page.",
+    "loading_counter": "Loading..."
   },
   "Portfolio": {
     "meta_title": "Portfolio",

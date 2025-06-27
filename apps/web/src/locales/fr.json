@@ -87,7 +87,8 @@
   },
   "Counter": {
     "meta_title": "Compteur",
-    "meta_description": "Une page de compteur simple."
+    "meta_description": "Une page de compteur simple.",
+    "loading_counter": "Chargement..."
   },
   "Portfolio": {
     "meta_title": "Portfolio",
