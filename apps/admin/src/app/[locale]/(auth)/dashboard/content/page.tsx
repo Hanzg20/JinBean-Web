@@ -5,8 +5,7 @@ type IContentProps = {
 };
 
 export async function generateMetadata(props: IContentProps) {
-  const { locale } = await props.params;
-
+  await props.params;
   return {
     title: '内容管理 - 金豆荚 JinBean',
     description: '管理博客文章、公告和页面内容',

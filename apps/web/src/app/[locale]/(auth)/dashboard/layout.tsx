@@ -1,3 +1,4 @@
+import React from 'react';
 import { SignOutButton } from '@clerk/nextjs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
@@ -26,7 +27,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
               href="/dashboard/"
               className="border-none text-gray-700 hover:text-gray-900"
             >
-              {t('dashboard_link')}
+              {t('DashboardLayout.dashboard_link')}
             </Link>
           </li>
           <li>
@@ -34,7 +35,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
               href="/dashboard/user-profile/"
               className="border-none text-gray-700 hover:text-gray-900"
             >
-              {t('user_profile_link')}
+              {t('DashboardLayout.user_profile_link')}
             </Link>
           </li>
         </>
@@ -47,7 +48,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
                 className="border-none text-gray-700 hover:text-gray-900"
                 type="button"
               >
-                {t('sign_out')}
+                {t('DashboardLayout.sign_out')}
               </button>
             </SignOutButton>
           </li>

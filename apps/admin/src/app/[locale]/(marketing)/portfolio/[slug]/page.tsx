@@ -31,10 +31,9 @@ export async function generateMetadata(props: IPortfolioDetailProps) {
 }
 
 export default async function PortfolioDetail(props: IPortfolioDetailProps) {
-  const { slug, locale } = await props.params;
-  setRequestLocale(locale);
+  const { slug } = await props.params;
   const t = await getTranslations({
-    locale,
+    locale: 'en',
     namespace: 'PortfolioSlug',
   });
 

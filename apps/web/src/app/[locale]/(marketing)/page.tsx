@@ -1,3 +1,4 @@
+import React from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Button from '@/../../libs/ui/components/Button';
 import Logo from '@/../../libs/ui/components/Logo';
@@ -14,12 +15,12 @@ export async function generateMetadata(props: IIndexProps) {
   });
 
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: t('Index.meta_title'),
+    description: t('Index.meta_description'),
   };
 }
 
-export default async function Index(props: IIndexProps) {
+export default function MarketingPage(props: IIndexProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({

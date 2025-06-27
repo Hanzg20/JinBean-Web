@@ -1,3 +1,4 @@
+import React from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { routing } from '@/libs/I18nRouting';
@@ -30,7 +31,7 @@ export async function generateMetadata(props: IPortfolioDetailProps) {
   };
 }
 
-export default async function PortfolioDetail(props: IPortfolioDetailProps) {
+export default function PortfolioSlugPage(props: IPortfolioDetailProps) {
   const { slug, locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({

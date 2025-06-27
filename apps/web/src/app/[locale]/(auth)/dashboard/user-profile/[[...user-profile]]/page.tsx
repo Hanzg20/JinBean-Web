@@ -1,3 +1,4 @@
+import React from 'react';
 import { UserProfile } from '@clerk/nextjs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getI18nPath } from '@/utils/Helpers';
@@ -14,11 +15,11 @@ export async function generateMetadata(props: IUserProfileProps) {
   });
 
   return {
-    title: t('meta_title'),
+    title: t('UserProfile.meta_title'),
   };
 }
 
-export default async function UserProfilePage(props: IUserProfileProps) {
+export default function UserProfilePage() {
   const { locale } = await props.params;
   setRequestLocale(locale);
 

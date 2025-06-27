@@ -1,3 +1,4 @@
+import React from 'react';
 import { SignIn } from '@clerk/nextjs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getI18nPath } from '@/utils/Helpers';
@@ -14,12 +15,12 @@ export async function generateMetadata(props: ISignInProps) {
   });
 
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: t('SignIn.meta_title'),
+    description: t('SignIn.meta_description'),
   };
 }
 
-export default async function SignInPage(props: ISignInProps) {
+export default function SignInPage(props: ISignInProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
