@@ -15,14 +15,13 @@ export async function generateMetadata(props: ISignInProps) {
   });
 
   return {
-    title: t('SignIn.meta_title'),
-    description: t('SignIn.meta_description'),
+    title: t('meta_title'),
+    description: t('meta_description'),
   };
 }
 
-export default function SignInPage(props: ISignInProps) {
+export default async function SignInPage(props: ISignInProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-
   return <SignIn path={getI18nPath('/sign-in', locale)} />;
 }

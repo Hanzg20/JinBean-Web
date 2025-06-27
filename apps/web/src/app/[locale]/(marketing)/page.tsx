@@ -15,12 +15,12 @@ export async function generateMetadata(props: IIndexProps) {
   });
 
   return {
-    title: t('Index.meta_title'),
-    description: t('Index.meta_description'),
+    title: t('meta_title'),
+    description: t('meta_description'),
   };
 }
 
-export default function MarketingPage(props: IIndexProps) {
+export default async function MarketingPage(props: IIndexProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({

@@ -15,14 +15,13 @@ export async function generateMetadata(props: IUserProfileProps) {
   });
 
   return {
-    title: t('UserProfile.meta_title'),
+    title: t('meta_title'),
   };
 }
 
-export default function UserProfilePage() {
+export default async function UserProfilePage(props: IUserProfileProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-
   return (
     <div className="my-6 -ml-16">
       <UserProfile path={getI18nPath('/dashboard/user-profile', locale)} />

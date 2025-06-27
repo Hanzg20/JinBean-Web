@@ -14,11 +14,11 @@ export async function generateMetadata(props: IDashboardProps) {
   });
 
   return {
-    title: t('Dashboard.meta_title'),
+    title: t('meta_title'),
   };
 }
 
-export default function DashboardPage(props: IDashboardProps) {
+export default async function DashboardPage(props: IDashboardProps) {
   await props.params; // 确保params被解析，但不需要使用locale
   return (
     <div className="py-5 [&_p]:my-6">

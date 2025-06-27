@@ -15,14 +15,13 @@ export async function generateMetadata(props: ISignUpProps) {
   });
 
   return {
-    title: t('SignUp.meta_title'),
-    description: t('SignUp.meta_description'),
+    title: t('meta_title'),
+    description: t('meta_description'),
   };
 }
 
-export default function SignUpPage() {
+export default async function SignUpPage(props: ISignUpProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-
   return <SignUp path={getI18nPath('/sign-up', locale)} />;
 }
