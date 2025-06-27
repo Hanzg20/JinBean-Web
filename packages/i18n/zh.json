@@ -88,8 +88,7 @@
   "Counter": {
     "meta_title": "计数器",
     "meta_description": "一个简单的计数器页面。",
-    "loading_counter": "加载中...",
-    "security_powered_by": "安全防护由"
+    "loading_counter": "加载中..."
   },
   "Portfolio": {
     "meta_title": "作品集",

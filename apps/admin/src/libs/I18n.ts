@@ -31,5 +31,4 @@ export default getRequestConfig(async ({ requestLocale }) => {
     messages: mergedMessages,
   };
 });
-
-// Fallback mechanism added 
+// Fallback mechanism added
