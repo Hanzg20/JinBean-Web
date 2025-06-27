@@ -5,7 +5,8 @@ type IServicesProps = {
 };
 
 export async function generateMetadata(props: IServicesProps) {
-  const { locale } = await props.params;
+  // const { locale } = await props.params;
+  await props.params;
 
   return {
     title: '服务审核 - 金豆荚 JinBean',
@@ -14,8 +15,8 @@ export async function generateMetadata(props: IServicesProps) {
 }
 
 export default async function Services(props: IServicesProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+  // const { locale } = await props.params;
+  setRequestLocale((await props.params).locale);
 
   return (
     <div className="min-h-screen bg-gray-50">
