@@ -31,7 +31,7 @@ export async function generateMetadata(props: IPortfolioDetailProps) {
   };
 }
 
-export default function PortfolioSlugPage(props: IPortfolioDetailProps) {
+export default async function PortfolioSlugPage(props: IPortfolioDetailProps) {
   const { slug, locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
@@ -41,11 +41,11 @@ export default function PortfolioSlugPage(props: IPortfolioDetailProps) {
 
   return (
     <>
-      <h1 className="capitalize">{t('header', { slug })}</h1>
-      <p>{t('content')}</p>
+      <h1 className="capitalize">{t('header' as any, { slug } as any)}</h1>
+      <p>{t('content' as any)}</p>
 
       <div className="mt-5 text-center text-sm">
-        {`${t('code_review_powered_by')} `}
+        {`${t('code_review_powered_by' as any)} `}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
