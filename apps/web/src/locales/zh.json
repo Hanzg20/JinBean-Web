@@ -1,0 +1,23 @@
+// JinBean Web 中文语言包
+// 根级 key：页面通用、导航、按钮等
+{
+  // 注册、关于、入驻、登录等主导航
+  "register": "注册",
+  "about": "关于我们",
+  "join": "入驻",
+  "login": "登录",
+  // 页脚信息
+  "footer": {
+    "copyright": "版权所有 © 2024 金豆荚"
+  },
+  // 登录页面元信息
+  "SignIn": {
+    "meta_title": "登录",
+    "meta_description": "使用我们用户友好的登录流程无缝登录您的账户。"
+  },
+  // 注册页面元信息
+  "SignUp": {
+    "meta_title": "注册",
+    "meta_description": "通过我们直观的注册流程轻松创建账户。"
+  }
+} 

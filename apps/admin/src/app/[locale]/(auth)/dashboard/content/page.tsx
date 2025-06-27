@@ -1,0 +1,1 @@
+import { setRequestLocale } from 'next-intl/server'; 

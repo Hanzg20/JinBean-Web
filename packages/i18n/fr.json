@@ -1,0 +1,110 @@
+{
+  "Index": {
+    "meta_title": "JinBean – Construire une plateforme de vie communautaire intelligente, fiable, pratique et solidaire",
+    "meta_description": "JinBean est une plateforme de vie intelligente intégrant 'agrégation de services + location partagée + entraide communautaire', axée sur la fourniture de services quotidiens pratiques, fiables et accessibles, ainsi qu'un réseau d'entraide de compétences pour les résidents de divers horizons culturels à travers le Canada.",
+    "hero": {
+      "description": "Construire une plateforme de vie communautaire intelligente, fiable, pratique et solidaire",
+      "download_app": "Télécharger l'application",
+      "learn_more": "En savoir plus"
+    },
+    "services": {
+      "title": "Nos services",
+      "housekeeping": {
+        "title": "Services ménagers",
+        "description": "Nettoyage, réparation, déménagement professionnels pour une vie à domicile confortable."
+      },
+      "tools": {
+        "title": "Location d'outils",
+        "description": "Partagez des outils de pelouse, équipements de réparation, etc. selon les besoins pour économiser."
+      },
+      "community": {
+        "title": "Interaction communautaire",
+        "description": "Communauté JinBean, partagez des expériences de vie et rencontrez des voisins."
+      }
+    },
+    "join": {
+      "title": "Devenez prestataire de services",
+      "description": "Si vous avez des compétences professionnelles, rejoignez notre équipe pour fournir des services de qualité à la communauté.",
+      "cta": "Rejoindre maintenant"
+    },
+    "community": {
+      "title": "Moments forts de JinBean",
+      "posts": {
+        "post1": {
+          "author": "Alice Chen",
+          "time": "il y a 2 heures",
+          "content": "Aujourd'hui, j'ai aidé un voisin à tondre la pelouse grâce au service de location d'outils de JinBean. Super pratique !"
+        },
+        "post2": {
+          "author": "Rodriguez",
+          "time": "il y a 5 heures",
+          "content": "Je reçois de plus en plus de commandes de réparation via JinBean. Merci pour votre confiance !"
+        },
+        "post3": {
+          "author": "Emma Thompson",
+          "time": "il y a 1 jour",
+          "content": "Le service de nettoyage de JinBean est très professionnel. Ma maison est comme neuve. Je recommande !"
+        }
+      }
+    }
+  },
+  "home": "Accueil",
+  "services": "Services",
+  "community": "Communauté",
+  "blog": "Blog",
+  "about": "À propos",
+  "join": "Rejoindre",
+  "login": "Connexion",
+  "register": "S'inscrire",
+  "button": {
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "download": "Télécharger l'application"
+  },
+  "footer": {
+    "copyright": "Copyright © 2024 JinBean"
+  },
+  "SignIn": {
+    "meta_title": "Connexion",
+    "meta_description": "Connectez-vous facilement à votre compte grâce à notre processus de connexion convivial."
+  },
+  "SignUp": {
+    "meta_title": "Inscription",
+    "meta_description": "Créez facilement un compte grâce à notre processus d'inscription intuitif."
+  },
+  "DashboardLayout": {
+    "dashboard_link": "Tableau de bord",
+    "user_profile_link": "Profil utilisateur",
+    "sign_out": "Déconnexion"
+  },
+  "Dashboard": {
+    "meta_title": "Tableau de bord",
+    "meta_description": "Gérez votre compte et vos services."
+  },
+  "UserProfile": {
+    "meta_title": "Profil utilisateur",
+    "meta_description": "Consultez et modifiez vos informations personnelles."
+  },
+  "Counter": {
+    "meta_title": "Compteur",
+    "meta_description": "Une page de compteur simple.",
+    "loading_counter": "Chargement...",
+    "security_powered_by": "Sécurité propulsée par"
+  },
+  "Portfolio": {
+    "meta_title": "Portfolio",
+    "meta_description": "Présentez vos projets et réalisations."
+  },
+  "PortfolioSlug": {
+    "meta_title": "Détails du portfolio",
+    "meta_description": "Informations détaillées sur le projet du portfolio."
+  },
+  "RootLayout": {
+    "meta_title": "Panneau d'administration",
+    "meta_description": "Disposition principale du panneau d'administration."
+  },
+  "About": {
+    "meta_title": "À propos de nous",
+    "meta_description": "En savoir plus sur notre équipe et notre mission."
+  }
+} 

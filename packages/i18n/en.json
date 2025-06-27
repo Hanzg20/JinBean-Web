@@ -1,0 +1,110 @@
+{
+  "Index": {
+    "meta_title": "JinBean – Build a trusted, convenient, and mutual smart community life platform",
+    "meta_description": "JinBean is a smart life platform integrating 'service aggregation + shared rental + community mutual assistance', focusing on providing convenient, trustworthy, and low-threshold daily services and skill-sharing networks for residents from diverse cultural backgrounds across Canada.",
+    "hero": {
+      "description": "Build a trusted, convenient, and mutual smart community life platform",
+      "download_app": "Download App",
+      "learn_more": "Learn More"
+    },
+    "services": {
+      "title": "Our Services",
+      "housekeeping": {
+        "title": "Housekeeping",
+        "description": "Professional cleaning, repair, moving, and more for a comfortable home life."
+      },
+      "tools": {
+        "title": "Tool Rental",
+        "description": "Share lawn tools, repair equipment, and more as needed to save costs."
+      },
+      "community": {
+        "title": "Community Interaction",
+        "description": "JinBean Circle community, share life experiences, and meet neighbors."
+      }
+    },
+    "join": {
+      "title": "Become a Service Provider",
+      "description": "If you have professional skills, join our service team to provide quality services to the community.",
+      "cta": "Join Now"
+    },
+    "community": {
+      "title": "JinBean Circle Highlights",
+      "posts": {
+        "post1": {
+          "author": "Alice Chen",
+          "time": "2 hours ago",
+          "content": "Helped a neighbor mow the lawn today using JinBean's tool rental service. Super convenient!"
+        },
+        "post2": {
+          "author": "Rodriguez",
+          "time": "5 hours ago",
+          "content": "Getting more repair orders through JinBean platform. Thanks for the trust!"
+        },
+        "post3": {
+          "author": "Emma Thompson",
+          "time": "1 day ago",
+          "content": "JinBean's cleaning service is very professional. My home looks brand new. Highly recommended!"
+        }
+      }
+    }
+  },
+  "home": "Home",
+  "services": "Services",
+  "community": "Community",
+  "blog": "Blog",
+  "about": "About Us",
+  "join": "Join",
+  "login": "Login",
+  "register": "Register",
+  "button": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "download": "Download App"
+  },
+  "footer": {
+    "copyright": "Copyright © 2024 JinBean"
+  },
+  "SignIn": {
+    "meta_title": "Sign In",
+    "meta_description": "Seamlessly sign in to your account with our user-friendly login process."
+  },
+  "SignUp": {
+    "meta_title": "Sign Up",
+    "meta_description": "Easily create an account with our intuitive registration process."
+  },
+  "DashboardLayout": {
+    "dashboard_link": "Dashboard",
+    "user_profile_link": "User Profile",
+    "sign_out": "Sign Out"
+  },
+  "Dashboard": {
+    "meta_title": "Dashboard",
+    "meta_description": "Manage your account and services."
+  },
+  "UserProfile": {
+    "meta_title": "User Profile",
+    "meta_description": "View and edit your personal information."
+  },
+  "Counter": {
+    "meta_title": "Counter",
+    "meta_description": "A simple counter page.",
+    "loading_counter": "Loading...",
+    "security_powered_by": "Security powered by"
+  },
+  "Portfolio": {
+    "meta_title": "Portfolio",
+    "meta_description": "Showcase your projects and achievements."
+  },
+  "PortfolioSlug": {
+    "meta_title": "Portfolio Details",
+    "meta_description": "Detailed information about the portfolio project."
+  },
+  "RootLayout": {
+    "meta_title": "Admin Panel",
+    "meta_description": "Main layout for the admin panel."
+  },
+  "About": {
+    "meta_title": "About Us",
+    "meta_description": "Learn about our team and mission."
+  }
+} 

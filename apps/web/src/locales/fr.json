@@ -1,0 +1,21 @@
+{
+  "register": "S'inscrire",
+  "about": "À Propos",
+  "join": "Rejoindre",
+  "login": "Connexion",
+  "home": "Accueil",
+  "services": "Services",
+  "community": "Communauté",
+  "blog": "Blog",
+  "footer": {
+    "copyright": "Copyright © 2024 JinBean"
+  },
+  "SignIn": {
+    "meta_title": "Se connecter",
+    "meta_description": "Connectez-vous à votre compte en toute simplicité avec notre processus de connexion convivial."
+  },
+  "SignUp": {
+    "meta_title": "S'inscrire",
+    "meta_description": "Créez facilement un compte grâce à notre processus d'inscription intuitif."
+  }
+} 
