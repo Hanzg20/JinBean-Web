@@ -5,7 +5,7 @@ type IDashboardProps = {
 };
 
 export async function generateMetadata(props: IDashboardProps) {
-  const { locale } = await props.params;
+  await props.params;
 
   return {
     title: '管理后台 - 金豆荚 JinBean',
@@ -14,8 +14,8 @@ export async function generateMetadata(props: IDashboardProps) {
 }
 
 export default async function Dashboard(props: IDashboardProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+  await props.params;
+  setRequestLocale((await props.params).locale);
 
   return (
     <div className="min-h-screen bg-gray-50">
