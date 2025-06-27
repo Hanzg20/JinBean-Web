@@ -88,5 +88,21 @@
   "Counter": {
     "meta_title": "Counter",
     "meta_description": "A simple counter page."
+  },
+  "Portfolio": {
+    "meta_title": "Portfolio",
+    "meta_description": "Showcase your projects and achievements."
+  },
+  "PortfolioSlug": {
+    "meta_title": "Portfolio Details",
+    "meta_description": "Detailed information about the portfolio project."
+  },
+  "RootLayout": {
+    "meta_title": "Admin Panel",
+    "meta_description": "Main layout for the admin panel."
+  },
+  "About": {
+    "meta_title": "About Us",
+    "meta_description": "Learn about our team and mission."
   }
 } 

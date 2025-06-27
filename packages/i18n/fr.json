@@ -88,5 +88,21 @@
   "Counter": {
     "meta_title": "Compteur",
     "meta_description": "Une page de compteur simple."
+  },
+  "Portfolio": {
+    "meta_title": "Portfolio",
+    "meta_description": "Présentez vos projets et réalisations."
+  },
+  "PortfolioSlug": {
+    "meta_title": "Détails du Portfolio",
+    "meta_description": "Informations détaillées sur le projet du portfolio."
+  },
+  "RootLayout": {
+    "meta_title": "Panneau d'administration",
+    "meta_description": "Mise en page principale du panneau d'administration."
+  },
+  "About": {
+    "meta_title": "À Propos",
+    "meta_description": "En savoir plus sur notre équipe et notre mission."
   }
 } 

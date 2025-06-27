@@ -88,5 +88,21 @@
   "Counter": {
     "meta_title": "计数器",
     "meta_description": "一个简单的计数器页面。"
+  },
+  "Portfolio": {
+    "meta_title": "作品集",
+    "meta_description": "展示您的项目和成就。"
+  },
+  "PortfolioSlug": {
+    "meta_title": "作品详情",
+    "meta_description": "作品集项目的详细信息。"
+  },
+  "RootLayout": {
+    "meta_title": "管理后台",
+    "meta_description": "管理后台主布局。"
+  },
+  "About": {
+    "meta_title": "关于我们",
+    "meta_description": "了解我们的团队和使命。"
   }
 } 
