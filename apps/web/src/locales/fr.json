@@ -80,5 +80,9 @@
   "Dashboard": {
     "meta_title": "Tableau de Bord",
     "meta_description": "Gérez votre compte et vos services."
+  },
+  "UserProfile": {
+    "meta_title": "Profil Utilisateur",
+    "meta_description": "Consultez et modifiez vos informations personnelles."
   }
 } 

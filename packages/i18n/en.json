@@ -80,5 +80,9 @@
   "Dashboard": {
     "meta_title": "Dashboard",
     "meta_description": "Manage your account and services."
+  },
+  "UserProfile": {
+    "meta_title": "User Profile",
+    "meta_description": "View and edit your personal information."
   }
 } 
