@@ -1,9 +1,9 @@
+import type { ReactNode } from 'react';
 import { SignOutButton } from '@clerk/nextjs';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
-import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';
-import type { ReactNode } from 'react';
+import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 
 type DashboardLayoutProps = {
   children: ReactNode;

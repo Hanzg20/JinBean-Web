@@ -14,7 +14,7 @@ const globalForDb = globalThis as unknown as {
 // Tested and compatible with Next.js Boilerplate
 const createDbConnection = () => {
   const databaseUrl = Env.DATABASE_URL || 'postgresql://localhost:5433/admin';
-  
+
   return drizzle({
     connection: {
       connectionString: databaseUrl,
