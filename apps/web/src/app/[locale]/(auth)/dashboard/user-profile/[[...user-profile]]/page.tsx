@@ -7,6 +7,14 @@ type IUserProfileProps = {
   params: Promise<{ locale: string }>;
 };
 
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
 export async function generateMetadata(props: IUserProfileProps) {
   const { locale } = await props.params;
   const t = await getTranslations({

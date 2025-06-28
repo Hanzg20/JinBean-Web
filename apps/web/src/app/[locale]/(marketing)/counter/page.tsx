@@ -6,6 +6,14 @@ import React, { Suspense } from 'react';
 import { CounterForm } from '@/components/CounterForm';
 import { CurrentCount } from '@/components/CurrentCount';
 
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }) {

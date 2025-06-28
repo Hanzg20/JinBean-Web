@@ -3,11 +3,19 @@ import React from 'react';
 import Button from '@/../../libs/ui/components/Button';
 import Logo from '@/../../libs/ui/components/Logo';
 
-type IIndexProps = {
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+type IPageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata(props: IIndexProps) {
+export async function generateMetadata(props: IPageProps) {
   const { locale } = await props.params;
   const t = await getTranslations({
     locale,
@@ -20,7 +28,7 @@ export async function generateMetadata(props: IIndexProps) {
   };
 }
 
-export default async function MarketingPage(props: IIndexProps) {
+export default async function MarketingPage(props: IPageProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({

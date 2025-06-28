@@ -1,6 +1,14 @@
 import React from 'react';
 import { Hello } from '@/components/Hello';
 
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
 type IDashboardProps = {
   params: Promise<{ locale: string }>;
 };

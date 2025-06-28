@@ -1,5 +1,13 @@
 import { setRequestLocale } from 'next-intl/server';
 
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
 type IBlogProps = {
   params: Promise<{ locale: string }>;
 };

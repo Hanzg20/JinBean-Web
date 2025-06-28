@@ -12,6 +12,9 @@ const baseConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   serverExternalPackages: ['@electric-sql/pglite'],
+  output: 'export',
+  trailingSlash: true,
+  distDir: 'out',
 };
 
 // Initialize the Next-Intl plugin
@@ -45,11 +48,8 @@ if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
       enabled: true,
     },
 
-    // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
-    // This can increase your server load as well as your hosting bill.
-    // Note: Check that the configured route will not match with your Next.js middleware, otherwise reporting of client-
-    // side errors will fail.
-    tunnelRoute: '/monitoring',
+    // Disable tunnelRoute for static exports
+    // tunnelRoute: '/monitoring',
 
     // Automatically tree-shake Sentry logger statements to reduce bundle size
     disableLogger: true,
@@ -61,4 +61,3 @@ if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
 
 const nextConfig = configWithPlugins;
 export default nextConfig;
-export const output = 'export';

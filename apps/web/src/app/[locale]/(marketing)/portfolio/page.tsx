@@ -3,6 +3,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
 type IPortfolioProps = {
   params: Promise<{ locale: string }>;
 };
