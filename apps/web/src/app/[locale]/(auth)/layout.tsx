@@ -1,5 +1,5 @@
 import { ClerkProvider } from '@clerk/nextjs';
-import { setRequestLocale } from 'next-intl/server';
+// import { setRequestLocale } from 'next-intl/server';
 import { routing } from '@/libs/I18nRouting';
 import { ClerkLocalizations } from '@/utils/AppConfig';
 
@@ -10,7 +10,7 @@ type AuthLayoutProps = {
 
 export default async function AuthLayout(props: AuthLayoutProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
+  // setRequestLocale(locale);
 
   // Check if Clerk is configured
   const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;

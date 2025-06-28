@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -17,7 +17,7 @@ type IPortfolioProps = {
 
 export async function generateMetadata(props: IPortfolioProps) {
   const { locale } = await props.params;
-  const t = await getTranslations({
+  // const t = await getTranslations({
     locale,
     namespace: 'Portfolio',
   });
@@ -30,8 +30,8 @@ export async function generateMetadata(props: IPortfolioProps) {
 
 export default async function PortfolioPage(props: IPortfolioProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
-  const t = await getTranslations({
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
     locale,
     namespace: 'Portfolio',
   });

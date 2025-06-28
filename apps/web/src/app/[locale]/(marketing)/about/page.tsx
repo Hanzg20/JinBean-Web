@@ -1,4 +1,4 @@
-import { setRequestLocale } from 'next-intl/server';
+// import { setRequestLocale } from 'next-intl/server';
 
 export async function generateStaticParams() {
   return [
@@ -22,7 +22,7 @@ export async function generateMetadata(props: IAboutProps) {
 
 export default async function About(props: IAboutProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
+  // setRequestLocale(locale);
 
   return (
     <div className="relative container mx-auto py-12 px-4 overflow-hidden rounded-xl border-4 border-cyan-400 shadow-2xl animate-glow bg-white/80 backdrop-blur-md">

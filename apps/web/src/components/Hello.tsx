@@ -6,11 +6,11 @@
 //   console.warn('Clerk not properly configured:', error);
 // }
 
-// import { getTranslations } from 'next-intl/server';
+// // import { getTranslations } from 'next-intl/server';
 import { Sponsors } from './Sponsors';
 
 export const Hello = async () => {
-  // const t = await getTranslations();
+  // // const t = await getTranslations();
 
   return (
     <div>

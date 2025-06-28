@@ -1,5 +1,5 @@
 import { SignIn } from '@clerk/nextjs';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
 import React from 'react';
 import { getI18nPath } from '@/utils/Helpers';
 
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: ISignInProps) {
   const { locale } = await props.params;
-  const t = await getTranslations({
+  // const t = await getTranslations({
     locale,
     namespace: 'SignIn',
   });
@@ -30,7 +30,7 @@ export async function generateMetadata(props: ISignInProps) {
 
 export default async function SignInPage(props: ISignInProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
+  // setRequestLocale(locale);
 
   // Check if Clerk is configured
   const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;

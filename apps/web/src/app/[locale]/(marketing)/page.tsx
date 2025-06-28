@@ -1,4 +1,4 @@
-// import { getTranslations, setRequestLocale } from 'next-intl/server';
+// // // import { getTranslations, setRequestLocale } from 'next-intl/server';
 import React from 'react';
 import Button from '@/../../libs/ui/components/Button';
 import Logo from '@/../../libs/ui/components/Logo';
@@ -17,7 +17,7 @@ type IPageProps = {
 
 export async function generateMetadata(props: IPageProps) {
   const { locale } = await props.params;
-  // const t = await getTranslations({
+  // // const t = await getTranslations({
   //   locale,
   //   namespace: 'Index',
   // });
@@ -30,8 +30,8 @@ export async function generateMetadata(props: IPageProps) {
 
 export default async function MarketingPage(props: IPageProps) {
   const { locale } = await props.params;
-  // setRequestLocale(locale);
-  // const t = await getTranslations({
+  // // setRequestLocale(locale);
+  // // const t = await getTranslations({
   //   locale,
   //   namespace: 'Index',
   // });

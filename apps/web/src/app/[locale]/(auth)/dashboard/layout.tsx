@@ -1,5 +1,5 @@
 import { SignOutButton } from '@clerk/nextjs';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import React from 'react';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
@@ -12,8 +12,8 @@ type DashboardLayoutProps = {
 
 export default async function DashboardLayout(props: DashboardLayoutProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
-  const t = await getTranslations({
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
     locale,
     namespace: 'DashboardLayout',
   });

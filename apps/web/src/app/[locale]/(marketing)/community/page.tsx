@@ -1,4 +1,4 @@
-import { setRequestLocale } from 'next-intl/server';
+// import { setRequestLocale } from 'next-intl/server';
 
 export async function generateStaticParams() {
   return [
@@ -23,7 +23,7 @@ export async function generateMetadata(props: ICommunityProps) {
 
 export default async function Community(props: ICommunityProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
+  // setRequestLocale(locale);
 
   return (
     <div className="min-h-screen bg-gray-50">
