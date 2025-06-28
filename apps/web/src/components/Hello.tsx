@@ -4,11 +4,11 @@ import { Sponsors } from './Sponsors';
 
 export const Hello = async () => {
   const t = await getTranslations();
-  
+
   // Check if Clerk is configured
   const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   let user = null;
-  
+
   if (clerkPublishableKey) {
     try {
       user = await currentUser();

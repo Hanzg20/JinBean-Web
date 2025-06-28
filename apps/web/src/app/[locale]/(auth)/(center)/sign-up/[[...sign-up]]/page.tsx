@@ -23,10 +23,10 @@ export async function generateMetadata(props: ISignUpProps) {
 export default async function SignUpPage(props: ISignUpProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  
+
   // Check if Clerk is configured
   const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-  
+
   if (!clerkPublishableKey) {
     return (
       <div className="flex items-center justify-center min-h-screen">
@@ -34,6 +34,6 @@ export default async function SignUpPage(props: ISignUpProps) {
       </div>
     );
   }
-  
+
   return <SignUp path={getI18nPath('/sign-up', locale)} />;
 }

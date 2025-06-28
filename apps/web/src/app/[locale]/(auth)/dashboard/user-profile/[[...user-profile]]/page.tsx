@@ -22,10 +22,10 @@ export async function generateMetadata(props: IUserProfileProps) {
 export default async function UserProfilePage(props: IUserProfileProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  
+
   // Check if Clerk is configured
   const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-  
+
   if (!clerkPublishableKey) {
     return (
       <div className="my-6 -ml-16">
@@ -33,7 +33,7 @@ export default async function UserProfilePage(props: IUserProfileProps) {
       </div>
     );
   }
-  
+
   return (
     <div className="my-6 -ml-16">
       <UserProfile path={getI18nPath('/dashboard/user-profile', locale)} />
