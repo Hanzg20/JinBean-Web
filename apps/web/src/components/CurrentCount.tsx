@@ -1,5 +1,5 @@
 // import { getTranslations } from 'next-intl/server';
-import { headers } from 'next/headers';
+// import { headers } from 'next/headers';
 // import { db } from '@/libs/DB';
 // import { logger } from '@/libs/Logger';
 // import { counterSchema } from '@/models/Schema';
