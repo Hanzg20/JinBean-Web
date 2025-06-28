@@ -1,5 +1,5 @@
-import React from 'react';
 import { SignOutButton } from '@clerk/nextjs';
+import React from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';

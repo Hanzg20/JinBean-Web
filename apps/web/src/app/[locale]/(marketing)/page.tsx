@@ -1,5 +1,5 @@
-import React from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
 import Button from '@/../../libs/ui/components/Button';
 import Logo from '@/../../libs/ui/components/Logo';
 

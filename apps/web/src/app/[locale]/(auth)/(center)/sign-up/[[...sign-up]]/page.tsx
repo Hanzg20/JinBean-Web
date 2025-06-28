@@ -1,5 +1,5 @@
-import React from 'react';
 import { SignUp } from '@clerk/nextjs';
+import React from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getI18nPath } from '@/utils/Helpers';
 
