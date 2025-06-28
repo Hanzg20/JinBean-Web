@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 import { routing } from '@/libs/I18nRouting';
 
 type IPortfolioDetailProps = {

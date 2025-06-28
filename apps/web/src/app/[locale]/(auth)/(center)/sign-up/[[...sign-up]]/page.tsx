@@ -1,6 +1,6 @@
 import { SignUp } from '@clerk/nextjs';
-import React from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
 import { getI18nPath } from '@/utils/Helpers';
 
 type ISignUpProps = {

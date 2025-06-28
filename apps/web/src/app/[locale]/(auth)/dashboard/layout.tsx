@@ -1,6 +1,6 @@
 import { SignOutButton } from '@clerk/nextjs';
-import React from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
 import Link from 'next/link';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { BaseTemplate } from '@/templates/BaseTemplate';

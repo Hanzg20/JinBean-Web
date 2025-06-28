@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react';
 import { useTranslations } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import React, { Suspense } from 'react';
 import Image from 'next/image';
 
 import { CounterForm } from '@/components/CounterForm';
