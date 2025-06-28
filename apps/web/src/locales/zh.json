@@ -1,4 +1,12 @@
 {
+  "RootLayout": {
+    "home_link": "首页",
+    "about_link": "关于",
+    "counter_link": "计数器",
+    "portfolio_link": "作品集",
+    "sign_in_link": "登录",
+    "sign_up_link": "注册"
+  },
   "Index": {
     "meta_title": "JinBean – 构建可信、便捷、互助的智慧社区生活平台",
     "meta_description": "JinBean 是一个融合\"服务聚合 + 共享租赁 + 社区互助\"于一体的智慧生活平台，专注为加拿大各地多元文化背景的居民，提供便捷、可信、低门槛的日常服务与技能互助网络。",
@@ -79,7 +87,9 @@
   },
   "Dashboard": {
     "meta_title": "仪表板",
-    "meta_description": "管理您的账户和服务。"
+    "meta_description": "管理您的账户和服务。",
+    "hello_message": "你好 {email}！",
+    "alternative_message": "想要使用相同的技术栈更快地构建您的SaaS？试试 <url></url>。"
   },
   "UserProfile": {
     "meta_title": "用户资料",
@@ -90,6 +100,14 @@
     "meta_description": "一个简单的计数器页面。",
     "loading_counter": "加载中...",
     "security_powered_by": "安全防护由"
+  },
+  "CounterForm": {
+    "presentation": "计数器存储在数据库中，并通过您提供的值进行递增。",
+    "label_increment": "递增值",
+    "button_increment": "递增"
+  },
+  "CurrentCount": {
+    "count": "计数：{count}"
   },
   "Portfolio": {
     "meta_title": "作品集",
@@ -117,6 +135,8 @@
   },
   "About": {
     "meta_title": "关于我们",
-    "meta_description": "了解我们的团队和使命。"
+    "meta_description": "了解我们的团队和使命。",
+    "about_paragraph": "欢迎来到我们的关于页面！我们是一个充满激情的团队，致力于创造令人惊叹的软件。",
+    "translation_powered_by": "翻译由"
   }
 }

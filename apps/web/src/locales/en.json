@@ -1,4 +1,12 @@
 {
+  "RootLayout": {
+    "home_link": "Home",
+    "about_link": "About",
+    "counter_link": "Counter",
+    "portfolio_link": "Portfolio",
+    "sign_in_link": "Sign in",
+    "sign_up_link": "Sign up"
+  },
   "Index": {
     "meta_title": "JinBean - Canada's All-in-One Smart Living & Community Services Platform",
     "meta_description": "JinBean is a next-generation mutual-aid and lifestyle services platform, designed to unify fragmented local services, empower everyday people to participate in value creation, and foster trusted, low-barrier community support ecosystems.",
@@ -79,7 +87,9 @@
   },
   "Dashboard": {
     "meta_title": "Dashboard",
-    "meta_description": "Manage your account and services."
+    "meta_description": "Manage your account and services.",
+    "hello_message": "Hello {email}!",
+    "alternative_message": "Want to build your SaaS faster using the same stack? Try <url></url>."
   },
   "UserProfile": {
     "meta_title": "User Profile",
@@ -90,6 +100,14 @@
     "meta_description": "A simple counter page.",
     "loading_counter": "Loading...",
     "security_powered_by": "Security powered by"
+  },
+  "CounterForm": {
+    "presentation": "The counter is stored in the database and incremented by the value you provide.",
+    "label_increment": "Increment by",
+    "button_increment": "Increment"
+  },
+  "CurrentCount": {
+    "count": "Count: {count}"
   },
   "Portfolio": {
     "meta_title": "Portfolio",
@@ -117,6 +135,8 @@
   },
   "About": {
     "meta_title": "About Us",
-    "meta_description": "Learn about our team and mission."
+    "meta_description": "Learn about our team and mission.",
+    "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
+    "translation_powered_by": "Translation powered by"
   }
 }
