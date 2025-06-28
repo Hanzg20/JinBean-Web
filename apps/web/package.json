@@ -8,7 +8,7 @@
     "dev:spotlight": "spotlight-sidecar",
     "dev:next": "next dev",
     "dev": "run-p db-server:file dev:*",
-    "build": "next build && next export",
+    "build": "next build",
     "export": "next export",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
