@@ -4,4 +4,3 @@ export default async function LocaleHome({ params }: { params: Promise<{ locale:
   const { locale } = await params;
   redirect(`/${locale}/dashboard`);
 }
-

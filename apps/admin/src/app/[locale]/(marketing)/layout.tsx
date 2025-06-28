@@ -2,9 +2,9 @@ import type { ReactNode } from 'react';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
-import { BaseTemplate } from '@/templates/BaseTemplate';
 import { DemoBanner } from '@/components/DemoBanner';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { BaseTemplate } from '@/templates/BaseTemplate';
 
 type MarketingLayoutProps = {
   children: ReactNode;

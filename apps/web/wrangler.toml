@@ -3,4 +3,4 @@ command = "npm run build"
 output_dir = "out"
 
 [site]
-bucket = "out" 
+bucket = "out"

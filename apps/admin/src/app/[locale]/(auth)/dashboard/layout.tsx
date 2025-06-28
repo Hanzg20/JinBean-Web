@@ -3,8 +3,8 @@ import { SignOutButton } from '@clerk/nextjs';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
-import { BaseTemplate } from '@/templates/BaseTemplate';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { BaseTemplate } from '@/templates/BaseTemplate';
 
 type DashboardLayoutProps = {
   children: ReactNode;
@@ -35,7 +35,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
         <>
           <li>
             <SignOutButton>
-              <button type="button" className="border-none text-gray-700 hover:text-gray-900" type="button">
+              <button type="button" className="border-none text-gray-700 hover:text-gray-900">
                 退出登录
               </button>
             </SignOutButton>
