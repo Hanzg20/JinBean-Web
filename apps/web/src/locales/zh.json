@@ -5,7 +5,9 @@
     "counter_link": "计数器",
     "portfolio_link": "作品集",
     "sign_in_link": "登录",
-    "sign_up_link": "注册"
+    "sign_up_link": "注册",
+    "meta_title": "管理后台",
+    "meta_description": "管理后台主布局。"
   },
   "Index": {
     "meta_title": "JinBean – 构建可信、便捷、互助的智慧社区生活平台",
@@ -128,10 +130,6 @@
     "title": "金豆荚",
     "description": "智慧生活与社区服务平台",
     "made_with": "由"
-  },
-  "RootLayout": {
-    "meta_title": "管理后台",
-    "meta_description": "管理后台主布局。"
   },
   "About": {
     "meta_title": "关于我们",

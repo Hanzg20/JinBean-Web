@@ -5,7 +5,9 @@
     "counter_link": "Counter",
     "portfolio_link": "Portfolio",
     "sign_in_link": "Sign in",
-    "sign_up_link": "Sign up"
+    "sign_up_link": "Sign up",
+    "meta_title": "Admin Panel",
+    "meta_description": "Main layout for the admin panel."
   },
   "Index": {
     "meta_title": "JinBean - Canada's All-in-One Smart Living & Community Services Platform",
@@ -128,10 +130,6 @@
     "title": "JinBean",
     "description": "Smart Living & Community Services Platform",
     "made_with": "Made with"
-  },
-  "RootLayout": {
-    "meta_title": "Admin Panel",
-    "meta_description": "Main layout for the admin panel."
   },
   "About": {
     "meta_title": "About Us",

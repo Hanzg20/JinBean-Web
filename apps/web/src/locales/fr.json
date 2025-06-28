@@ -5,7 +5,9 @@
     "counter_link": "Compteur",
     "portfolio_link": "Portfolio",
     "sign_in_link": "Se connecter",
-    "sign_up_link": "S'inscrire"
+    "sign_up_link": "S'inscrire",
+    "meta_title": "Panneau d'Administration",
+    "meta_description": "Mise en page principale du panneau d'administration."
   },
   "Index": {
     "meta_title": "JinBean - Plateforme Canadienne de Services de Vie Intelligente et Communautaire Tout-en-Un",
