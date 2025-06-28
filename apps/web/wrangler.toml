@@ -1,6 +1,9 @@
 [build]
-command = "npm run build"
-output_dir = "out"
+command = "npm install && npm run build"
+cwd = "./"
+
+[build.upload]
+format = "directory"
 
 [site]
-bucket = "out"
+bucket = "./out"
