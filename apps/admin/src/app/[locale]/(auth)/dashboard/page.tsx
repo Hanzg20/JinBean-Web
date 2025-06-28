@@ -100,7 +100,7 @@ export default async function Dashboard(props: IDashboardProps) {
           </div>
           <div className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
                 <div className="w-10 h-10 bg-[#2E8B57] rounded-lg flex items-center justify-center">
                   <span className="text-white text-lg">👤</span>
                 </div>
@@ -110,7 +110,7 @@ export default async function Dashboard(props: IDashboardProps) {
                 </div>
               </button>
 
-              <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
                 <div className="w-10 h-10 bg-[#FFD700] rounded-lg flex items-center justify-center">
                   <span className="text-[#2E8B57] text-lg">🔧</span>
                 </div>
@@ -120,7 +120,7 @@ export default async function Dashboard(props: IDashboardProps) {
                 </div>
               </button>
 
-              <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
                 <div className="w-10 h-10 bg-[#B22222] rounded-lg flex items-center justify-center">
                   <span className="text-white text-lg">📝</span>
                 </div>
@@ -130,7 +130,7 @@ export default async function Dashboard(props: IDashboardProps) {
                 </div>
               </button>
 
-              <button className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
                 <div className="w-10 h-10 bg-[#4A90E2] rounded-lg flex items-center justify-center">
                   <span className="text-white text-lg">📊</span>
                 </div>

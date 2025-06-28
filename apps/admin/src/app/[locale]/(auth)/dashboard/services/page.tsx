@@ -113,7 +113,7 @@ export default async function Services(props: IServicesProps) {
               <option value="rejected">已拒绝</option>
             </select>
 
-            <button className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+            <button type="button" className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
               搜索
             </button>
           </div>
@@ -186,9 +186,9 @@ export default async function Services(props: IServicesProps) {
                     2024-01-20 10:30
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
-                    <button className="text-green-600 hover:text-green-900 mr-3">通过</button>
-                    <button className="text-red-600 hover:text-red-900">拒绝</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-green-600 hover:text-green-900 mr-3">通过</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
                   </td>
                 </tr>
 
@@ -226,9 +226,9 @@ export default async function Services(props: IServicesProps) {
                     2024-01-20 09:15
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
-                    <button className="text-green-600 hover:text-green-900 mr-3">通过</button>
-                    <button className="text-red-600 hover:text-red-900">拒绝</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-green-600 hover:text-green-900 mr-3">通过</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
                   </td>
                 </tr>
 
@@ -266,9 +266,9 @@ export default async function Services(props: IServicesProps) {
                     2024-01-19 16:45
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
-                    <button className="text-gray-400 cursor-not-allowed mr-3">通过</button>
-                    <button className="text-gray-400 cursor-not-allowed">拒绝</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed mr-3">通过</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed">拒绝</button>
                   </td>
                 </tr>
 
@@ -306,9 +306,9 @@ export default async function Services(props: IServicesProps) {
                     2024-01-18 14:20
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
-                    <button className="text-gray-400 cursor-not-allowed mr-3">通过</button>
-                    <button className="text-gray-400 cursor-not-allowed">拒绝</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed mr-3">通过</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed">拒绝</button>
                   </td>
                 </tr>
 
@@ -346,9 +346,9 @@ export default async function Services(props: IServicesProps) {
                     2024-01-20 11:30
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
-                    <button className="text-green-600 hover:text-green-900 mr-3">通过</button>
-                    <button className="text-red-600 hover:text-red-900">拒绝</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-green-600 hover:text-green-900 mr-3">通过</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
                   </td>
                 </tr>
               </tbody>
@@ -362,15 +362,15 @@ export default async function Services(props: IServicesProps) {
                 显示 1-5 条，共 23 条记录
               </div>
               <div className="flex items-center space-x-2">
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
                   上一页
                 </button>
-                <button className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">4</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">5</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                <button type="button" className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">4</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">5</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
                   下一页
                 </button>
               </div>
@@ -381,3 +381,4 @@ export default async function Services(props: IServicesProps) {
     </div>
   );
 }
+

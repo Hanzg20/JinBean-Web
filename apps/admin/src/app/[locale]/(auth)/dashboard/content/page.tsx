@@ -34,19 +34,19 @@ export default async function Content(props: IContentProps) {
       <div className="px-4 sm:px-6 lg:px-8 py-6">
         <div className="bg-white rounded-lg shadow p-6">
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="flex items-center justify-center px-6 py-3 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
               <span className="text-lg mr-2">📝</span>
               新建文章
             </button>
-            <button className="flex items-center justify-center px-6 py-3 bg-[#FFD700] text-[#2E8B57] rounded-lg hover:bg-[#FFC300] transition-colors font-semibold">
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#FFD700] text-[#2E8B57] rounded-lg hover:bg-[#FFC300] transition-colors font-semibold">
               <span className="text-lg mr-2">📢</span>
               发布公告
             </button>
-            <button className="flex items-center justify-center px-6 py-3 bg-[#B22222] text-white rounded-lg hover:bg-[#8B0000] transition-colors">
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#B22222] text-white rounded-lg hover:bg-[#8B0000] transition-colors">
               <span className="text-lg mr-2">🌐</span>
               页面管理
             </button>
-            <button className="flex items-center justify-center px-6 py-3 bg-[#4A90E2] text-white rounded-lg hover:bg-[#357ABD] transition-colors">
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#4A90E2] text-white rounded-lg hover:bg-[#357ABD] transition-colors">
               <span className="text-lg mr-2">📊</span>
               内容统计
             </button>
@@ -59,13 +59,13 @@ export default async function Content(props: IContentProps) {
         <div className="bg-white rounded-lg shadow">
           <div className="border-b border-gray-200">
             <nav className="-mb-px flex space-x-8 px-6">
-              <button className="border-b-2 border-[#2E8B57] py-4 px-1 text-sm font-medium text-[#2E8B57]">
+              <button type="button" className="border-b-2 border-[#2E8B57] py-4 px-1 text-sm font-medium text-[#2E8B57]">
                 博客文章
               </button>
-              <button className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              <button type="button" className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
                 公告
               </button>
-              <button className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              <button type="button" className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
                 页面内容
               </button>
             </nav>
@@ -99,7 +99,7 @@ export default async function Content(props: IContentProps) {
                 <option value="scheduled">定时发布</option>
               </select>
 
-              <button className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+              <button type="button" className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
                 搜索
               </button>
             </div>
@@ -161,9 +161,9 @@ export default async function Content(props: IContentProps) {
                       2024-01-15 14:30
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                      <button className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
-                      <button className="text-red-600 hover:text-red-900">删除</button>
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
                     </td>
                   </tr>
 
@@ -198,9 +198,9 @@ export default async function Content(props: IContentProps) {
                       2024-01-12 10:15
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                      <button className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
-                      <button className="text-red-600 hover:text-red-900">删除</button>
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
                     </td>
                   </tr>
 
@@ -235,9 +235,9 @@ export default async function Content(props: IContentProps) {
                       2024-01-10 16:45
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                      <button className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
-                      <button className="text-red-600 hover:text-red-900">删除</button>
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
                     </td>
                   </tr>
 
@@ -272,9 +272,9 @@ export default async function Content(props: IContentProps) {
                       -
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                      <button className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
-                      <button className="text-red-600 hover:text-red-900">删除</button>
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
                     </td>
                   </tr>
 
@@ -309,9 +309,9 @@ export default async function Content(props: IContentProps) {
                       2024-01-25 09:00
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                      <button className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
-                      <button className="text-red-600 hover:text-red-900">删除</button>
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
                     </td>
                   </tr>
                 </tbody>
@@ -324,15 +324,15 @@ export default async function Content(props: IContentProps) {
                 显示 1-5 条，共 23 条记录
               </div>
               <div className="flex items-center space-x-2">
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
                   上一页
                 </button>
-                <button className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">4</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">5</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                <button type="button" className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">4</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">5</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
                   下一页
                 </button>
               </div>

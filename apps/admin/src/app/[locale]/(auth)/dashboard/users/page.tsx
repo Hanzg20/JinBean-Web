@@ -60,7 +60,7 @@ export default async function Users(props: IUsersProps) {
                 <option value="suspended">已暂停</option>
               </select>
 
-              <button className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+              <button type="button" className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
                 搜索
               </button>
             </div>
@@ -73,7 +73,7 @@ export default async function Users(props: IUsersProps) {
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
             <h2 className="text-lg font-semibold text-gray-900">用户列表</h2>
-            <button className="px-4 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+            <button type="button" className="px-4 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
               添加用户
             </button>
           </div>
@@ -134,8 +134,8 @@ export default async function Users(props: IUsersProps) {
                     2024-01-20 14:30
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                    <button className="text-red-600 hover:text-red-900">暂停</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">暂停</button>
                   </td>
                 </tr>
 
@@ -170,8 +170,8 @@ export default async function Users(props: IUsersProps) {
                     2024-01-20 16:45
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                    <button className="text-red-600 hover:text-red-900">暂停</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">暂停</button>
                   </td>
                 </tr>
 
@@ -206,8 +206,8 @@ export default async function Users(props: IUsersProps) {
                     2024-01-18 09:15
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                    <button className="text-green-600 hover:text-green-900">恢复</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-green-600 hover:text-green-900">恢复</button>
                   </td>
                 </tr>
 
@@ -242,8 +242,8 @@ export default async function Users(props: IUsersProps) {
                     2024-01-20 18:20
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
-                    <button className="text-gray-400 cursor-not-allowed">暂停</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed">暂停</button>
                   </td>
                 </tr>
 
@@ -278,8 +278,8 @@ export default async function Users(props: IUsersProps) {
                     2024-01-20 10:30
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <button className="text-[#2E8B57] hover:text-[#276947] mr-3">审核</button>
-                    <button className="text-red-600 hover:text-red-900">拒绝</button>
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">审核</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
                   </td>
                 </tr>
               </tbody>
@@ -293,15 +293,15 @@ export default async function Users(props: IUsersProps) {
                 显示 1-10 条，共 1,247 条记录
               </div>
               <div className="flex items-center space-x-2">
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
                   上一页
                 </button>
-                <button className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
+                <button type="button" className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
                 <span className="px-2 text-gray-500">...</span>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">125</button>
-                <button className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">125</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
                   下一页
                 </button>
               </div>
@@ -312,3 +312,4 @@ export default async function Users(props: IUsersProps) {
     </div>
   );
 }
+
