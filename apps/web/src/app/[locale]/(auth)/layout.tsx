@@ -12,6 +12,9 @@ export default async function AuthLayout(props: AuthLayoutProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
 
+  // Check if Clerk is configured
+  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
   const clerkLocale
     = ClerkLocalizations.supportedLocales[locale]
       ?? ClerkLocalizations.defaultLocale;
@@ -25,6 +28,11 @@ export default async function AuthLayout(props: AuthLayoutProps) {
     signUpUrl = `/${locale}${signUpUrl}`;
     dashboardUrl = `/${locale}${dashboardUrl}`;
     afterSignOutUrl = `/${locale}${afterSignOutUrl}`;
+  }
+
+  // If Clerk is not configured, render children without ClerkProvider
+  if (!clerkPublishableKey) {
+    return <>{props.children}</>;
   }
 
   return (

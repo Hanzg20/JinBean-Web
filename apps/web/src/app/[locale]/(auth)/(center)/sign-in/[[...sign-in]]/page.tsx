@@ -23,5 +23,17 @@ export async function generateMetadata(props: ISignInProps) {
 export default async function SignInPage(props: ISignInProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
+  
+  // Check if Clerk is configured
+  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  
+  if (!clerkPublishableKey) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <p>Authentication is not configured. Please set up Clerk to use this feature.</p>
+      </div>
+    );
+  }
+  
   return <SignIn path={getI18nPath('/sign-in', locale)} />;
 }

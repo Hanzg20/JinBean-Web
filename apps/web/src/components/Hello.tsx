@@ -4,13 +4,24 @@ import { Sponsors } from './Sponsors';
 
 export const Hello = async () => {
   const t = await getTranslations();
-  const user = await currentUser();
+  
+  // Check if Clerk is configured
+  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  let user = null;
+  
+  if (clerkPublishableKey) {
+    try {
+      user = await currentUser();
+    } catch (error) {
+      console.warn('Clerk not properly configured:', error);
+    }
+  }
 
   return (
     <>
       <p>
         {`👋 `}
-        {(t as any)('Dashboard.hello_message', { email: user?.primaryEmailAddress?.emailAddress ?? '' })}
+        {(t as any)('Dashboard.hello_message', { email: user?.primaryEmailAddress?.emailAddress ?? 'Guest' })}
       </p>
       <p>
         {(t as any).rich('Dashboard.alternative_message', {

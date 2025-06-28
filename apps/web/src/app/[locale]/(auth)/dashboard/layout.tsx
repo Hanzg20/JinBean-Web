@@ -18,6 +18,9 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
     namespace: 'DashboardLayout',
   });
 
+  // Check if Clerk is configured
+  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+
   return (
     <BaseTemplate
       leftNav={(
@@ -42,16 +45,18 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
       )}
       rightNav={(
         <>
-          <li>
-            <SignOutButton>
-              <button
-                className="border-none text-gray-700 hover:text-gray-900"
-                type="button"
-              >
-                {t('sign_out' as any)}
-              </button>
-            </SignOutButton>
-          </li>
+          {clerkPublishableKey && (
+            <li>
+              <SignOutButton>
+                <button
+                  className="border-none text-gray-700 hover:text-gray-900"
+                  type="button"
+                >
+                  {t('sign_out' as any)}
+                </button>
+              </SignOutButton>
+            </li>
+          )}
 
           <li>
             <LocaleSwitcher />
