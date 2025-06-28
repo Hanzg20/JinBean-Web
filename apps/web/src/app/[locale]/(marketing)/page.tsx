@@ -1,4 +1,4 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
 import React from 'react';
 import Button from '@/../../libs/ui/components/Button';
 import Logo from '@/../../libs/ui/components/Logo';
@@ -17,24 +17,24 @@ type IPageProps = {
 
 export async function generateMetadata(props: IPageProps) {
   const { locale } = await props.params;
-  const t = await getTranslations({
-    locale,
-    namespace: 'Index',
-  });
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Index',
+  // });
 
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: '金豆荚 JinBean - Home',
+    description: 'Your trusted platform for housekeeping services and community building',
   };
 }
 
 export default async function MarketingPage(props: IPageProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
-  const t = await getTranslations({
-    locale,
-    namespace: 'Index',
-  });
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Index',
+  // });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
@@ -49,14 +49,14 @@ export default async function MarketingPage(props: IPageProps) {
             <span className="text-[#FFD700]"> JinBean</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            {t('hero.description')}
+            Your trusted platform for housekeeping services and community building
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-4">
-              {t('hero.download_app')}
+              Download App
             </Button>
             <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
-              {t('hero.learn_more')}
+              Learn More
             </Button>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default async function MarketingPage(props: IPageProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            {t('services.title')}
+            Our Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Service Card 1 */}
@@ -75,10 +75,10 @@ export default async function MarketingPage(props: IPageProps) {
                 <span className="text-white text-2xl">🏠</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t('services.housekeeping.title')}
+                Housekeeping Services
               </h3>
               <p className="text-gray-600">
-                {t('services.housekeeping.description')}
+                Professional cleaning and maintenance services for your home
               </p>
             </div>
 
@@ -88,9 +88,9 @@ export default async function MarketingPage(props: IPageProps) {
                 <span className="text-[#2E8B57] text-2xl">🔧</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t('services.tools.title')}
+                Tools & Equipment
               </h3>
-              <p className="text-gray-600">{t('services.tools.description')}</p>
+              <p className="text-gray-600">High-quality tools and equipment for all your needs</p>
             </div>
 
             {/* Service Card 3 */}
@@ -99,10 +99,10 @@ export default async function MarketingPage(props: IPageProps) {
                 <span className="text-white text-2xl">👥</span>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {t('services.community.title')}
+                Community Building
               </h3>
               <p className="text-gray-600">
-                {t('services.community.description')}
+                Connect with neighbors and build a stronger community
               </p>
             </div>
           </div>
@@ -113,11 +113,11 @@ export default async function MarketingPage(props: IPageProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {t('join.title')}
+            Join Our Community
           </h2>
-          <p className="text-xl text-green-100 mb-8">{t('join.description')}</p>
+          <p className="text-xl text-green-100 mb-8">Be part of something bigger</p>
           <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
-            {t('join.cta')}
+            Get Started
           </Button>
         </div>
       </section>
@@ -126,7 +126,7 @@ export default async function MarketingPage(props: IPageProps) {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            {t('community.title')}
+            Community Stories
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Community Post 1 */}
@@ -137,15 +137,15 @@ export default async function MarketingPage(props: IPageProps) {
                 </div>
                 <div className="ml-3">
                   <p className="font-semibold text-gray-900">
-                    {t('community.posts.post1.author')}
+                    Zhang Wei
                   </p>
                   <p className="text-sm text-gray-500">
-                    {t('community.posts.post1.time')}
+                    2 hours ago
                   </p>
                 </div>
               </div>
               <p className="text-gray-700">
-                {t('community.posts.post1.content')}
+                Great experience with the housekeeping service!
               </p>
             </div>
 
@@ -157,15 +157,15 @@ export default async function MarketingPage(props: IPageProps) {
                 </div>
                 <div className="ml-3">
                   <p className="font-semibold text-gray-900">
-                    {t('community.posts.post2.author')}
+                    Li Ming
                   </p>
                   <p className="text-sm text-gray-500">
-                    {t('community.posts.post2.time')}
+                    1 day ago
                   </p>
                 </div>
               </div>
               <p className="text-gray-700">
-                {t('community.posts.post2.content')}
+                The tools are excellent quality and very affordable.
               </p>
             </div>
 
@@ -177,15 +177,15 @@ export default async function MarketingPage(props: IPageProps) {
                 </div>
                 <div className="ml-3">
                   <p className="font-semibold text-gray-900">
-                    {t('community.posts.post3.author')}
+                    Wang Fang
                   </p>
                   <p className="text-sm text-gray-500">
-                    {t('community.posts.post3.time')}
+                    3 days ago
                   </p>
                 </div>
               </div>
               <p className="text-gray-700">
-                {t('community.posts.post3.content')}
+                Love the community features and how easy it is to connect with neighbors.
               </p>
             </div>
           </div>
