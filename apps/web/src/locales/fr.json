@@ -108,7 +108,8 @@
   },
   "BaseTemplate": {
     "title": "JinBean",
-    "description": "Plateforme de Services de Vie Intelligente et Communautaire"
+    "description": "Plateforme de Services de Vie Intelligente et Communautaire",
+    "made_with": "Fait avec"
   },
   "RootLayout": {
     "meta_title": "Panneau d'administration",

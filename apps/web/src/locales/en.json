@@ -108,7 +108,8 @@
   },
   "BaseTemplate": {
     "title": "JinBean",
-    "description": "Smart Living & Community Services Platform"
+    "description": "Smart Living & Community Services Platform",
+    "made_with": "Made with"
   },
   "RootLayout": {
     "meta_title": "Admin Panel",

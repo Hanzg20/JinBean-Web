@@ -108,7 +108,8 @@
   },
   "BaseTemplate": {
     "title": "金豆荚",
-    "description": "智慧生活与社区服务平台"
+    "description": "智慧生活与社区服务平台",
+    "made_with": "由"
   },
   "RootLayout": {
     "meta_title": "管理后台",

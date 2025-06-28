@@ -27,7 +27,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
               href="/dashboard/"
               className="border-none text-gray-700 hover:text-gray-900"
             >
-              {t('DashboardLayout.dashboard_link' as any)}
+              {t('dashboard_link' as any)}
             </Link>
           </li>
           <li>
@@ -35,7 +35,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
               href="/dashboard/user-profile/"
               className="border-none text-gray-700 hover:text-gray-900"
             >
-              {t('DashboardLayout.user_profile_link' as any)}
+              {t('user_profile_link' as any)}
             </Link>
           </li>
         </>
@@ -48,7 +48,7 @@ export default async function DashboardLayout(props: DashboardLayoutProps) {
                 className="border-none text-gray-700 hover:text-gray-900"
                 type="button"
               >
-                {t('DashboardLayout.sign_out' as any)}
+                {t('sign_out' as any)}
               </button>
             </SignOutButton>
           </li>
