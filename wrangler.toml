@@ -1,0 +1,9 @@
+[build]
+command = "cd apps/web && npm install && npm run build"
+cwd = "./"
+
+[build.upload]
+format = "directory"
+
+[site]
+bucket = "apps/web/out" 
