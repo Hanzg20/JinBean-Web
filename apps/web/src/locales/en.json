@@ -88,15 +88,27 @@
   "Counter": {
     "meta_title": "Counter",
     "meta_description": "A simple counter page.",
-    "loading_counter": "Loading..."
+    "loading_counter": "Loading...",
+    "security_powered_by": "Security powered by"
   },
   "Portfolio": {
     "meta_title": "Portfolio",
-    "meta_description": "Showcase your projects and achievements."
+    "meta_description": "Showcase your projects and achievements.",
+    "presentation": "This is a portfolio page.",
+    "portfolio_name": "Portfolio {name}",
+    "error_reporting_powered_by": "Error reporting powered by",
+    "coverage_powered_by": "Coverage powered by"
   },
   "PortfolioSlug": {
     "meta_title": "Portfolio Details",
-    "meta_description": "Detailed information about the portfolio project."
+    "meta_description": "Detailed information about the portfolio project.",
+    "header": "Portfolio Header",
+    "content": "Portfolio Content",
+    "code_review_powered_by": "Code review powered by"
+  },
+  "BaseTemplate": {
+    "title": "JinBean",
+    "description": "Smart Living & Community Services Platform"
   },
   "RootLayout": {
     "meta_title": "Admin Panel",

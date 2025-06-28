@@ -88,15 +88,27 @@
   "Counter": {
     "meta_title": "计数器",
     "meta_description": "一个简单的计数器页面。",
-    "loading_counter": "加载中..."
+    "loading_counter": "加载中...",
+    "security_powered_by": "安全防护由"
   },
   "Portfolio": {
     "meta_title": "作品集",
-    "meta_description": "展示您的项目和成就。"
+    "meta_description": "展示您的项目和成就。",
+    "presentation": "这是一个作品集页面。",
+    "portfolio_name": "作品集 {name}",
+    "error_reporting_powered_by": "错误报告由",
+    "coverage_powered_by": "覆盖率统计由"
   },
   "PortfolioSlug": {
     "meta_title": "作品详情",
-    "meta_description": "作品集项目的详细信息。"
+    "meta_description": "作品集项目的详细信息。",
+    "header": "作品集标题",
+    "content": "作品集内容",
+    "code_review_powered_by": "代码审查由"
+  },
+  "BaseTemplate": {
+    "title": "金豆荚",
+    "description": "智慧生活与社区服务平台"
   },
   "RootLayout": {
     "meta_title": "管理后台",

@@ -88,15 +88,27 @@
   "Counter": {
     "meta_title": "Compteur",
     "meta_description": "Une page de compteur simple.",
-    "loading_counter": "Chargement..."
+    "loading_counter": "Chargement...",
+    "security_powered_by": "Sécurité alimentée par"
   },
   "Portfolio": {
     "meta_title": "Portfolio",
-    "meta_description": "Présentez vos projets et réalisations."
+    "meta_description": "Présentez vos projets et réalisations.",
+    "presentation": "Ceci est une page de portfolio.",
+    "portfolio_name": "Portfolio {name}",
+    "error_reporting_powered_by": "Signalement d'erreurs alimenté par",
+    "coverage_powered_by": "Couverture alimentée par"
   },
   "PortfolioSlug": {
     "meta_title": "Détails du Portfolio",
-    "meta_description": "Informations détaillées sur le projet du portfolio."
+    "meta_description": "Informations détaillées sur le projet du portfolio.",
+    "header": "En-tête du Portfolio",
+    "content": "Contenu du Portfolio",
+    "code_review_powered_by": "Révision de code alimentée par"
+  },
+  "BaseTemplate": {
+    "title": "JinBean",
+    "description": "Plateforme de Services de Vie Intelligente et Communautaire"
   },
   "RootLayout": {
     "meta_title": "Panneau d'administration",
