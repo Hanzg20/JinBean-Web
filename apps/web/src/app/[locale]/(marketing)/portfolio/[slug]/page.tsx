@@ -21,13 +21,13 @@ export function generateStaticParams() {
 export async function generateMetadata(props: IPortfolioDetailProps) {
   const { locale, slug } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'PortfolioSlug',
-  });
+  //   locale,
+  //   namespace: 'PortfolioSlug',
+  // });
 
   return {
-    title: t('meta_title', { slug }),
-    description: t('meta_description', { slug }),
+    title: `Portfolio - ${slug} - JinBean`,
+    description: `View details of ${slug} project`,
   };
 }
 
@@ -35,35 +35,38 @@ export default async function PortfolioSlugPage(props: IPortfolioDetailProps) {
   const { slug, locale } = await props.params;
   // setRequestLocale(locale);
   // const t = await getTranslations({
-    locale,
-    namespace: 'PortfolioSlug',
-  });
+  //   locale,
+  //   namespace: 'PortfolioSlug',
+  // });
 
   return (
-    <>
-      <h1 className="capitalize">{t('header' as any, { slug } as any)}</h1>
-      <p>{t('content' as any)}</p>
-
-      <div className="mt-5 text-center text-sm">
-        {`${t('code_review_powered_by' as any)} `}
-        <a
-          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-          href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
-        >
-          CodeRabbit
-        </a>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">Portfolio Project: {slug}</h1>
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <p className="text-gray-600 mb-4">
+          This is a detailed view of the {slug} project. Here you can see all the details, 
+          technologies used, and outcomes of this project.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-xl font-semibold mb-3">Project Overview</h3>
+            <p className="text-gray-700">
+              This project demonstrates our expertise in modern web development 
+              and showcases the quality of work we deliver to our clients.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-3">Technologies Used</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Next.js 15</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>Modern React Patterns</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <a href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025">
-        <Image
-          className="mx-auto mt-2"
-          src="/assets/images/coderabbit-logo-light.svg"
-          alt="CodeRabbit"
-          width={128}
-          height={22}
-        />
-      </a>
-    </>
+    </div>
   );
 }
 
