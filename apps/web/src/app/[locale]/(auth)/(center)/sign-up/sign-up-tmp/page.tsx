@@ -15,7 +15,7 @@ export async function generateStaticParams() {
   ];
 }
 
-export async function generateMetadata(props: ISignUpProps) {
+export async function generateMetadata(/* props: ISignUpProps */) {
   // const { locale } = await props.params;
   // const t = await getTranslations({
   //   locale,
