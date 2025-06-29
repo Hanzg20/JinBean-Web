@@ -18,12 +18,13 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: IUserProfileProps) {
   const { locale } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'UserProfile',
-  });
+  //   locale,
+  //   namespace: 'UserProfile',
+  // });
 
   return {
-    title: t('meta_title'),
+    title: 'User Profile - JinBean',
+    description: 'Manage your JinBean profile',
   };
 }
 
@@ -36,15 +37,11 @@ export default async function UserProfilePage(props: IUserProfileProps) {
 
   if (!clerkPublishableKey) {
     return (
-      <div className="my-6 -ml-16">
+      <div className="flex items-center justify-center min-h-screen">
         <p>Authentication is not configured. Please set up Clerk to use this feature.</p>
       </div>
     );
   }
 
-  return (
-    <div className="my-6 -ml-16">
-      <UserProfile path={getI18nPath('/dashboard/user-profile', locale)} />
-    </div>
-  );
+  return <UserProfile path={getI18nPath('/user-profile', locale)} />;
 }

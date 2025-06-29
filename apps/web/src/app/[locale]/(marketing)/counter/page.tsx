@@ -19,13 +19,13 @@ export async function generateMetadata(props: {
 }) {
   const { locale } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'Counter',
-  });
+  //   locale,
+  //   namespace: 'Counter',
+  // });
 
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: 'Counter Demo - JinBean',
+    description: 'A simple counter demonstration',
   };
 }
 
@@ -37,13 +37,13 @@ export default function CounterPage() {
       <CounterForm />
 
       <div className="mt-3">
-        <Suspense fallback={<p>loading_counter</p>}>
+        <Suspense fallback={<p>Loading counter...</p>}>
           <CurrentCount />
         </Suspense>
       </div>
 
       <div className="mt-5 text-center text-sm">
-        {`$security_powered_by `}
+        Security powered by{' '}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://launch.arcjet.com/Q6eLbRE"

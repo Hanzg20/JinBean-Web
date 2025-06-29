@@ -18,13 +18,13 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: ISignUpProps) {
   const { locale } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'SignUp',
-  });
+  //   locale,
+  //   namespace: 'SignUp',
+  // });
 
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: 'Sign Up - JinBean',
+    description: 'Create your JinBean account',
   };
 }
 
