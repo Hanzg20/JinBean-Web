@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await props.params;
+  // const { locale } = await props.params;
   // const t = await getTranslations({
   //   locale,
   //   namespace: 'Counter',
@@ -29,38 +29,29 @@ export async function generateMetadata(props: {
   };
 }
 
-export default function CounterPage() {
-  const t = useTranslations('Counter' as any);
+export default async function CounterPage(props: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Counter',
+  // });
 
   return (
-    <>
-      <CounterForm />
-
-      <div className="mt-3">
-        <Suspense fallback={<p>Loading counter...</p>}>
-          <CurrentCount />
-        </Suspense>
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-8">Counter Demo</h1>
+      <div className="max-w-md mx-auto">
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="text-center mb-4">
+            <p className="text-lg text-gray-600">Current count:</p>
+            <p className="text-4xl font-bold text-blue-600">
+              <CurrentCount />
+            </p>
+          </div>
+          <CounterForm />
+        </div>
       </div>
-
-      <div className="mt-5 text-center text-sm">
-        Security powered by{' '}
-        <a
-          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-          href="https://launch.arcjet.com/Q6eLbRE"
-        >
-          Arcjet
-        </a>
-      </div>
-
-      <a href="https://launch.arcjet.com/Q6eLbRE">
-        <Image
-          className="mx-auto mt-2"
-          src="/assets/images/arcjet-light.svg"
-          alt="Arcjet"
-          width={128}
-          height={38}
-        />
-      </a>
-    </>
+    </div>
   );
 }
