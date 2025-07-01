@@ -12,6 +12,9 @@ const baseConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   serverExternalPackages: ['@electric-sql/pglite'],
+  output: 'export',
+  trailingSlash: true,
+  distDir: 'out',
 };
 
 // Initialize the Next-Intl plugin
@@ -61,4 +64,3 @@ if (!process.env.NEXT_PUBLIC_SENTRY_DISABLED) {
 
 const nextConfig = configWithPlugins;
 export default nextConfig;
-export const output = 'export';
