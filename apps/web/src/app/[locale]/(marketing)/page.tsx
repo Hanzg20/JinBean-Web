@@ -15,8 +15,8 @@ type IPageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata(props: IPageProps) {
-  const { locale } = await props.params;
+export async function generateMetadata(_props: IPageProps) {
+  // const { locale } = await props.params;
   // // const t = await getTranslations({
   //   locale,
   //   namespace: 'Index',
@@ -28,8 +28,8 @@ export async function generateMetadata(props: IPageProps) {
   };
 }
 
-export default async function MarketingPage(props: IPageProps) {
-  const { locale } = await props.params;
+export default async function MarketingPage(_props: IPageProps) {
+  // const { locale } = await props.params;
   // // setRequestLocale(locale);
   // // const t = await getTranslations({
   //   locale,

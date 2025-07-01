@@ -1,22 +1,23 @@
 'use client';
 
+import React from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
-import { CounterValidation } from '@/validations/CounterValidation';
+// import { CounterValidation } from '@/validations/CounterValidation';
 
 export const CounterForm = () => {
-  const t = useTranslations('CounterForm' as any);
+  // const _t = useTranslations('CounterForm' as any);
   const form = useForm({
-    resolver: zodResolver(CounterValidation),
+    // resolver: zodResolver(CounterValidation),
     defaultValues: {
       increment: 0,
     },
   });
   const router = useRouter();
 
-  const handleIncrement = form.handleSubmit(async (_data) => {
+  const handleIncrement = form.handleSubmit(async (data) => {
     // await fetch(`/api/counter`, {
     //   method: 'PUT',
     //   headers: {
@@ -31,10 +32,10 @@ export const CounterForm = () => {
 
   return (
     <form onSubmit={handleIncrement}>
-      <p>{(t as any)('presentation')}</p>
+      <p>presentation</p>
       <div>
         <label className="text-sm font-bold text-gray-700" htmlFor="increment">
-          {(t as any)('label_increment')}
+          label_increment
           <input
             id="increment"
             type="number"
@@ -54,9 +55,9 @@ export const CounterForm = () => {
           type="submit"
           disabled={form.formState.isSubmitting}
         >
-          {(t as any)('button_increment')}
+          button_increment
         </button>
       </div>
     </form>
   );
-};
+}; 

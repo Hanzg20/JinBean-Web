@@ -1,10 +1,10 @@
-import { currentUser } from '@clerk/nextjs/server';
-import { getTranslations } from 'next-intl/server';
+// import { currentUser } from '@clerk/nextjs/server';
+// import { getTranslations } from 'next-intl/server';
 import { Sponsors } from './Sponsors';
 
 export const Hello = async () => {
-  const t = await getTranslations();
-  const user = await currentUser();
+  // const t = await getTranslations();
+  // const user = await currentUser();
 
   return (
     <>

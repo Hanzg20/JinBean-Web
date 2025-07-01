@@ -1,50 +1,29 @@
-import { ClerkProvider } from '@clerk/nextjs';
+import type { ReactNode } from 'react';
+// import { ClerkProvider } from '@clerk/nextjs';
 // import { setRequestLocale } from 'next-intl/server';
-import { routing } from '@/libs/I18nRouting';
-import { ClerkLocalizations } from '@/utils/AppConfig';
+
+// import { routing } from '@/libs/I18nRouting';
+// import { ClerkLocalizations } from '@/utils/AppConfig';
 
 type AuthLayoutProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   params: Promise<{ locale: string }>;
 };
 
-export default async function AuthLayout(props: AuthLayoutProps) {
-  const { locale } = await props.params;
-  // setRequestLocale(locale);
-
-  // Check if Clerk is configured
-  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-
-  const clerkLocale
-    = ClerkLocalizations.supportedLocales[locale]
-      ?? ClerkLocalizations.defaultLocale;
-  let signInUrl = '/sign-in';
-  let signUpUrl = '/sign-up';
-  let dashboardUrl = '/dashboard';
-  let afterSignOutUrl = '/';
-
-  if (locale !== routing.defaultLocale) {
-    signInUrl = `/${locale}${signInUrl}`;
-    signUpUrl = `/${locale}${signUpUrl}`;
-    dashboardUrl = `/${locale}${dashboardUrl}`;
-    afterSignOutUrl = `/${locale}${afterSignOutUrl}`;
-  }
-
-  // If Clerk is not configured, render children without ClerkProvider
-  if (!clerkPublishableKey) {
-    return <>{props.children}</>;
-  }
+export default async function AuthLayout({ children, params: _params }: AuthLayoutProps) {
+  // const { locale } = await params;
+  // await setRequestLocale(locale);
 
   return (
-    <ClerkProvider
-      localization={clerkLocale}
-      signInUrl={signInUrl}
-      signUpUrl={signUpUrl}
-      signInFallbackRedirectUrl={dashboardUrl}
-      signUpFallbackRedirectUrl={dashboardUrl}
-      afterSignOutUrl={afterSignOutUrl}
-    >
-      {props.children}
-    </ClerkProvider>
+    // <ClerkProvider localization={ClerkLocalizations}>
+    <div className="flex min-h-screen flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          Authentication
+        </h2>
+      </div>
+      {children}
+    </div>
+    // </ClerkProvider>
   );
 }

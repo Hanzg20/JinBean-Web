@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import { hasLocale, NextIntlClientProvider } from 'next-intl';
+// import { hasLocale, NextIntlClientProvider } from 'next-intl';
 // // import { setRequestLocale } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+// import { notFound } from 'next/navigation';
 import { PostHogProvider } from '@/components/analytics/PostHogProvider';
 import { DemoBadge } from '@/components/DemoBadge';
 import { routing } from '@/libs/I18nRouting';
@@ -44,19 +44,15 @@ type LocaleLayoutProps = {
 export default async function LocaleLayout(props: LocaleLayoutProps) {
   const { locale } = await props.params;
 
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
-
   // // setRequestLocale(locale);
 
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider>
-          <PostHogProvider>{props.children}</PostHogProvider>
-          <DemoBadge />
-        </NextIntlClientProvider>
+        {/* <NextIntlClientProvider> */}
+        <PostHogProvider>{props.children}</PostHogProvider>
+        <DemoBadge />
+        {/* </NextIntlClientProvider> */}
       </body>
     </html>
   );

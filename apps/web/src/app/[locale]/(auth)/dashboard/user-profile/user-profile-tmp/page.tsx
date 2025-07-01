@@ -1,7 +1,6 @@
-import { UserProfile } from '@clerk/nextjs';
+// import { UserProfile } from '@clerk/nextjs';
 // // import { getTranslations, setRequestLocale } from 'next-intl/server';
 import React from 'react';
-import { getI18nPath } from '@/utils/Helpers';
 
 type IUserProfileProps = {
   params: Promise<{ locale: string }>;
@@ -28,20 +27,21 @@ export async function generateMetadata(/* props: IUserProfileProps */) {
   };
 }
 
-export default async function UserProfilePage(props: IUserProfileProps) {
-  const { locale } = await props.params;
-  // setRequestLocale(locale);
+export default async function UserProfilePage({ params: _params }: IUserProfileProps) {
+  // const { locale } = await params;
+  // await setRequestLocale(locale);
 
-  // Check if Clerk is configured
-  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-
-  if (!clerkPublishableKey) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <p>Authentication is not configured. Please set up Clerk to use this feature.</p>
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          User Profile
+        </h2>
+        <p className="mt-2 text-center text-sm text-gray-600">
+          Manage your profile settings
+        </p>
       </div>
-    );
-  }
-
-  return <UserProfile path={getI18nPath('/user-profile', locale)} />;
+      {/* <UserProfile /> */}
+    </div>
+  );
 }

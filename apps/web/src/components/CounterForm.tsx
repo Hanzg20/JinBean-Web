@@ -1,13 +1,13 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useTranslations } from 'next-intl';
+// import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { CounterValidation } from '@/validations/CounterValidation';
 
 export const CounterForm = () => {
-  const t = useTranslations('CounterForm' as any);
+  // const _t = useTranslations('CounterForm' as any);
   const form = useForm({
     resolver: zodResolver(CounterValidation),
     defaultValues: {
@@ -16,14 +16,14 @@ export const CounterForm = () => {
   });
   const router = useRouter();
 
-  const handleIncrement = form.handleSubmit(async (data) => {
-    await fetch(`/api/counter`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+  const handleIncrement = form.handleSubmit(async (_data) => {
+    // await fetch(`/api/counter`, {
+    //   method: 'PUT',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // });
 
     form.reset();
     router.refresh();

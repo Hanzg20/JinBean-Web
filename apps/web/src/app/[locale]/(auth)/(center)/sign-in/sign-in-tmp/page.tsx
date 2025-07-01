@@ -1,7 +1,7 @@
-import { SignIn } from '@clerk/nextjs';
+// import { SignIn } from '@clerk/nextjs';
 // // import { getTranslations, setRequestLocale } from 'next-intl/server';
 import React from 'react';
-import { getI18nPath } from '@/utils/Helpers';
+// import { getI18nPath } from '@/utils/Helpers';
 
 type ISignInProps = {
   params: Promise<{ locale: string }>;
@@ -28,20 +28,21 @@ export async function generateMetadata(/* props: ISignInProps */) {
   };
 }
 
-export default async function SignInPage(props: ISignInProps) {
-  const { locale } = await props.params;
-  // setRequestLocale(locale);
+export default async function SignInPage({ params: _params }: ISignInProps) {
+  // const { locale } = await params;
+  // await setRequestLocale(locale);
 
-  // Check if Clerk is configured
-  const clerkPublishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
-
-  if (!clerkPublishableKey) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <p>Authentication is not configured. Please set up Clerk to use this feature.</p>
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          Sign In
+        </h2>
+        <p className="mt-2 text-center text-sm text-gray-600">
+          Sign in to your account
+        </p>
       </div>
-    );
-  }
-
-  return <SignIn path={getI18nPath('/sign-in', locale)} />;
+      {/* <SignIn /> */}
+    </div>
+  );
 }

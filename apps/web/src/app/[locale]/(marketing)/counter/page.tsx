@@ -1,7 +1,6 @@
-import { useTranslations } from 'next-intl';
 // import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
-import React, { Suspense } from 'react';
+// import Image from 'next/image';
+import React from 'react';
 
 import { CounterForm } from '@/components/CounterForm';
 import { CurrentCount } from '@/components/CurrentCount';
@@ -29,10 +28,8 @@ export async function generateMetadata(/* props: {
   };
 }
 
-export default async function CounterPage(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
+export default async function CounterPage(/* props: { params: Promise<{ locale: string }> } */) {
+  // const { locale } = await props.params;
   // const t = await getTranslations({
   //   locale,
   //   namespace: 'Counter',

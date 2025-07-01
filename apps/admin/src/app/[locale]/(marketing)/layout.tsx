@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
 import { DemoBanner } from '@/components/DemoBanner';
@@ -14,7 +14,7 @@ type MarketingLayoutProps = {
 export default async function MarketingLayout(props: MarketingLayoutProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  const t = await getTranslations({
+  // const t = await getTranslations({
     locale,
     namespace: 'RootLayout',
   });

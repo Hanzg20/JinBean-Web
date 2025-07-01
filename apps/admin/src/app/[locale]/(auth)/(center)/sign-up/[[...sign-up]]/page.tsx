@@ -1,5 +1,5 @@
 import { SignUp } from '@clerk/nextjs';
-import { getTranslations, setRequestLocale } from 'next-intl/server';
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getI18nPath } from '@/utils/Helpers';
 
 type ISignUpPageProps = {
@@ -8,7 +8,7 @@ type ISignUpPageProps = {
 
 export async function generateMetadata(props: ISignUpPageProps) {
   const { locale } = await props.params;
-  const t = await getTranslations({
+  // const t = await getTranslations({
     locale,
     namespace: 'SignUp',
   });

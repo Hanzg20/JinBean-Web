@@ -1,4 +1,9 @@
 // import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
+
+type IServicesProps = {
+  params: Promise<{ locale: string }>;
+};
 
 export async function generateStaticParams() {
   return [
@@ -8,21 +13,18 @@ export async function generateStaticParams() {
   ];
 }
 
-type IServicesProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateMetadata(props: IServicesProps) {
-  await props.params; // 确保params被解析，但不需要使用locale
+export async function generateMetadata(_props: IServicesProps) {
+  // const { locale: _locale } = await props.params;
+  // setRequestLocale(locale);
 
   return {
-    title: '服务类型 - 金豆荚 JinBean',
+    title: 'Services - JinBean',
     description: '金豆荚提供家政服务、工具租赁、社区互动等多种便民服务',
   };
 }
 
-export default async function Services(props: IServicesProps) {
-  const { locale } = await props.params;
+export default async function Services(_props: IServicesProps) {
+  // const { locale: _locale } = await props.params;
   // setRequestLocale(locale);
 
   return (

@@ -1,4 +1,4 @@
-import { setRequestLocale } from 'next-intl/server';
+// import { setRequestLocale } from 'next-intl/server';
 
 type IDashboardProps = {
   params: Promise<{ locale: string }>;

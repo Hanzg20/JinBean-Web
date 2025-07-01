@@ -1,4 +1,5 @@
 // import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
 
 export async function generateStaticParams() {
   return [
@@ -8,21 +9,18 @@ export async function generateStaticParams() {
   ];
 }
 
-type ICommunityProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateMetadata(props: ICommunityProps) {
-  await props.params; // 确保params被解析，但不需要使用locale
+export async function generateMetadata(/* props: ICommunityProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
 
   return {
-    title: '金豆圈社区 - 金豆荚 JinBean',
+    title: 'Community - JinBean',
     description: '加入金豆圈社区，与邻里分享生活经验，参与社区活动',
   };
 }
 
-export default async function Community(props: ICommunityProps) {
-  const { locale } = await props.params;
+export default async function Community(/* props: ICommunityProps */) {
+  // const { locale } = await props.params;
   // setRequestLocale(locale);
 
   return (
@@ -223,105 +221,21 @@ export default async function Community(props: ICommunityProps) {
                   王
                 </div>
                 <div className="ml-3">
-                  <p className="font-semibold text-gray-900">王女士</p>
+                  <p className="font-semibold text-gray-900">王妈妈</p>
                   <p className="text-sm text-gray-500">1天前</p>
                 </div>
               </div>
-              <h3 className="font-semibold text-gray-900 mb-2">寻找中文家教</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                寻找育儿经验分享
+              </h3>
               <p className="text-gray-600 mb-4">
-                孩子今年上小学，想找一位有经验的中文家教老师。
-                希望老师有耐心，能够培养孩子对中文的兴趣。
-                有推荐的老师请私信我，谢谢！
+                我家宝宝刚满1岁，想和大家交流一下育儿经验。
+                特别是关于辅食添加和睡眠训练的建议，有经验的妈妈们请分享！
               </p>
               <div className="flex items-center justify-between text-sm text-gray-500">
-                <span>👍 8 赞</span>
-                <span>💬 6 评论</span>
-                <span>📤 2 分享</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-            即将举行的活动
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Event 1 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-[#2E8B57] to-[#276947] flex items-center justify-center">
-                <span className="text-white text-4xl">🎨</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  中国传统文化工作坊
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  学习书法、剪纸、茶艺等传统文化，感受中华文化魅力
-                </p>
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>📅 本周六 14:00</span>
-                  <span>📍 社区中心</span>
-                </div>
-                <button
-                  className="w-full bg-[#2E8B57] text-white py-2 rounded-lg hover:bg-[#276947] transition-colors"
-                  type="button"
-                >
-                  立即报名
-                </button>
-              </div>
-            </div>
-
-            {/* Event 2 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-[#FFD700] to-[#FFC300] flex items-center justify-center">
-                <span className="text-[#2E8B57] text-4xl">🍳</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  美食分享会
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  分享家乡美食，学习烹饪技巧，品尝各地特色菜
-                </p>
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>📅 下周日 16:00</span>
-                  <span>📍 社区厨房</span>
-                </div>
-                <button
-                  className="w-full bg-[#FFD700] text-[#2E8B57] py-2 rounded-lg hover:bg-[#FFC300] transition-colors font-semibold"
-                  type="button"
-                >
-                  立即报名
-                </button>
-              </div>
-            </div>
-
-            {/* Event 3 */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-[#B22222] to-[#8B0000] flex items-center justify-center">
-                <span className="text-white text-4xl">🎵</span>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  音乐交流会
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  欣赏中西方音乐，学习乐器演奏，享受音乐的魅力
-                </p>
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                  <span>📅 下周六 19:00</span>
-                  <span>📍 音乐厅</span>
-                </div>
-                <button
-                  className="w-full bg-[#B22222] text-white py-2 rounded-lg hover:bg-[#8B0000] transition-colors"
-                  type="button"
-                >
-                  立即报名
-                </button>
+                <span>👍 42 赞</span>
+                <span>💬 25 评论</span>
+                <span>📤 8 分享</span>
               </div>
             </div>
           </div>
@@ -329,24 +243,24 @@ export default async function Community(props: ICommunityProps) {
       </section>
 
       {/* Join Community CTA */}
-      <section className="bg-[#2E8B57] py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             加入金豆圈社区
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            下载金豆荚 App，立即加入我们的社区，与邻里分享生活，参与精彩活动
+            与邻里分享生活，参与社区活动，共建温暖家园
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
-              className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
               type="button"
+              className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
             >
-              下载 App
+              立即加入
             </button>
             <button
-              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold"
               type="button"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold"
             >
               了解更多
             </button>

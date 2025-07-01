@@ -1,4 +1,5 @@
 // import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
 
 export async function generateStaticParams() {
   return [
@@ -8,21 +9,18 @@ export async function generateStaticParams() {
   ];
 }
 
-type IJoinProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateMetadata(props: IJoinProps) {
-  await props.params; // 确保params被解析，但不需要使用locale
+export async function generateMetadata(/* props: IJoinProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
 
   return {
-    title: '成为服务提供者 - 金豆荚 JinBean',
+    title: 'Join Us - JinBean',
     description: '加入金豆荚平台，成为服务提供者，为社区提供优质服务',
   };
 }
 
-export default async function Join(props: IJoinProps) {
-  const { locale } = await props.params;
+export default async function Join(/* props: IJoinProps */) {
+  // const { locale } = await props.params;
   // setRequestLocale(locale);
 
   return (
@@ -218,9 +216,7 @@ export default async function Join(props: IJoinProps) {
                 key={service.name}
                 className="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition-shadow"
               >
-                <div
-                  className={`w-12 h-12 ${service.color} rounded-full flex items-center justify-center mx-auto mb-3`}
-                >
+                <div className={`w-12 h-12 ${service.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
                   <span className="text-white text-xl">{service.icon}</span>
                 </div>
                 <h3 className="font-semibold text-gray-900">{service.name}</h3>
@@ -231,13 +227,13 @@ export default async function Join(props: IJoinProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#2E8B57] py-16">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             准备好开始了吗？
           </h2>
           <p className="text-xl text-green-100 mb-8">
-            加入金豆荚，成为社区服务的一份子，让我们一起创造更美好的社区生活
+            加入金豆荚平台，开启您的服务提供者之旅
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

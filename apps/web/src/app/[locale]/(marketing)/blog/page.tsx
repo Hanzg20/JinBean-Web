@@ -1,4 +1,5 @@
 // import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
 
 export async function generateStaticParams() {
   return [
@@ -8,21 +9,18 @@ export async function generateStaticParams() {
   ];
 }
 
-type IBlogProps = {
-  params: Promise<{ locale: string }>;
-};
-
-export async function generateMetadata(props: IBlogProps) {
-  await props.params; // 确保params被解析，但不需要使用locale
+export async function generateMetadata(/* props: IBlogProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
 
   return {
-    title: '博客 - 金豆荚 JinBean',
+    title: 'Blog - JinBean',
     description: '分享生活技巧、社区故事和平台动态，让生活更美好',
   };
 }
 
-export default async function Blog(props: IBlogProps) {
-  const { locale } = await props.params;
+export default async function Blog(/* props: IBlogProps */) {
+  // const { locale } = await props.params;
   // setRequestLocale(locale);
 
   return (

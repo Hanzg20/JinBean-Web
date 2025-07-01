@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import { getTranslations } from 'next-intl/server';
+// import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import { Suspense } from 'react';
 import { CounterForm } from '@/components/CounterForm';
@@ -9,7 +9,7 @@ export async function generateMetadata(props: {
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await props.params;
-  const t = await getTranslations({
+  // const t = await getTranslations({
     locale,
     namespace: 'Counter',
   });

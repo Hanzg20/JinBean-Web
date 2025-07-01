@@ -1,5 +1,5 @@
 import { hasLocale } from 'next-intl';
-import { getRequestConfig } from 'next-intl/server';
+// import { getRequestConfig } from 'next-intl/server';
 import { routing } from './I18nRouting';
 
 // NextJS Boilerplate uses Crowdin as the localization software.
