@@ -25,7 +25,8 @@
     "db:studio": "dotenv -c production -- drizzle-kit studio",
     "storybook": "storybook dev -p 6006",
     "storybook:test": "vitest run --config .storybook/vitest.config.mts",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "postbuild": "cp -r out ../../out"
   },
   "dependencies": {
     "@arcjet/next": "^1.0.0-beta.8",
