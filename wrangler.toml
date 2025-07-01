@@ -4,7 +4,4 @@ cwd = "./"
 pages_build_output_dir = "./out"
 
 [build.upload]
-format = "directory"
-
-[site]
-bucket = "apps/web/out" 
+format = "directory" 
