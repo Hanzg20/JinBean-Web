@@ -15,7 +15,7 @@ export async function generateMetadata(props: IDashboardProps) {
 
 export default async function Dashboard(props: IDashboardProps) {
   await props.params;
-  setRequestLocale((await props.params).locale);
+  // setRequestLocale((await props.params).locale);
 
   return (
     <div className="min-h-screen bg-gray-50">
