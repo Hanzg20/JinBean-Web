@@ -6,22 +6,21 @@ type ISignUpPageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata(props: ISignUpPageProps) {
-  const { locale } = await props.params;
+export async function generateMetadata(_props: ISignUpPageProps) {
+  // const { locale } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'SignUp',
-  });
-
+  //   locale,
+  //   namespace: 'SignUp',
+  // });
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: 'Sign up',
+    description: 'Effortlessly create an account through our intuitive sign-up process.',
   };
 }
 
-export default async function SignUpPage(props: ISignUpPageProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+export default async function SignUpPage(_props: ISignUpPageProps) {
+  const { locale } = await _props.params;
+  // setRequestLocale(locale);
 
   return (
     <SignUp path={getI18nPath('/sign-up', locale)} />

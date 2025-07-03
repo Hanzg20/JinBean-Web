@@ -17,33 +17,23 @@ export function generateStaticParams() {
     .flat(1);
 }
 
-export async function generateMetadata(props: IPortfolioDetailProps) {
-  const { locale, slug } = await props.params;
-  // const t = await getTranslations({
-    locale,
-    namespace: 'PortfolioSlug',
-  });
-
+export async function generateMetadata(_props: IPortfolioDetailProps) {
+  const { slug } = await _props.params;
   return {
-    title: (t as any)('meta_title', { slug }),
-    description: (t as any)('meta_description', { slug }),
+    title: `Portfolio ${slug}`,
+    description: `Portfolio ${slug} description`,
   };
 }
 
-export default async function PortfolioDetail(props: IPortfolioDetailProps) {
-  const { slug } = await props.params;
-  // const t = await getTranslations({
-    locale: 'en',
-    namespace: 'PortfolioSlug',
-  });
-
+export default async function PortfolioDetail(_props: IPortfolioDetailProps) {
+  const { slug } = await _props.params;
   return (
     <>
-      <h1 className="capitalize">{(t as any)('header', { slug })}</h1>
-      <p>{(t as any)('content')}</p>
-
+      <h1 className="capitalize">{`Portfolio ${slug}`}</h1>
+      <p>Created a set of promotional materials and branding elements for a corporate event. Crafted a visually unified theme, encompassing a logo, posters, banners, and digital assets. Integrated the client's brand identity while infusing it with a contemporary and innovative approach.</p>
       <div className="mt-5 text-center text-sm">
-        {`${(t as any)('code_review_powered_by')} `}
+        Code review powered by
+        {' '}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
@@ -51,7 +41,6 @@ export default async function PortfolioDetail(props: IPortfolioDetailProps) {
           CodeRabbit
         </a>
       </div>
-
       <a
         href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
       >
@@ -65,6 +54,6 @@ export default async function PortfolioDetail(props: IPortfolioDetailProps) {
       </a>
     </>
   );
-};
+}
 
 export const dynamicParams = false;

@@ -20,7 +20,8 @@ export const CurrentCount = async () => {
 
   return (
     <div>
-      {(t as any)('CurrentCount.count', { count })}
+      {'Count: '}
+      {count}
     </div>
   );
 };

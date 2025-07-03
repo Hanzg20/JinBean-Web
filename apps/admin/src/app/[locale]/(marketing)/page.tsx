@@ -5,31 +5,28 @@ type IIndexProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata(props: IIndexProps) {
-  const { locale } = await props.params;
+export async function generateMetadata(_props: IIndexProps) {
   // const t = await getTranslations({
-    locale,
-    namespace: 'Index',
-  });
-
+  //   locale,
+  //   namespace: 'Index',
+  // });
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: 'Next.js Boilerplate Presentation',
+    description: 'Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.',
   };
 }
 
-export default async function Index(props: IIndexProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+export default async function Index(_props: IIndexProps) {
+  // const { locale } = await _props.params;
+  // setRequestLocale(locale);
   // const t = await getTranslations({
-    locale,
-    namespace: 'Index',
-  });
-
+  //   locale,
+  //   namespace: 'Index',
+  // });
   return (
     <>
       <p>
-        {`Follow `}
+        {'Follow '}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://twitter.com/ixartz"
@@ -38,7 +35,7 @@ export default async function Index(props: IIndexProps) {
         >
           @Ixartz on Twitter
         </a>
-        {` for updates and more information about the boilerplate.`}
+        {' for updates and more information about the boilerplate.'}
       </p>
       <h2 className="mt-5 text-2xl font-bold">
         Boilerplate Code for Your Next.js Project with Tailwind CSS
@@ -133,8 +130,8 @@ export default async function Index(props: IIndexProps) {
         Their services integrate seamlessly with the boilerplate, and we
         recommend trying them out.
       </p>
-      <h2 className="mt-5 text-2xl font-bold">{t('sponsors_title')}</h2>
+      <h2 className="mt-5 text-2xl font-bold">Sponsors</h2>
       <Sponsors />
     </>
   );
-};
+}

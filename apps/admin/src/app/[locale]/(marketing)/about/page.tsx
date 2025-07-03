@@ -5,33 +5,31 @@ type IAboutProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata(props: IAboutProps) {
-  const { locale } = await props.params;
+export async function generateMetadata(_props: IAboutProps) {
+  // const { locale } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'About',
-  });
-
+  //   locale,
+  //   namespace: 'About',
+  // });
   return {
-    title: (t as any)('meta_title'),
-    description: (t as any)('meta_description'),
+    title: 'About',
+    description: 'About page description',
   };
 }
 
-export default async function About(props: IAboutProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+export default async function About(_props: IAboutProps) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
   // const t = await getTranslations({
-    locale,
-    namespace: 'About',
-  });
-
+  //   locale,
+  //   namespace: 'About',
+  // });
   return (
     <>
-      <p>{(t as any)('about_paragraph')}</p>
-
+      <p>Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.</p>
       <div className="mt-2 text-center text-sm">
-        {`${(t as any)('translation_powered_by')} `}
+        Translation powered by
+        <br />
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://l.crowdin.com/next-js"
@@ -39,7 +37,6 @@ export default async function About(props: IAboutProps) {
           Crowdin
         </a>
       </div>
-
       <a href="https://l.crowdin.com/next-js">
         <Image
           className="mx-auto mt-2"
@@ -51,4 +48,4 @@ export default async function About(props: IAboutProps) {
       </a>
     </>
   );
-};
+}

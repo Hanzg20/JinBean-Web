@@ -6,31 +6,27 @@ type IPortfolioProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata(props: IPortfolioProps) {
-  const { locale } = await props.params;
+export async function generateMetadata(_props: IPortfolioProps) {
   // const t = await getTranslations({
-    locale,
-    namespace: 'Portfolio',
-  });
-
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
   return {
-    title: (t as any)('meta_title'),
-    description: (t as any)('meta_description'),
+    title: 'Portfolio',
+    description: 'Welcome to my portfolio page!',
   };
 }
 
-export default async function Portfolio(props: IPortfolioProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+export default async function Portfolio(_props: IPortfolioProps) {
+  // const { locale } = await _props.params;
+  // setRequestLocale(locale);
   // const t = await getTranslations({
-    locale,
-    namespace: 'Portfolio',
-  });
-
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
   return (
     <>
-      <p>{(t as any)('presentation')}</p>
-
+      <p>Welcome to my portfolio page! Here you will find a carefully curated collection of my work and accomplishments. Through this portfolio, I'm to showcase my expertise, creativity, and the value I can bring to your projects.</p>
       <div className="grid grid-cols-1 justify-items-start gap-3 md:grid-cols-2 xl:grid-cols-3">
         {Array.from(Array.from({ length: 6 }).keys()).map(elt => (
           <Link
@@ -38,20 +34,20 @@ export default async function Portfolio(props: IPortfolioProps) {
             key={elt}
             href={`/portfolio/${elt}`}
           >
-            {(t as any)('portfolio_name', { name: elt })}
+            {`Portfolio ${elt}`}
           </Link>
         ))}
       </div>
-
       <div className="mt-5 text-center text-sm">
-        {`${(t as any)('error_reporting_powered_by')} `}
+        Error reporting powered by
+        {' '}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
         >
           Sentry
         </a>
-        {` - ${(t as any)('coverage_powered_by')} `}
+        {' - Code coverage powered by '}
         <a
           className="text-blue-700 hover:border-b-2 hover:border-blue-700"
           href="https://about.codecov.io/codecov-free-trial/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
@@ -59,7 +55,6 @@ export default async function Portfolio(props: IPortfolioProps) {
           Codecov
         </a>
       </div>
-
       <a
         href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
       >
@@ -73,4 +68,4 @@ export default async function Portfolio(props: IPortfolioProps) {
       </a>
     </>
   );
-};
+}

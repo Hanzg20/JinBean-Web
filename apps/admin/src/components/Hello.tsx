@@ -8,21 +8,11 @@ export const Hello = async () => {
 
   return (
     <>
+      <p>Hello!</p>
       <p>
-        {`👋 `}
-        {(t as any)('Dashboard.hello_message', { email: user?.primaryEmailAddress?.emailAddress ?? '' })}
-      </p>
-      <p>
-        {(t as any).rich('Dashboard.alternative_message', {
-          url: () => (
-            <a
-              className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-              href="https://nextjs-boilerplate.com/pro-saas-starter-kit"
-            >
-              Next.js Boilerplate SaaS
-            </a>
-          ),
-        })}
+        {'Want to build your SaaS faster using the same stack? Try '}
+        <a className="text-blue-700 hover:border-b-2 hover:border-blue-700" href="https://nextjs-boilerplate.com/pro-saas-starter-kit">Next.js Boilerplate SaaS</a>
+        {'.'}
       </p>
       <Sponsors />
     </>

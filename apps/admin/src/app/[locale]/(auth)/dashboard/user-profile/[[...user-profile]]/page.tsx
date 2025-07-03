@@ -6,21 +6,20 @@ type IUserProfilePageProps = {
   params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata(props: IUserProfilePageProps) {
-  const { locale } = await props.params;
+export async function generateMetadata(_props: IUserProfilePageProps) {
+  // const { locale } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'UserProfile',
-  });
-
+  //   locale,
+  //   namespace: 'UserProfile',
+  // });
   return {
-    title: t('meta_title'),
+    title: 'User Profile',
   };
 }
 
-export default async function UserProfilePage(props: IUserProfilePageProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+export default async function UserProfilePage(_props: IUserProfilePageProps) {
+  const { locale } = await _props.params;
+  // setRequestLocale(locale);
 
   return (
     <div className="my-6 -ml-16">

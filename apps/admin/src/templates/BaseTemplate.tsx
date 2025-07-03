@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { AppConfig } from '@/utils/AppConfig';
 
 export const BaseTemplate = (props: {
@@ -6,8 +5,6 @@ export const BaseTemplate = (props: {
   rightNav?: React.ReactNode;
   children: React.ReactNode;
 }) => {
-  const t = useTranslations('BaseTemplate' as any);
-
   return (
     <div className="w-full px-1 text-gray-700 antialiased">
       <div className="mx-auto max-w-screen-md">
@@ -16,7 +13,7 @@ export const BaseTemplate = (props: {
             <h1 className="text-3xl font-bold text-gray-900">
               {AppConfig.name}
             </h1>
-            <h2 className="text-xl">{(t as any)('description')}</h2>
+            <h2 className="text-xl">Starter code for your Nextjs Boilerplate with Tailwind CSS</h2>
           </div>
 
           <div className="flex justify-between">
@@ -37,17 +34,10 @@ export const BaseTemplate = (props: {
         <main>{props.children}</main>
 
         <footer className="border-t border-gray-300 py-8 text-center text-sm">
-          {`© Copyright ${new Date().getFullYear()} ${AppConfig.name}. `}
-          {(t as any).rich('made_with', {
-            author: () => (
-              <a
-                href="https://creativedesignsguru.com"
-                className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-              >
-                CreativeDesignsGuru
-              </a>
-            ),
-          })}
+          {'© Copyright '}
+          {new Date().getFullYear()}
+          {' JinBean Web. Made with '}
+          <a href="https://creativedesignsguru.com" className="text-blue-700 hover:border-b-2 hover:border-blue-700">CreativeDesignsGuru</a>
           {/*
            * PLEASE READ THIS SECTION
            * I'm an indie maker with limited resources and funds, I'll really appreciate if you could have a link to my website.

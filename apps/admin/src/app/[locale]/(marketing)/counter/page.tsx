@@ -5,18 +5,15 @@ import { Suspense } from 'react';
 import { CounterForm } from '@/components/CounterForm';
 import { CurrentCount } from '@/components/CurrentCount';
 
-export async function generateMetadata(props: {
-  params: Promise<{ locale: string }>;
-}) {
-  const { locale } = await props.params;
+export async function generateMetadata(_props: { params: Promise<{ locale: string }> }) {
+  // const { locale } = await props.params;
   // const t = await getTranslations({
-    locale,
-    namespace: 'Counter',
-  });
-
+  //   locale,
+  //   namespace: 'Counter',
+  // });
   return {
-    title: t('meta_title'),
-    description: t('meta_description'),
+    title: 'Counter',
+    description: 'An example of DB operation',
   };
 }
 

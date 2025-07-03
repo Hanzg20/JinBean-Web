@@ -12,7 +12,7 @@ type AuthLayoutProps = {
 
 export default async function AuthLayout(props: AuthLayoutProps) {
   const { locale } = await props.params;
-  setRequestLocale(locale);
+  // setRequestLocale(locale);
 
   const clerkLocale = ClerkLocalizations.supportedLocales[locale] ?? ClerkLocalizations.defaultLocale;
   let signInUrl = '/sign-in';

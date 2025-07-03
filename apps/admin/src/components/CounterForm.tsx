@@ -31,7 +31,7 @@ export const CounterForm = () => {
 
   return (
     <form onSubmit={handleIncrement}>
-      <p>{(t as any)('presentation')}</p>
+      <p>The counter is stored in the database and incremented by the value you provide.</p>
       <div>
         <label className="text-sm font-bold text-gray-700" htmlFor="increment">
           {(t as any)('label_increment')}

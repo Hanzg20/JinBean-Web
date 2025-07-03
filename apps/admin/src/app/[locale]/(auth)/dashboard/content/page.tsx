@@ -13,8 +13,8 @@ export async function generateMetadata(props: IContentProps) {
 }
 
 export default async function Content(props: IContentProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+  const { locale: _locale } = await props.params;
+  // setRequestLocale(locale);
 
   return (
     <div className="min-h-screen bg-gray-50">

@@ -11,14 +11,13 @@ type MarketingLayoutProps = {
   params: Promise<{ locale: string }>;
 };
 
-export default async function MarketingLayout(props: MarketingLayoutProps) {
-  const { locale } = await props.params;
-  setRequestLocale(locale);
+export default async function MarketingLayout(_props: MarketingLayoutProps) {
+  // const { locale } = await _props.params;
+  // setRequestLocale(locale);
   // const t = await getTranslations({
-    locale,
-    namespace: 'RootLayout',
-  });
-
+  //   locale,
+  //   namespace: 'RootLayout',
+  // });
   return (
     <>
       <DemoBanner />
@@ -30,7 +29,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {(t as any)('home_link')}
+                Home
               </Link>
             </li>
             <li>
@@ -38,7 +37,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/about/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {(t as any)('about_link')}
+                About
               </Link>
             </li>
             <li>
@@ -46,7 +45,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/counter/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {(t as any)('counter_link')}
+                Counter
               </Link>
             </li>
             <li>
@@ -54,7 +53,7 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/portfolio/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {(t as any)('portfolio_link')}
+                Portfolio
               </Link>
             </li>
             <li>
@@ -74,26 +73,24 @@ export default async function MarketingLayout(props: MarketingLayoutProps) {
                 href="/sign-in/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {(t as any)('sign_in_link')}
+                Sign in
               </Link>
             </li>
-
             <li>
               <Link
                 href="/sign-up/"
                 className="border-none text-gray-700 hover:text-gray-900"
               >
-                {(t as any)('sign_up_link')}
+                Sign up
               </Link>
             </li>
-
             <li>
               <LocaleSwitcher />
             </li>
           </>
         )}
       >
-        <div className="py-5 text-xl [&_p]:my-6">{props.children}</div>
+        <div className="py-5 text-xl [&_p]:my-6">{_props.children}</div>
       </BaseTemplate>
     </>
   );
