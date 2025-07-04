@@ -69,3 +69,4 @@ export default async function PortfolioPage(props: IPortfolioProps) {
     </div>
   );
 }
+

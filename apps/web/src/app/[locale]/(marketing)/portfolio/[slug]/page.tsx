@@ -76,3 +76,4 @@ export default async function PortfolioSlugPage(props: IPortfolioDetailProps) {
 }
 
 export const dynamicParams = false;
+

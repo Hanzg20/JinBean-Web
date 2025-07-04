@@ -1,0 +1,8 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "style/no-multiple-empty-lines": "off",
+    "style/no-trailing-spaces": "off",
+    "style/eol-last": "off"
+  }
+}

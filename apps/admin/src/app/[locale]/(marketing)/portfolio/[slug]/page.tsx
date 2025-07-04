@@ -1,57 +1,66 @@
 // import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
-import { routing } from '@/libs/I18nRouting';
 
-type IPortfolioDetailProps = {
-  params: Promise<{ slug: string; locale: string }>;
+type IPortfolioSlugProps = {
+  params: Promise<{ locale: string; slug: string }>;
 };
 
 export function generateStaticParams() {
-  return routing.locales
-    .map(locale =>
-      Array.from(Array.from({ length: 6 }).keys()).map(elt => ({
-        slug: `${elt}`,
-        locale,
-      })),
-    )
-    .flat(1);
+  return [
+    { locale: 'en', slug: 'project-1' },
+    { locale: 'en', slug: 'project-2' },
+    { locale: 'zh', slug: 'project-1' },
+    { locale: 'zh', slug: 'project-2' },
+    { locale: 'fr', slug: 'project-1' },
+    { locale: 'fr', slug: 'project-2' },
+  ];
 }
 
-export async function generateMetadata(_props: IPortfolioDetailProps) {
-  const { slug } = await _props.params;
+export async function generateMetadata(_props: IPortfolioSlugProps) {
+  // const { locale, slug } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
   return {
-    title: `Portfolio ${slug}`,
-    description: `Portfolio ${slug} description`,
+    title: 'Portfolio Project',
+    description: 'Portfolio project details',
   };
 }
 
-export default async function PortfolioDetail(_props: IPortfolioDetailProps) {
-  const { slug } = await _props.params;
+export default async function PortfolioSlug(_props: IPortfolioSlugProps) {
+  // const { locale, slug } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
+
   return (
     <>
-      <h1 className="capitalize">{`Portfolio ${slug}`}</h1>
-      <p>Created a set of promotional materials and branding elements for a corporate event. Crafted a visually unified theme, encompassing a logo, posters, banners, and digital assets. Integrated the client's brand identity while infusing it with a contemporary and innovative approach.</p>
-      <div className="mt-5 text-center text-sm">
-        Code review powered by
-        {' '}
-        <a
-          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
-          href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
-        >
-          CodeRabbit
-        </a>
-      </div>
-      <a
-        href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
-      >
+      <h1>Portfolio Project Details</h1>
+      <p>This is a detailed view of a portfolio project.</p>
+      <div className="mt-4">
         <Image
-          className="mx-auto mt-2"
-          src="/assets/images/coderabbit-logo-light.svg"
-          alt="CodeRabbit"
-          width={128}
-          height={22}
+          src="/assets/images/placeholder.png"
+          alt="Project placeholder"
+          width={400}
+          height={300}
+          className="rounded-lg"
         />
-      </a>
+      </div>
+      <div className="mt-4">
+        <h2>Project Description</h2>
+        <p>This is a sample project description that would be replaced with actual content.</p>
+      </div>
+      <div className="mt-4">
+        <h2>Technologies Used</h2>
+        <ul className="list-disc list-inside">
+          <li>Next.js</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
     </>
   );
 }

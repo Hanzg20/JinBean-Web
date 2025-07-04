@@ -46,3 +46,4 @@ export default async function SignUpPage({ params: _params }: ISignUpProps) {
     </div>
   );
 }
+

@@ -52,3 +52,4 @@ export default async function CounterPage(/* props: { params: Promise<{ locale: 
     </div>
   );
 }
+

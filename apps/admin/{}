@@ -1,0 +1,3616 @@
+// import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(/* props: IJoinProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return {
+    title: 'Join Us - JinBean',
+    description: '加入金豆荚平台，成为服务提供者，为社区提供优质服务',
+  };
+}
+
+export default async function Join(/* props: IJoinProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <section className="bg-gradient-to-r from-[#2E8B57] to-[#276947] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            成为服务提供者
+          </h1>
+          <p className="text-xl text-green-100 max-w-3xl mx-auto">
+            加入金豆荚平台，用您的专业技能为社区提供优质服务
+          </p>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            为什么选择金豆荚？
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Benefit 1 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+              <div className="w-16 h-16 bg-[#2E8B57] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl">💰</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                灵活收入
+              </h3>
+              <p className="text-gray-600">
+                自由选择工作时间，按服务收费，收入透明可控
+              </p>
+            </div>
+
+            {/* Benefit 2 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+              <div className="w-16 h-16 bg-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-[#2E8B57] text-2xl">👥</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                社区认可
+              </h3>
+              <p className="text-gray-600">
+                获得用户好评和社区认可，建立个人品牌
+              </p>
+            </div>
+
+            {/* Benefit 3 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+              <div className="w-16 h-16 bg-[#B22222] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl">🛡️</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                安全保障
+              </h3>
+              <p className="text-gray-600">
+                平台提供保险保障，确保服务过程安全无忧
+              </p>
+            </div>
+
+            {/* Benefit 4 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+              <div className="w-16 h-16 bg-[#4A90E2] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl">📱</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                便捷管理
+              </h3>
+              <p className="text-gray-600">
+                专业的服务管理工具，轻松管理订单和客户
+              </p>
+            </div>
+
+            {/* Benefit 5 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+              <div className="w-16 h-16 bg-[#50C878] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl">🎓</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                技能提升
+              </h3>
+              <p className="text-gray-600">
+                提供培训课程，帮助提升专业技能和服务质量
+              </p>
+            </div>
+
+            {/* Benefit 6 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
+              <div className="w-16 h-16 bg-[#8B4513] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl">🌍</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                多元文化
+              </h3>
+              <p className="text-gray-600">
+                服务多元文化社区，体验不同文化背景
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Join */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            如何加入？
+          </h2>
+          <div className="space-y-8">
+            {/* Step 1 */}
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-[#2E8B57] rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                1
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  注册账号
+                </h3>
+                <p className="text-gray-600">
+                  下载金豆荚 App 或访问官网，完成账号注册和身份验证
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-[#2E8B57] rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                2
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  选择服务类型
+                </h3>
+                <p className="text-gray-600">
+                  根据您的专业技能，选择适合的服务类型和区域
+                </p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-[#2E8B57] rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                3
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  提交申请
+                </h3>
+                <p className="text-gray-600">
+                  填写详细信息，上传相关证件，提交入驻申请
+                </p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex items-start space-x-6">
+              <div className="w-12 h-12 bg-[#2E8B57] rounded-full flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                4
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  审核通过
+                </h3>
+                <p className="text-gray-600">
+                  平台审核通过后，即可开始接单提供服务
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Categories */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            我们需要的服务类型
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { name: '家政保洁', icon: '🧹', color: 'bg-blue-500' },
+              { name: '维修保养', icon: '🔧', color: 'bg-green-500' },
+              { name: '园艺护理', icon: '🌱', color: 'bg-yellow-500' },
+              { name: '搬家服务', icon: '📦', color: 'bg-purple-500' },
+              { name: '宠物护理', icon: '🐕', color: 'bg-pink-500' },
+              { name: '教育培训', icon: '📚', color: 'bg-indigo-500' },
+              { name: '健康医疗', icon: '🏥', color: 'bg-red-500' },
+              { name: '法律服务', icon: '⚖️', color: 'bg-gray-500' },
+            ].map(service => (
+              <div
+                key={service.name}
+                className="bg-white rounded-lg shadow p-4 text-center hover:shadow-lg transition-shadow"
+              >
+                <div className={`w-12 h-12 ${service.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                  <span className="text-white text-xl">{service.icon}</span>
+                </div>
+                <h3 className="font-semibold text-gray-900">{service.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            准备好开始了吗？
+          </h2>
+          <p className="text-xl text-green-100 mb-8">
+            加入金豆荚平台，开启您的服务提供者之旅
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              type="button"
+              className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+            >
+              立即申请
+            </button>
+            <button
+              type="button"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold"
+            >
+              了解更多
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+// import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export default async function About(props: { params: Promise<{ locale: string }> }) {
+  const { locale: _locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-8">About JinBean</h1>
+      <div className="max-w-4xl mx-auto">
+        <div className="bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-2xl font-semibold mb-6">Our Story</h2>
+          <p className="text-gray-700 mb-6">
+            JinBean is a modern platform dedicated to connecting communities through housekeeping services and innovative tools. We believe in creating sustainable, efficient solutions that make everyday life easier.
+          </p>
+
+          <h2 className="text-2xl font-semibold mb-6">Our Mission</h2>
+          <p className="text-gray-700 mb-6">
+            To provide reliable, high-quality housekeeping services while fostering strong community connections. We strive to make professional cleaning and maintenance accessible to everyone.
+          </p>
+
+          <h2 className="text-2xl font-semibold mb-6">Our Values</h2>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>
+              <strong>Quality:</strong>
+              <br />
+              We maintain the highest standards in all our services
+            </li>
+            <li>
+              <strong>Community:</strong>
+              <br />
+              We believe in building strong, supportive neighborhoods
+            </li>
+            <li>
+              <strong>Innovation:</strong>
+              <br />
+              We continuously improve our tools and processes
+            </li>
+            <li>
+              <strong>Sustainability:</strong>
+              <br />
+              We use eco-friendly products and practices
+            </li>
+            <li>
+              <strong>Reliability:</strong>
+              <br />
+              You can always count on us to deliver on our promises
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+// import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(/* props: IBlogProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return {
+    title: 'Blog - JinBean',
+    description: '分享生活技巧、社区故事和平台动态，让生活更美好',
+  };
+}
+
+export default async function Blog(/* props: IBlogProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <section className="bg-gradient-to-r from-[#2E8B57] to-[#276947] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            金豆荚博客
+          </h1>
+          <p className="text-xl text-green-100 max-w-3xl mx-auto">
+            分享生活技巧、社区故事和平台动态，让生活更美好
+          </p>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white border-b">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap gap-4 justify-center">
+            {[
+              { name: '全部', active: true },
+              { name: '生活技巧', active: false },
+              { name: '社区故事', active: false },
+              { name: '平台动态', active: false },
+              { name: '健康生活', active: false },
+              { name: '育儿经验', active: false },
+            ].map(category => (
+              <button
+                key={category.name}
+                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                  category.active
+                    ? 'bg-[#2E8B57] text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+                type="button"
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Post */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">精选文章</h2>
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-1/2">
+                <div className="h-64 md:h-full bg-gradient-to-br from-[#2E8B57] to-[#276947] flex items-center justify-center">
+                  <span className="text-white text-6xl">🏠</span>
+                </div>
+              </div>
+              <div className="md:w-1/2 p-8">
+                <div className="flex items-center mb-4">
+                  <span className="bg-[#2E8B57] text-white px-3 py-1 rounded-full text-sm">
+                    生活技巧
+                  </span>
+                  <span className="text-gray-500 text-sm ml-4">
+                    2024年1月15日
+                  </span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  海外华人居家生活必备技能指南
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  在海外生活，掌握一些基本的居家技能非常重要。本文为大家整理了从日常清洁到简单维修的实用技巧，
+                  让您的海外生活更加便利舒适。无论您是刚来海外的新移民，还是已经生活多年的老居民，
+                  都能从这些技巧中受益...
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-[#2E8B57] rounded-full flex items-center justify-center text-white font-semibold">
+                      金
+                    </div>
+                    <span className="ml-3 text-gray-700">金豆荚编辑团队</span>
+                  </div>
+                  <button
+                    className="bg-[#2E8B57] text-white px-6 py-2 rounded-lg hover:bg-[#276947] transition-colors"
+                    type="button"
+                  >
+                    阅读全文
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Posts Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl font-bold text-gray-900 mb-8">最新文章</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Post 1 */}
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#FFD700] to-[#FFC300] flex items-center justify-center">
+                <span className="text-[#2E8B57] text-4xl">🍳</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-3">
+                  <span className="bg-[#FFD700] text-[#2E8B57] px-2 py-1 rounded-full text-xs font-medium">
+                    生活技巧
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月12日
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  10道简单易学的家常菜，让海外生活更有家的味道
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  在海外生活，最想念的就是家乡的味道。本文为大家推荐10道简单易学的家常菜，
+                  用当地食材就能做出地道的中国味道...
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">阅读时间：8分钟</span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
+                    阅读全文 →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            {/* Post 2 */}
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#B22222] to-[#8B0000] flex items-center justify-center">
+                <span className="text-white text-4xl">👥</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-3">
+                  <span className="bg-[#B22222] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    社区故事
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月10日
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  从陌生人到邻居：金豆荚社区里的温暖故事
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  在金豆荚社区里，每天都在发生着温暖的故事。从最初的陌生人，
+                  到现在的亲密邻居，这些故事见证了社区的成长...
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">
+                    阅读时间：12分钟
+                  </span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
+                    阅读全文 →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            {/* Post 3 */}
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#4A90E2] to-[#357ABD] flex items-center justify-center">
+                <span className="text-white text-4xl">📱</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-3">
+                  <span className="bg-[#4A90E2] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    平台动态
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月8日
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  金豆荚App 2.0版本发布：全新界面，更好体验
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  金豆荚App迎来重大更新！2.0版本带来了全新的用户界面设计，
+                  更流畅的操作体验，以及更多实用功能...
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">阅读时间：5分钟</span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
+                    阅读全文 →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            {/* Post 4 */}
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#50C878] to-[#3CB371] flex items-center justify-center">
+                <span className="text-white text-4xl">🏥</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-3">
+                  <span className="bg-[#50C878] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    健康生活
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月5日
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  海外就医指南：如何选择合适的医疗服务
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  在海外生活，了解当地的医疗体系非常重要。本文为您详细介绍如何选择合适的医疗服务，
+                  以及就医时需要注意的事项...
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">
+                    阅读时间：15分钟
+                  </span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
+                    阅读全文 →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            {/* Post 5 */}
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#8B4513] to-[#654321] flex items-center justify-center">
+                <span className="text-white text-4xl">👶</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-3">
+                  <span className="bg-[#8B4513] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    育儿经验
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月3日
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  双语教育：如何在海外培养孩子的中文能力
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  在海外长大的华人孩子，如何保持中文能力是一个重要课题。
+                  本文分享一些实用的双语教育方法和经验...
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">
+                    阅读时间：10分钟
+                  </span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
+                    阅读全文 →
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            {/* Post 6 */}
+            <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-[#FF69B4] to-[#FF1493] flex items-center justify-center">
+                <span className="text-white text-4xl">🎨</span>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center mb-3">
+                  <span className="bg-[#FF69B4] text-white px-2 py-1 rounded-full text-xs font-medium">
+                    生活技巧
+                  </span>
+                  <span className="text-gray-500 text-xs ml-3">
+                    2024年1月1日
+                  </span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  居家装饰：用中国元素打造温馨的海外之家
+                </h3>
+                <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  在海外生活，如何让家里保持中国文化的氛围？
+                  本文为您介绍一些简单实用的居家装饰技巧...
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">阅读时间：7分钟</span>
+                  <button
+                    className="text-[#2E8B57] hover:text-[#276947] font-medium text-sm"
+                    type="button"
+                  >
+                    阅读全文 →
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Signup */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            订阅我们的博客
+          </h2>
+          <p className="text-xl text-green-100 mb-8">
+            第一时间获取最新文章和社区动态，让生活更精彩
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="输入您的邮箱地址"
+              className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-opacity-50"
+            />
+            <button
+              className="bg-white text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+              type="button"
+            >
+              订阅
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Load More */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <button
+            className="bg-white border-2 border-[#2E8B57] text-[#2E8B57] px-8 py-3 rounded-lg hover:bg-[#2E8B57] hover:text-white transition-colors font-semibold"
+            type="button"
+          >
+            加载更多文章
+          </button>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
+import Link from 'next/link';
+import React from 'react';
+import { getI18nPath } from '@/utils/Helpers';
+
+type IPortfolioProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(props: IPortfolioProps) {
+  const { locale: _locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
+
+  return {
+    title: 'Portfolio - JinBean',
+    description: 'View our portfolio of projects and achievements',
+  };
+}
+
+export default async function PortfolioPage(props: IPortfolioProps) {
+  const { locale } = await props.params;
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
+
+  const projects = [
+    { id: '1', title: 'Project 1', description: 'A modern web application built with Next.js and TypeScript' },
+    { id: '2', title: 'Project 2', description: 'E-commerce platform with advanced features and analytics' },
+    { id: '3', title: 'Project 3', description: 'Mobile-first responsive design with cutting-edge technologies' },
+    { id: '4', title: 'Project 4', description: 'Full-stack application with real-time collaboration features' },
+    { id: '5', title: 'Project 5', description: 'AI-powered dashboard with data visualization and insights' },
+  ];
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-8">Our Portfolio</h1>
+      <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        Explore our collection of successful projects that showcase our expertise in modern web development and innovative solutions.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map(project => (
+          <div key={project.id} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+            <div className="p-6">
+              <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+              <p className="text-gray-600 mb-4">{project.description}</p>
+              <Link
+                href={getI18nPath(`/portfolio/${project.id}`, locale)}
+                className="inline-block bg-[#2E8B57] text-white px-4 py-2 rounded-lg hover:bg-[#276947] transition-colors"
+              >
+                View Details
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
+import { routing } from '@/libs/I18nRouting';
+
+type IPortfolioDetailProps = {
+  params: Promise<{ slug: string; locale: string }>;
+};
+
+export function generateStaticParams() {
+  return routing.locales
+    .map(locale =>
+      Array.from(Array.from({ length: 6 }).keys()).map(elt => ({
+        slug: `${elt}`,
+        locale,
+      })),
+    )
+    .flat(1);
+}
+
+export async function generateMetadata(props: IPortfolioDetailProps) {
+  const { locale: _locale, slug } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'PortfolioSlug',
+  // });
+
+  return {
+    title: `Portfolio - ${slug} - JinBean`,
+    description: `View details of ${slug} project`,
+  };
+}
+
+export default async function PortfolioSlugPage(props: IPortfolioDetailProps) {
+  const { slug, locale: _locale } = await props.params;
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'PortfolioSlug',
+  // });
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold mb-6">
+        Portfolio Project:
+        {' '}
+        {slug}
+      </h1>
+      <div className="bg-white rounded-lg shadow-md p-6">
+        <p className="text-gray-600 mb-4">
+          This is a detailed view of the
+          {' '}
+          {slug}
+          {' '}
+          project. Here you can see all the details, technologies used, and outcomes of this project.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-xl font-semibold mb-3">Project Overview</h3>
+            <p className="text-gray-700">
+              This project demonstrates our expertise in modern web development and showcases the quality of work we deliver to our clients.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-3">Technologies Used</h3>
+            <ul className="list-disc list-inside text-gray-700">
+              <li>Next.js 15</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>Modern React Patterns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export const dynamicParams = false;
+
+
+// import { getTranslations } from 'next-intl/server';
+// import Image from 'next/image';
+import React from 'react';
+
+import { CounterForm } from '@/components/CounterForm';
+import { CurrentCount } from '@/components/CurrentCount';
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(/* props: {
+  params: Promise<{ locale: string }>;
+} */) {
+  // const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Counter',
+  // });
+
+  return {
+    title: 'Counter Demo - JinBean',
+    description: 'A simple counter demonstration',
+  };
+}
+
+export default async function CounterPage(/* props: { params: Promise<{ locale: string }> } */) {
+  // const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Counter',
+  // });
+
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <h1 className="text-3xl font-bold text-center mb-8">Counter Demo</h1>
+      <div className="max-w-md mx-auto">
+        <div className="bg-white rounded-lg shadow-md p-6">
+          <div className="text-center mb-4">
+            <p className="text-lg text-gray-600">Current count:</p>
+            <p className="text-4xl font-bold text-blue-600">
+              <CurrentCount />
+            </p>
+          </div>
+          <CounterForm />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+// import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(/* props: ICommunityProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return {
+    title: 'Community - JinBean',
+    description: '加入金豆圈社区，与邻里分享生活经验，参与社区活动',
+  };
+}
+
+export default async function Community(/* props: ICommunityProps */) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <section className="bg-gradient-to-r from-[#2E8B57] to-[#276947] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            金豆圈社区
+          </h1>
+          <p className="text-xl text-green-100 max-w-3xl mx-auto">
+            连接邻里，分享生活，共建温暖社区
+          </p>
+        </div>
+      </section>
+
+      {/* Community Stats */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#2E8B57] mb-2">
+                5,000+
+              </div>
+              <div className="text-gray-600">社区成员</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#FFD700] mb-2">
+                1,200+
+              </div>
+              <div className="text-gray-600">互助帖子</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#B22222] mb-2">
+                50+
+              </div>
+              <div className="text-gray-600">社区活动</div>
+            </div>
+            <div>
+              <div className="text-3xl md:text-4xl font-bold text-[#4A90E2] mb-2">
+                98%
+              </div>
+              <div className="text-gray-600">满意度</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Features */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            社区功能
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Feature 1 */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-[#2E8B57] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-2xl">💬</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                邻里交流
+              </h3>
+              <p className="text-gray-600">
+                分享生活经验，交流育儿心得，讨论社区话题，建立邻里友谊
+              </p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-[#FFD700] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-[#2E8B57] text-2xl">🤝</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                互助服务
+              </h3>
+              <p className="text-gray-600">
+                发布求助信息，提供技能帮助，实现邻里互助，共同解决问题
+              </p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-[#B22222] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-2xl">🎉</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                社区活动
+              </h3>
+              <p className="text-gray-600">
+                组织节日庆祝、文化分享、技能培训等丰富多彩的社区活动
+              </p>
+            </div>
+
+            {/* Feature 4 */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-[#4A90E2] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-2xl">📢</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                信息发布
+              </h3>
+              <p className="text-gray-600">
+                及时发布社区通知、活动信息、服务推荐等重要消息
+              </p>
+            </div>
+
+            {/* Feature 5 */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-[#50C878] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-2xl">⭐</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                评价推荐
+              </h3>
+              <p className="text-gray-600">
+                分享服务体验，推荐优质商家，帮助其他用户做出选择
+              </p>
+            </div>
+
+            {/* Feature 6 */}
+            <div className="bg-white rounded-lg shadow-lg p-6">
+              <div className="w-16 h-16 bg-[#8B4513] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-2xl">🏆</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                积分奖励
+              </h3>
+              <p className="text-gray-600">
+                参与社区活动获得积分，兑换优惠券和服务折扣
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Posts */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            热门讨论
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Post 1 */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#2E8B57] rounded-full flex items-center justify-center text-white font-semibold">
+                  张
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">张阿姨</p>
+                  <p className="text-sm text-gray-500">2小时前</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                推荐一位很棒的保洁阿姨
+              </h3>
+              <p className="text-gray-600 mb-4">
+                上周通过金豆荚预约了李阿姨的保洁服务，非常专业细心，家里焕然一新！
+                强烈推荐给大家，有需要的可以私信我联系方式。
+              </p>
+              <div className="flex items-center justify-between text-sm text-gray-500">
+                <span>👍 15 赞</span>
+                <span>💬 8 评论</span>
+                <span>📤 3 分享</span>
+              </div>
+            </div>
+
+            {/* Post 2 */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#FFD700] rounded-full flex items-center justify-center text-[#2E8B57] font-semibold">
+                  李
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">李师傅</p>
+                  <p className="text-sm text-gray-500">5小时前</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                免费提供园艺咨询
+              </h3>
+              <p className="text-gray-600 mb-4">
+                我是专业园艺师，有20年经验。如果大家有园艺问题，可以随时咨询我。
+                这周末我还会在社区中心举办免费园艺讲座，欢迎参加！
+              </p>
+              <div className="flex items-center justify-between text-sm text-gray-500">
+                <span>👍 28 赞</span>
+                <span>💬 12 评论</span>
+                <span>📤 5 分享</span>
+              </div>
+            </div>
+
+            {/* Post 3 */}
+            <div className="bg-gray-50 rounded-lg p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-[#B22222] rounded-full flex items-center justify-center text-white font-semibold">
+                  王
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">王妈妈</p>
+                  <p className="text-sm text-gray-500">1天前</p>
+                </div>
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                寻找育儿经验分享
+              </h3>
+              <p className="text-gray-600 mb-4">
+                我家宝宝刚满1岁，想和大家交流一下育儿经验。
+                特别是关于辅食添加和睡眠训练的建议，有经验的妈妈们请分享！
+              </p>
+              <div className="flex items-center justify-between text-sm text-gray-500">
+                <span>👍 42 赞</span>
+                <span>💬 25 评论</span>
+                <span>📤 8 分享</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Community CTA */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            加入金豆圈社区
+          </h2>
+          <p className="text-xl text-green-100 mb-8">
+            与邻里分享生活，参与社区活动，共建温暖家园
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              type="button"
+              className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+            >
+              立即加入
+            </button>
+            <button
+              type="button"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold"
+            >
+              了解更多
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+// // // import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
+import Button from '@/../../libs/ui/components/Button';
+import Logo from '@/../../libs/ui/components/Logo';
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+type IPageProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(_props: IPageProps) {
+  // const { locale } = await props.params;
+  // // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Index',
+  // });
+
+  return {
+    title: '金豆荚 JinBean - Home',
+    description: 'Your trusted platform for housekeeping services and community building',
+  };
+}
+
+export default async function MarketingPage(_props: IPageProps) {
+  // const { locale } = await props.params;
+  // // setRequestLocale(locale);
+  // // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Index',
+  // });
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <Logo size={80} />
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <span className="text-[#2E8B57]">金豆荚</span>
+            <span className="text-[#FFD700]"> JinBean</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Your trusted platform for housekeeping services and community building
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="text-lg px-8 py-4">
+              Download App
+            </Button>
+            <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
+              Learn More
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            Our Services
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Service Card 1 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-[#2E8B57] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-2xl">🏠</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Housekeeping Services
+              </h3>
+              <p className="text-gray-600">
+                Professional cleaning and maintenance services for your home
+              </p>
+            </div>
+
+            {/* Service Card 2 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-[#FFD700] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-[#2E8B57] text-2xl">🔧</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Tools & Equipment
+              </h3>
+              <p className="text-gray-600">High-quality tools and equipment for all your needs</p>
+            </div>
+
+            {/* Service Card 3 */}
+            <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-[#B22222] rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-2xl">👥</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Community Building
+              </h3>
+              <p className="text-gray-600">
+                Connect with neighbors and build a stronger community
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#2E8B57]">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Join Our Community
+          </h2>
+          <p className="text-xl text-green-100 mb-8">Be part of something bigger</p>
+          <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
+            Get Started
+          </Button>
+        </div>
+      </section>
+
+      {/* Community Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
+            Community Stories
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Community Post 1 */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-[#2E8B57] rounded-full flex items-center justify-center text-white font-semibold">
+                  张
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">
+                    Zhang Wei
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    2 hours ago
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                Great experience with the housekeeping service!
+              </p>
+            </div>
+
+            {/* Community Post 2 */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-[#FFD700] rounded-full flex items-center justify-center text-[#2E8B57] font-semibold">
+                  李
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">
+                    Li Ming
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    1 day ago
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                The tools are excellent quality and very affordable.
+              </p>
+            </div>
+
+            {/* Community Post 3 */}
+            <div className="bg-white rounded-lg shadow p-6">
+              <div className="flex items-center mb-4">
+                <div className="w-10 h-10 bg-[#B22222] rounded-full flex items-center justify-center text-white font-semibold">
+                  王
+                </div>
+                <div className="ml-3">
+                  <p className="font-semibold text-gray-900">
+                    Wang Fang
+                  </p>
+                  <p className="text-sm text-gray-500">
+                    3 days ago
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-700">
+                Love the community features and how easy it is to connect with neighbors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+// import { setRequestLocale } from 'next-intl/server';
+import React from 'react';
+
+type IServicesProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(_props: IServicesProps) {
+  // const { locale: _locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return {
+    title: 'Services - JinBean',
+    description: '金豆荚提供家政服务、工具租赁、社区互动等多种便民服务',
+  };
+}
+
+export default async function Services(_props: IServicesProps) {
+  // const { locale: _locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <section className="bg-[#2E8B57] py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            我们的服务
+          </h1>
+          <p className="text-xl text-green-100 max-w-3xl mx-auto">
+            为海外华人及本地居民提供全方位的便民生活服务
+          </p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* 家政服务 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-[#2E8B57] to-[#276947] flex items-center justify-center">
+                <span className="text-white text-6xl">🏠</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  家政服务
+                </h3>
+                <ul className="space-y-2 text-gray-600 mb-6">
+                  <li>• 专业保洁服务</li>
+                  <li>• 家居维修保养</li>
+                  <li>• 搬家服务</li>
+                  <li>• 园艺护理</li>
+                  <li>• 宠物护理</li>
+                </ul>
+                <button
+                  type="button"
+                  className="w-full bg-[#2E8B57] text-white py-3 rounded-lg hover:bg-[#276947] transition-colors"
+                >
+                  立即预约
+                </button>
+              </div>
+            </div>
+
+            {/* 工具租赁 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-[#FFD700] to-[#FFC300] flex items-center justify-center">
+                <span className="text-[#2E8B57] text-6xl">🔧</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  工具租赁
+                </h3>
+                <ul className="space-y-2 text-gray-600 mb-6">
+                  <li>• 草坪修剪工具</li>
+                  <li>• 维修设备</li>
+                  <li>• 清洁设备</li>
+                  <li>• 园艺工具</li>
+                  <li>• 搬运设备</li>
+                </ul>
+                <button
+                  type="button"
+                  className="w-full bg-[#FFD700] text-[#2E8B57] py-3 rounded-lg hover:bg-[#FFC300] transition-colors font-semibold"
+                >
+                  查看工具
+                </button>
+              </div>
+            </div>
+
+            {/* 社区互动 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-[#B22222] to-[#8B0000] flex items-center justify-center">
+                <span className="text-white text-6xl">👥</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  社区互动
+                </h3>
+                <ul className="space-y-2 text-gray-600 mb-6">
+                  <li>• 金豆圈社区</li>
+                  <li>• 邻里互助</li>
+                  <li>• 经验分享</li>
+                  <li>• 活动组织</li>
+                  <li>• 技能交换</li>
+                </ul>
+                <button
+                  type="button"
+                  className="w-full bg-[#B22222] text-white py-3 rounded-lg hover:bg-[#8B0000] transition-colors"
+                >
+                  加入社区
+                </button>
+              </div>
+            </div>
+
+            {/* 教育培训 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-[#4A90E2] to-[#357ABD] flex items-center justify-center">
+                <span className="text-white text-6xl">📚</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  教育培训
+                </h3>
+                <ul className="space-y-2 text-gray-600 mb-6">
+                  <li>• 语言学习</li>
+                  <li>• 技能培训</li>
+                  <li>• 文化课程</li>
+                  <li>• 职业发展</li>
+                  <li>• 兴趣培养</li>
+                </ul>
+                <button
+                  type="button"
+                  className="w-full bg-[#4A90E2] text-white py-3 rounded-lg hover:bg-[#357ABD] transition-colors"
+                >
+                  查看课程
+                </button>
+              </div>
+            </div>
+
+            {/* 健康医疗 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-[#50C878] to-[#3CB371] flex items-center justify-center">
+                <span className="text-white text-6xl">🏥</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  健康医疗
+                </h3>
+                <ul className="space-y-2 text-gray-600 mb-6">
+                  <li>• 健康咨询</li>
+                  <li>• 医疗翻译</li>
+                  <li>• 体检预约</li>
+                  <li>• 康复护理</li>
+                  <li>• 心理健康</li>
+                </ul>
+                <button
+                  type="button"
+                  className="w-full bg-[#50C878] text-white py-3 rounded-lg hover:bg-[#3CB371] transition-colors"
+                >
+                  健康服务
+                </button>
+              </div>
+            </div>
+
+            {/* 法律服务 */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-[#8B4513] to-[#654321] flex items-center justify-center">
+                <span className="text-white text-6xl">⚖️</span>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  法律服务
+                </h3>
+                <ul className="space-y-2 text-gray-600 mb-6">
+                  <li>• 法律咨询</li>
+                  <li>• 文件翻译</li>
+                  <li>• 合同审查</li>
+                  <li>• 移民服务</li>
+                  <li>• 纠纷调解</li>
+                </ul>
+                <button
+                  type="button"
+                  className="w-full bg-[#8B4513] text-white py-3 rounded-lg hover:bg-[#654321] transition-colors"
+                >
+                  法律咨询
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-[#2E8B57] py-16">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            需要其他服务？
+          </h2>
+          <p className="text-xl text-green-100 mb-8">
+            如果您有特殊需求，请联系我们，我们将为您提供定制化服务
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              type="button"
+              className="bg-white text-[#2E8B57] px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
+            >
+              联系我们
+            </button>
+            <button
+              type="button"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-[#2E8B57] transition-colors font-semibold"
+            >
+              成为服务提供者
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+
+// import { UserProfile } from '@clerk/nextjs';
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
+
+type IUserProfileProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(/* props: IUserProfileProps */) {
+  // const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'UserProfile',
+  // });
+
+  return {
+    title: 'User Profile - JinBean',
+    description: 'Manage your JinBean profile',
+  };
+}
+
+export default async function UserProfilePage({ params: _params }: IUserProfileProps) {
+  // const { locale } = await params;
+  // await setRequestLocale(locale);
+
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          User Profile
+        </h2>
+        <p className="mt-2 text-center text-sm text-gray-600">
+          Manage your profile settings
+        </p>
+      </div>
+      {/* <UserProfile /> */}
+    </div>
+  );
+}
+
+
+import React from 'react';
+import { Hello } from '@/components/Hello';
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+type IDashboardProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(props: IDashboardProps) {
+  // const { locale } = await props.params;
+  await props.params;
+  // // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Dashboard',
+  // });
+
+  return {
+    title: 'Dashboard',
+  };
+}
+
+export default async function DashboardPage(props: IDashboardProps) {
+  await props.params; // 确保params被解析，但不需要使用locale
+  return (
+    <div className="py-5 [&_p]:my-6">
+      <Hello />
+    </div>
+  );
+}
+
+
+// import { SignUp } from '@clerk/nextjs';
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
+// import { getI18nPath } from '@/utils/Helpers';
+
+type ISignUpProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(/* props: ISignUpProps */) {
+  // const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'SignUp',
+  // });
+
+  return {
+    title: 'Sign Up - JinBean',
+    description: 'Create your JinBean account',
+  };
+}
+
+export default async function SignUpPage({ params: _params }: ISignUpProps) {
+  // const { locale } = await params;
+  // await setRequestLocale(locale);
+
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          Sign Up
+        </h2>
+        <p className="mt-2 text-center text-sm text-gray-600">
+          Create your account
+        </p>
+      </div>
+      {/* <SignUp /> */}
+    </div>
+  );
+}
+
+
+// import { SignIn } from '@clerk/nextjs';
+// // import { getTranslations, setRequestLocale } from 'next-intl/server';
+import React from 'react';
+// import { getI18nPath } from '@/utils/Helpers';
+
+type ISignInProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateStaticParams() {
+  return [
+    { locale: 'zh' },
+    { locale: 'en' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata(/* props: ISignInProps */) {
+  // const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'SignIn',
+  // });
+
+  return {
+    title: 'Sign In - JinBean',
+    description: 'Sign in to your JinBean account',
+  };
+}
+
+export default async function SignInPage({ params: _params }: ISignInProps) {
+  // const { locale } = await params;
+  // await setRequestLocale(locale);
+
+  return (
+    <div className="flex min-h-screen flex-col items-center justify-center py-12 sm:px-6 lg:px-8">
+      <div className="sm:mx-auto sm:w-full sm:max-w-md">
+        <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
+          Sign In
+        </h2>
+        <p className="mt-2 text-center text-sm text-gray-600">
+          Sign in to your account
+        </p>
+      </div>
+      {/* <SignIn /> */}
+    </div>
+  );
+}
+
+
+import { redirect } from 'next/navigation';
+
+export default async function RootPage() {
+  // For static export, redirect to default locale
+  redirect('/en');
+}
+
+
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
+import Image from 'next/image';
+
+type IAboutProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(_props: IAboutProps) {
+  // const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'About',
+  // });
+  return {
+    title: 'About',
+    description: 'About page description',
+  };
+}
+
+export default async function About(_props: IAboutProps) {
+  // const { locale } = await props.params;
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'About',
+  // });
+  return (
+    <>
+      <p>Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.</p>
+      <div className="mt-2 text-center text-sm">
+        Translation powered by
+        <br />
+        <a
+          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
+          href="https://l.crowdin.com/next-js"
+        >
+          Crowdin
+        </a>
+      </div>
+      <a href="https://l.crowdin.com/next-js">
+        <Image
+          className="mx-auto mt-2"
+          src="/assets/images/crowdin-dark.png"
+          alt="Crowdin Translation Management System"
+          width={128}
+          height={26}
+        />
+      </a>
+    </>
+  );
+}
+
+
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
+import Image from 'next/image';
+import Link from 'next/link';
+
+type IPortfolioProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(_props: IPortfolioProps) {
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
+  return {
+    title: 'Portfolio',
+    description: 'Welcome to my portfolio page!',
+  };
+}
+
+export default async function Portfolio(_props: IPortfolioProps) {
+  // const { locale } = await _props.params;
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
+  return (
+    <>
+      <p>Welcome to my portfolio page! Here you will find a carefully curated collection of my work and accomplishments. Through this portfolio, I'm to showcase my expertise, creativity, and the value I can bring to your projects.</p>
+      <div className="grid grid-cols-1 justify-items-start gap-3 md:grid-cols-2 xl:grid-cols-3">
+        {Array.from(Array.from({ length: 6 }).keys()).map(elt => (
+          <Link
+            className="hover:text-blue-700"
+            key={elt}
+            href={`/portfolio/${elt}`}
+          >
+            {`Portfolio ${elt}`}
+          </Link>
+        ))}
+      </div>
+      <div className="mt-5 text-center text-sm">
+        Error reporting powered by
+        {' '}
+        <a
+          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
+          href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
+        >
+          Sentry
+        </a>
+        {' - Code coverage powered by '}
+        <a
+          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
+          href="https://about.codecov.io/codecov-free-trial/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
+        >
+          Codecov
+        </a>
+      </div>
+      <a
+        href="https://sentry.io/for/nextjs/?utm_source=github&utm_medium=paid-community&utm_campaign=general-fy25q1-nextjs&utm_content=github-banner-nextjsboilerplate-logo"
+      >
+        <Image
+          className="mx-auto mt-2"
+          src="/assets/images/sentry-dark.png"
+          alt="Sentry"
+          width={128}
+          height={38}
+        />
+      </a>
+    </>
+  );
+}
+
+
+// import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
+
+type IPortfolioSlugProps = {
+  params: Promise<{ locale: string; slug: string }>;
+};
+
+export function generateStaticParams() {
+  return [
+    { locale: 'en', slug: 'project-1' },
+    { locale: 'en', slug: 'project-2' },
+    { locale: 'zh', slug: 'project-1' },
+    { locale: 'zh', slug: 'project-2' },
+    { locale: 'fr', slug: 'project-1' },
+    { locale: 'fr', slug: 'project-2' },
+  ];
+}
+
+export async function generateMetadata(_props: IPortfolioSlugProps) {
+  // const { locale, slug } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
+  return {
+    title: 'Portfolio Project',
+    description: 'Portfolio project details',
+  };
+}
+
+export default async function PortfolioSlug(_props: IPortfolioSlugProps) {
+  // const { locale, slug } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Portfolio',
+  // });
+
+  return (
+    <>
+      <h1>Portfolio Project Details</h1>
+      <p>This is a detailed view of a portfolio project.</p>
+      <div className="mt-4">
+        <Image
+          src="/assets/images/placeholder.png"
+          alt="Project placeholder"
+          width={400}
+          height={300}
+          className="rounded-lg"
+        />
+      </div>
+      <div className="mt-4">
+        <h2>Project Description</h2>
+        <p>This is a sample project description that would be replaced with actual content.</p>
+      </div>
+      <div className="mt-4">
+        <h2>Technologies Used</h2>
+        <ul className="list-disc list-inside">
+          <li>Next.js</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>Tailwind CSS</li>
+        </ul>
+      </div>
+    </>
+  );
+}
+
+export const dynamicParams = false;
+
+
+import { useTranslations } from 'next-intl';
+// import { getTranslations } from 'next-intl/server';
+import Image from 'next/image';
+import { Suspense } from 'react';
+import { CounterForm } from '@/components/CounterForm';
+import { CurrentCount } from '@/components/CurrentCount';
+
+export async function generateMetadata(_props: { params: Promise<{ locale: string }> }) {
+  // const { locale } = await props.params;
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Counter',
+  // });
+  return {
+    title: 'Counter',
+    description: 'An example of DB operation',
+  };
+}
+
+export default function Counter() {
+  const t = useTranslations('Counter' as any);
+
+  return (
+    <>
+      <CounterForm />
+
+      <div className="mt-3">
+        <Suspense fallback={<p>{(t as any)('loading_counter')}</p>}>
+          <CurrentCount />
+        </Suspense>
+      </div>
+
+      <div className="mt-5 text-center text-sm">
+        {`${(t as any)('security_powered_by')} `}
+        <a
+          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
+          href="https://launch.arcjet.com/Q6eLbRE"
+        >
+          Arcjet
+        </a>
+      </div>
+
+      <a
+        href="https://launch.arcjet.com/Q6eLbRE"
+      >
+        <Image
+          className="mx-auto mt-2"
+          src="/assets/images/arcjet-light.svg"
+          alt="Arcjet"
+          width={128}
+          height={38}
+        />
+      </a>
+    </>
+  );
+};
+
+
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Sponsors } from '@/components/Sponsors';
+
+type IIndexProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(_props: IIndexProps) {
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Index',
+  // });
+  return {
+    title: 'Next.js Boilerplate Presentation',
+    description: 'Next js Boilerplate is the perfect starter code for your project. Build your React application with the Next.js framework.',
+  };
+}
+
+export default async function Index(_props: IIndexProps) {
+  // const { locale } = await _props.params;
+  // setRequestLocale(locale);
+  // const t = await getTranslations({
+  //   locale,
+  //   namespace: 'Index',
+  // });
+  return (
+    <>
+      <p>
+        {'Follow '}
+        <a
+          className="text-blue-700 hover:border-b-2 hover:border-blue-700"
+          href="https://twitter.com/ixartz"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          @Ixartz on Twitter
+        </a>
+        {' for updates and more information about the boilerplate.'}
+      </p>
+      <h2 className="mt-5 text-2xl font-bold">
+        Boilerplate Code for Your Next.js Project with Tailwind CSS
+      </h2>
+      <p className="text-base">
+        Next.js Boilerplate is a developer-friendly starter code for Next.js projects, built with Tailwind CSS and TypeScript.
+        {' '}
+        <span role="img" aria-label="zap">
+          ⚡️
+        </span>
+        {' '}
+        Designed with developer experience in mind, it includes:
+      </p>
+      <ul className="mt-3 text-base">
+        <li>🚀 Next.js with App Router support</li>
+        <li>🔥 TypeScript for type checking</li>
+        <li>💎 Tailwind CSS integration</li>
+        <li>
+          🔒 Authentication with
+          {' '}
+          <a
+            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
+            href="https://clerk.com?utm_source=github&amp;utm_medium=sponsorship&amp;utm_campaign=nextjs-boilerplate"
+          >
+            Clerk
+          </a>
+          {' '}
+          (includes passwordless, social, and multi-factor auth)
+        </li>
+        <li>📦 ORM with DrizzleORM (PostgreSQL, SQLite, MySQL support)</li>
+        <li>
+          💽 Dev database with PGlite and production with
+          {' '}
+          <a
+            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
+            href="https://www.prisma.io/?via=nextjsindex"
+          >
+            Prisma PostgreSQL
+          </a>
+        </li>
+        <li>
+          🌐 Multi-language support (i18n) with next-intl and
+          {' '}
+          <a
+            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
+            href="https://l.crowdin.com/next-js"
+          >
+            Crowdin
+          </a>
+        </li>
+        <li>🔴 Form handling (React Hook Form) and validation (Zod)</li>
+        <li>📏 Linting and formatting (ESLint, Prettier)</li>
+        <li>🦊 Git hooks and commit linting (Husky, Commitlint)</li>
+        <li>🦺 Testing suite (Vitest, React Testing Library, Playwright)</li>
+        <li>🎉 Storybook for UI development</li>
+        <li>
+          🐰 AI-powered code reviews with
+          {' '}
+          <a
+            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
+            href="https://www.coderabbit.ai?utm_source=next_js_starter&utm_medium=github&utm_campaign=next_js_starter_oss_2025"
+          >
+            CodeRabbit
+          </a>
+        </li>
+        <li>
+          🚨 Error monitoring (
+          <a
+            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
+            href="https://sentry.io/for/nextjs/?utm_source=github&amp;utm_medium=paid-community&amp;utm_campaign=general-fy25q1-nextjs&amp;utm_content=github-banner-nextjsboilerplate-logo"
+          >
+            Sentry
+          </a>
+          ) and logging (Pino.js)
+        </li>
+        <li>🖥️ Monitoring as Code (Checkly)</li>
+        <li>
+          🔐 Security and bot protection (
+          <a
+            className="font-bold text-blue-700 hover:border-b-2 hover:border-blue-700"
+            href="https://launch.arcjet.com/Q6eLbRE"
+          >
+            Arcjet
+          </a>
+          )
+        </li>
+        <li>🤖 SEO optimization (metadata, JSON-LD, Open Graph tags)</li>
+        <li>⚙️ Development tools (VSCode config, bundler analyzer, changelog generation)</li>
+      </ul>
+      <p className="text-base">
+        Our sponsors&apos; exceptional support has made this project possible.
+        Their services integrate seamlessly with the boilerplate, and we
+        recommend trying them out.
+      </p>
+      <h2 className="mt-5 text-2xl font-bold">Sponsors</h2>
+      <Sponsors />
+    </>
+  );
+}
+
+
+// import { setRequestLocale } from 'next-intl/server';
+
+type IContentProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(props: IContentProps) {
+  await props.params;
+  return {
+    title: '内容管理 - 金豆荚 JinBean',
+    description: '管理博客文章、公告和页面内容',
+  };
+}
+
+export default async function Content(props: IContentProps) {
+  const { locale: _locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-6">
+            <h1 className="text-2xl font-bold text-gray-900">内容管理</h1>
+            <p className="mt-1 text-sm text-gray-500">
+              管理博客文章、公告和页面内容
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Actions */}
+      <div className="px-4 sm:px-6 lg:px-8 py-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+              <span className="text-lg mr-2">📝</span>
+              新建文章
+            </button>
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#FFD700] text-[#2E8B57] rounded-lg hover:bg-[#FFC300] transition-colors font-semibold">
+              <span className="text-lg mr-2">📢</span>
+              发布公告
+            </button>
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#B22222] text-white rounded-lg hover:bg-[#8B0000] transition-colors">
+              <span className="text-lg mr-2">🌐</span>
+              页面管理
+            </button>
+            <button type="button" className="flex items-center justify-center px-6 py-3 bg-[#4A90E2] text-white rounded-lg hover:bg-[#357ABD] transition-colors">
+              <span className="text-lg mr-2">📊</span>
+              内容统计
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Content Tabs */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-6">
+        <div className="bg-white rounded-lg shadow">
+          <div className="border-b border-gray-200">
+            <nav className="-mb-px flex space-x-8 px-6">
+              <button type="button" className="border-b-2 border-[#2E8B57] py-4 px-1 text-sm font-medium text-[#2E8B57]">
+                博客文章
+              </button>
+              <button type="button" className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                公告
+              </button>
+              <button type="button" className="border-b-2 border-transparent py-4 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                页面内容
+              </button>
+            </nav>
+          </div>
+
+          {/* Blog Articles */}
+          <div className="p-6">
+            {/* Filters */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
+              <div className="flex-1">
+                <input
+                  type="text"
+                  placeholder="搜索文章标题或内容..."
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]"
+                />
+              </div>
+
+              <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]">
+                <option value="">分类</option>
+                <option value="life-tips">生活技巧</option>
+                <option value="community">社区故事</option>
+                <option value="platform">平台动态</option>
+                <option value="health">健康生活</option>
+                <option value="parenting">育儿经验</option>
+              </select>
+
+              <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]">
+                <option value="">状态</option>
+                <option value="published">已发布</option>
+                <option value="draft">草稿</option>
+                <option value="scheduled">定时发布</option>
+              </select>
+
+              <button type="button" className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+                搜索
+              </button>
+            </div>
+
+            {/* Articles Table */}
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      文章信息
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      分类
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      状态
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      作者
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      发布时间
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      操作
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {/* Article 1 */}
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4">
+                      <div>
+                        <div className="text-sm font-medium text-gray-900">海外华人居家生活必备技能指南</div>
+                        <div className="text-sm text-gray-500">在海外生活，掌握一些基本的居家技能非常重要...</div>
+                        <div className="text-sm text-gray-400">阅读时间：15分钟 | 浏览量：1,234</div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                        生活技巧
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                        已发布
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-[#2E8B57] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-semibold">金</span>
+                        </div>
+                        <span className="ml-2 text-sm text-gray-900">金豆荚编辑</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      2024-01-15 14:30
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
+                    </td>
+                  </tr>
+
+                  {/* Article 2 */}
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4">
+                      <div>
+                        <div className="text-sm font-medium text-gray-900">10道简单易学的家常菜，让海外生活更有家的味道</div>
+                        <div className="text-sm text-gray-500">在海外生活，最想念的就是家乡的味道...</div>
+                        <div className="text-sm text-gray-400">阅读时间：8分钟 | 浏览量：856</div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                        生活技巧
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                        已发布
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-[#FFD700] rounded-full flex items-center justify-center">
+                          <span className="text-[#2E8B57] text-xs font-semibold">李</span>
+                        </div>
+                        <span className="ml-2 text-sm text-gray-900">李华</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      2024-01-12 10:15
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
+                    </td>
+                  </tr>
+
+                  {/* Article 3 */}
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4">
+                      <div>
+                        <div className="text-sm font-medium text-gray-900">从陌生人到邻居：金豆荚社区里的温暖故事</div>
+                        <div className="text-sm text-gray-500">在金豆荚社区里，每天都在发生着温暖的故事...</div>
+                        <div className="text-sm text-gray-400">阅读时间：12分钟 | 浏览量：1,567</div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
+                        社区故事
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                        已发布
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-[#B22222] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-semibold">王</span>
+                        </div>
+                        <span className="ml-2 text-sm text-gray-900">王芳</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      2024-01-10 16:45
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
+                    </td>
+                  </tr>
+
+                  {/* Article 4 */}
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4">
+                      <div>
+                        <div className="text-sm font-medium text-gray-900">金豆荚App 2.0版本发布：全新界面，更好体验</div>
+                        <div className="text-sm text-gray-500">金豆荚App迎来重大更新！2.0版本带来了全新的用户界面设计...</div>
+                        <div className="text-sm text-gray-400">阅读时间：5分钟 | 浏览量：2,341</div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                        平台动态
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-800">
+                        草稿
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-[#4A90E2] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-semibold">陈</span>
+                        </div>
+                        <span className="ml-2 text-sm text-gray-900">陈强</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      -
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
+                    </td>
+                  </tr>
+
+                  {/* Article 5 */}
+                  <tr className="hover:bg-gray-50">
+                    <td className="px-6 py-4">
+                      <div>
+                        <div className="text-sm font-medium text-gray-900">海外就医指南：如何选择合适的医疗服务</div>
+                        <div className="text-sm text-gray-500">在海外生活，了解当地的医疗体系非常重要...</div>
+                        <div className="text-sm text-gray-400">阅读时间：15分钟 | 浏览量：987</div>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                        健康生活
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                        定时发布
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="flex items-center">
+                        <div className="w-8 h-8 bg-[#50C878] rounded-full flex items-center justify-center">
+                          <span className="text-white text-xs font-semibold">刘</span>
+                        </div>
+                        <span className="ml-2 text-sm text-gray-900">刘敏</span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                      2024-01-25 09:00
+                    </td>
+                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                      <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                      <button type="button" className="text-blue-600 hover:text-blue-900 mr-3">预览</button>
+                      <button type="button" className="text-red-600 hover:text-red-900">删除</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* Pagination */}
+            <div className="mt-6 flex items-center justify-between">
+              <div className="text-sm text-gray-500">
+                显示 1-5 条，共 23 条记录
+              </div>
+              <div className="flex items-center space-x-2">
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                  上一页
+                </button>
+                <button type="button" className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">4</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">5</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                  下一页
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+import { UserProfile } from '@clerk/nextjs';
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getI18nPath } from '@/utils/Helpers';
+
+export function generateStaticParams() {
+  return [
+    { locale: 'en', userProfile: [] },
+    { locale: 'zh', userProfile: [] },
+    { locale: 'fr', userProfile: [] },
+  ];
+}
+
+export async function generateMetadata() {
+  return {
+    title: 'User Profile',
+  };
+}
+
+export default async function UserProfilePage({ params }: { params: any }) {
+  const { locale } = params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="my-6 -ml-16">
+      <UserProfile
+        path={getI18nPath('/dashboard/user-profile', locale)}
+      />
+    </div>
+  );
+};
+
+
+import { UserProfile } from '@clerk/nextjs';
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getI18nPath } from '@/utils/Helpers';
+
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'zh' },
+    { locale: 'fr' },
+  ];
+}
+
+export async function generateMetadata() {
+  return {
+    title: 'User Profile',
+  };
+}
+
+export default async function UserProfilePage({ params }: { params: any }) {
+  const { locale } = params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="my-6 -ml-16">
+      <UserProfile
+        path={getI18nPath('/dashboard/user-profile', locale)}
+      />
+    </div>
+  );
+}
+
+// import { setRequestLocale } from 'next-intl/server';
+
+type IUsersProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(props: IUsersProps) {
+  await props.params;
+
+  return {
+    title: '用户管理 - 金豆荚 JinBean',
+    description: '管理金豆荚平台的用户账户',
+  };
+}
+
+export default async function Users(props: IUsersProps) {
+  const { locale: _locale } = await props.params;
+  // setRequestLocale(locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-6">
+            <h1 className="text-2xl font-bold text-gray-900">用户管理</h1>
+            <p className="mt-1 text-sm text-gray-500">
+              管理平台用户账户和权限
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Filters and Search */}
+      <div className="px-4 sm:px-6 lg:px-8 py-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <div className="flex flex-col sm:flex-row gap-4">
+            {/* Search */}
+            <div className="flex-1">
+              <input
+                type="text"
+                placeholder="搜索用户姓名、邮箱或手机号..."
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]"
+              />
+            </div>
+
+            {/* Filters */}
+            <div className="flex gap-4">
+              <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]">
+                <option value="">用户类型</option>
+                <option value="user">普通用户</option>
+                <option value="provider">服务提供者</option>
+                <option value="admin">管理员</option>
+              </select>
+
+              <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]">
+                <option value="">状态</option>
+                <option value="active">活跃</option>
+                <option value="inactive">非活跃</option>
+                <option value="suspended">已暂停</option>
+              </select>
+
+              <button type="button" className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+                搜索
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Users Table */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-200 flex justify-between items-center">
+            <h2 className="text-lg font-semibold text-gray-900">用户列表</h2>
+            <button type="button" className="px-4 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+              添加用户
+            </button>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    用户信息
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    类型
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    状态
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    注册时间
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    最后登录
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    操作
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {/* User 1 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-[#2E8B57] rounded-full flex items-center justify-center">
+                        <span className="text-white font-semibold">张</span>
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-sm font-medium text-gray-900">张女士</div>
+                        <div className="text-sm text-gray-500">zhang@example.com</div>
+                        <div className="text-sm text-gray-500">+1 (555) 123-4567</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                      普通用户
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                      活跃
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-15
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20 14:30
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">暂停</button>
+                  </td>
+                </tr>
+
+                {/* User 2 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-[#FFD700] rounded-full flex items-center justify-center">
+                        <span className="text-[#2E8B57] font-semibold">李</span>
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-sm font-medium text-gray-900">李师傅</div>
+                        <div className="text-sm text-gray-500">li@example.com</div>
+                        <div className="text-sm text-gray-500">+1 (555) 234-5678</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      服务提供者
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                      活跃
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-10
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20 16:45
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">暂停</button>
+                  </td>
+                </tr>
+
+                {/* User 3 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-[#B22222] rounded-full flex items-center justify-center">
+                        <span className="text-white font-semibold">王</span>
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-sm font-medium text-gray-900">王女士</div>
+                        <div className="text-sm text-gray-500">wang@example.com</div>
+                        <div className="text-sm text-gray-500">+1 (555) 345-6789</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                      普通用户
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
+                      已暂停
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-05
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-18 09:15
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-green-600 hover:text-green-900">恢复</button>
+                  </td>
+                </tr>
+
+                {/* User 4 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-[#4A90E2] rounded-full flex items-center justify-center">
+                        <span className="text-white font-semibold">陈</span>
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-sm font-medium text-gray-900">陈先生</div>
+                        <div className="text-sm text-gray-500">chen@example.com</div>
+                        <div className="text-sm text-gray-500">+1 (555) 456-7890</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800">
+                      管理员
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                      活跃
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-01
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20 18:20
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">编辑</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed">暂停</button>
+                  </td>
+                </tr>
+
+                {/* User 5 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-10 h-10 bg-[#50C878] rounded-full flex items-center justify-center">
+                        <span className="text-white font-semibold">刘</span>
+                      </div>
+                      <div className="ml-4">
+                        <div className="text-sm font-medium text-gray-900">刘师傅</div>
+                        <div className="text-sm text-gray-500">liu@example.com</div>
+                        <div className="text-sm text-gray-500">+1 (555) 567-8901</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      服务提供者
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-800">
+                      待审核
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20 10:30
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">审核</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Pagination */}
+          <div className="px-6 py-4 border-t border-gray-200">
+            <div className="flex items-center justify-between">
+              <div className="text-sm text-gray-500">
+                显示 1-10 条，共 1,247 条记录
+              </div>
+              <div className="flex items-center space-x-2">
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                  上一页
+                </button>
+                <button type="button" className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
+                <span className="px-2 text-gray-500">...</span>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">125</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                  下一页
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+// import { setRequestLocale } from 'next-intl/server';
+
+type IDashboardProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(props: IDashboardProps) {
+  await props.params;
+
+  return {
+    title: '管理后台 - 金豆荚 JinBean',
+    description: '金豆荚管理后台，管理用户、服务和内容',
+  };
+}
+
+export default async function Dashboard(props: IDashboardProps) {
+  await props.params;
+  // setRequestLocale((await props.params).locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-6">
+            <h1 className="text-2xl font-bold text-gray-900">管理后台</h1>
+            <p className="mt-1 text-sm text-gray-500">
+              欢迎回来，管理员
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Overview */}
+      <div className="px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Total Users */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">👥</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">总用户数</p>
+                <p className="text-2xl font-bold text-gray-900">12,847</p>
+                <p className="text-sm text-green-600">+12% 较上月</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Active Services */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">🔧</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">活跃服务</p>
+                <p className="text-2xl font-bold text-gray-900">1,234</p>
+                <p className="text-sm text-green-600">+8% 较上月</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Total Orders */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">📦</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">今日订单</p>
+                <p className="text-2xl font-bold text-gray-900">156</p>
+                <p className="text-sm text-green-600">+5% 较昨日</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Revenue */}
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">💰</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">今日收入</p>
+                <p className="text-2xl font-bold text-gray-900">$8,432</p>
+                <p className="text-sm text-green-600">+15% 较昨日</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Actions */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="bg-white rounded-lg shadow">
+          <div className="px-6 py-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">快速操作</h2>
+          </div>
+          <div className="p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+                <div className="w-10 h-10 bg-[#2E8B57] rounded-lg flex items-center justify-center">
+                  <span className="text-white text-lg">👤</span>
+                </div>
+                <div className="ml-3 text-left">
+                  <p className="font-medium text-gray-900">用户管理</p>
+                  <p className="text-sm text-gray-500">查看和管理用户</p>
+                </div>
+              </button>
+
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+                <div className="w-10 h-10 bg-[#FFD700] rounded-lg flex items-center justify-center">
+                  <span className="text-[#2E8B57] text-lg">🔧</span>
+                </div>
+                <div className="ml-3 text-left">
+                  <p className="font-medium text-gray-900">服务审核</p>
+                  <p className="text-sm text-gray-500">审核新服务申请</p>
+                </div>
+              </button>
+
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+                <div className="w-10 h-10 bg-[#B22222] rounded-lg flex items-center justify-center">
+                  <span className="text-white text-lg">📝</span>
+                </div>
+                <div className="ml-3 text-left">
+                  <p className="font-medium text-gray-900">内容管理</p>
+                  <p className="text-sm text-gray-500">管理博客和公告</p>
+                </div>
+              </button>
+
+              <button type="button" className="flex items-center p-4 border border-gray-200 rounded-lg hover:border-[#2E8B57] hover:bg-green-50 transition-colors">
+                <div className="w-10 h-10 bg-[#4A90E2] rounded-lg flex items-center justify-center">
+                  <span className="text-white text-lg">📊</span>
+                </div>
+                <div className="ml-3 text-left">
+                  <p className="font-medium text-gray-900">数据报表</p>
+                  <p className="text-sm text-gray-500">查看详细数据</p>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Recent Activity */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="bg-white rounded-lg shadow">
+          <div className="px-6 py-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">最近活动</h2>
+          </div>
+          <div className="p-6">
+            <div className="space-y-4">
+              <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </div>
+                <div className="ml-4 flex-1">
+                  <p className="text-sm font-medium text-gray-900">新用户注册</p>
+                  <p className="text-sm text-gray-500">张女士完成了注册，成为第12,847位用户</p>
+                </div>
+                <span className="text-sm text-gray-400">2分钟前</span>
+              </div>
+
+              <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">!</span>
+                </div>
+                <div className="ml-4 flex-1">
+                  <p className="text-sm font-medium text-gray-900">服务申请待审核</p>
+                  <p className="text-sm text-gray-500">李师傅提交了家政服务申请，等待审核</p>
+                </div>
+                <span className="text-sm text-gray-400">15分钟前</span>
+              </div>
+
+              <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">📝</span>
+                </div>
+                <div className="ml-4 flex-1">
+                  <p className="text-sm font-medium text-gray-900">新博客发布</p>
+                  <p className="text-sm text-gray-500">《海外生活必备技能指南》已发布</p>
+                </div>
+                <span className="text-sm text-gray-400">1小时前</span>
+              </div>
+
+              <div className="flex items-center p-4 bg-gray-50 rounded-lg">
+                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">💰</span>
+                </div>
+                <div className="ml-4 flex-1">
+                  <p className="text-sm font-medium text-gray-900">大额订单</p>
+                  <p className="text-sm text-gray-500">完成了一笔$500的搬家服务订单</p>
+                </div>
+                <span className="text-sm text-gray-400">2小时前</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* System Status */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="bg-white rounded-lg shadow">
+          <div className="px-6 py-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">系统状态</h2>
+          </div>
+          <div className="p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-green-600 text-2xl">✓</span>
+                </div>
+                <h3 className="font-medium text-gray-900">服务器状态</h3>
+                <p className="text-sm text-green-600">正常运行</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-blue-600 text-2xl">📊</span>
+                </div>
+                <h3 className="font-medium text-gray-900">数据库</h3>
+                <p className="text-sm text-blue-600">连接正常</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-yellow-600 text-2xl">⚠️</span>
+                </div>
+                <h3 className="font-medium text-gray-900">存储空间</h3>
+                <p className="text-sm text-yellow-600">75% 已使用</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+// import { setRequestLocale } from 'next-intl/server';
+
+type IServicesProps = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata(_props: IServicesProps) {
+  // const { locale } = await props.params;
+  await _props.params;
+
+  return {
+    title: '服务审核 - 金豆荚 JinBean',
+    description: '审核和管理平台服务申请',
+  };
+}
+
+export default async function Services(_props: IServicesProps) {
+  // const { locale } = await props.params;
+  // setRequestLocale((await props.params).locale);
+
+  return (
+    <div className="min-h-screen bg-gray-50">
+      {/* Header */}
+      <div className="bg-white shadow">
+        <div className="px-4 sm:px-6 lg:px-8">
+          <div className="py-6">
+            <h1 className="text-2xl font-bold text-gray-900">服务审核</h1>
+            <p className="mt-1 text-sm text-gray-500">
+              审核和管理平台服务申请
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Stats Cards */}
+      <div className="px-4 sm:px-6 lg:px-8 py-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">⏳</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">待审核</p>
+                <p className="text-2xl font-bold text-gray-900">23</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">✓</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">已通过</p>
+                <p className="text-2xl font-bold text-gray-900">1,156</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">✗</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">已拒绝</p>
+                <p className="text-2xl font-bold text-gray-900">89</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow p-6">
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">📊</span>
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-medium text-gray-500">通过率</p>
+                <p className="text-2xl font-bold text-gray-900">92.8%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Filters */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex-1">
+              <input
+                type="text"
+                placeholder="搜索服务名称或提供者..."
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]"
+              />
+            </div>
+
+            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]">
+              <option value="">服务类型</option>
+              <option value="cleaning">家政保洁</option>
+              <option value="repair">维修保养</option>
+              <option value="gardening">园艺护理</option>
+              <option value="moving">搬家服务</option>
+              <option value="pet">宠物护理</option>
+            </select>
+
+            <select className="px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E8B57] focus:border-[#2E8B57]">
+              <option value="">审核状态</option>
+              <option value="pending">待审核</option>
+              <option value="approved">已通过</option>
+              <option value="rejected">已拒绝</option>
+            </select>
+
+            <button type="button" className="px-6 py-2 bg-[#2E8B57] text-white rounded-lg hover:bg-[#276947] transition-colors">
+              搜索
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Table */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="bg-white rounded-lg shadow overflow-hidden">
+          <div className="px-6 py-4 border-b border-gray-200">
+            <h2 className="text-lg font-semibold text-gray-900">服务申请列表</h2>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="min-w-full divide-y divide-gray-200">
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    服务信息
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    提供者
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    服务类型
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    状态
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    申请时间
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    操作
+                  </th>
+                </tr>
+              </thead>
+              <tbody className="bg-white divide-y divide-gray-200">
+                {/* Service 1 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4">
+                    <div>
+                      <div className="text-sm font-medium text-gray-900">专业家政保洁服务</div>
+                      <div className="text-sm text-gray-500">提供专业的家庭清洁服务，包括日常保洁、深度清洁等</div>
+                      <div className="text-sm text-gray-500">价格: $25-35/小时</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-[#2E8B57] rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-semibold">李</span>
+                      </div>
+                      <div className="ml-3">
+                        <div className="text-sm font-medium text-gray-900">李阿姨</div>
+                        <div className="text-sm text-gray-500">li@example.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800">
+                      家政保洁
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      待审核
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20 10:30
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-green-600 hover:text-green-900 mr-3">通过</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
+                  </td>
+                </tr>
+
+                {/* Service 2 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4">
+                    <div>
+                      <div className="text-sm font-medium text-gray-900">水电维修服务</div>
+                      <div className="text-sm text-gray-500">专业的水电维修，解决各种家居维修问题</div>
+                      <div className="text-sm text-gray-500">价格: $50-80/次</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-[#FFD700] rounded-full flex items-center justify-center">
+                        <span className="text-[#2E8B57] text-xs font-semibold">王</span>
+                      </div>
+                      <div className="ml-3">
+                        <div className="text-sm font-medium text-gray-900">王师傅</div>
+                        <div className="text-sm text-gray-500">wang@example.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                      维修保养
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      待审核
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20 09:15
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-green-600 hover:text-green-900 mr-3">通过</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
+                  </td>
+                </tr>
+
+                {/* Service 3 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4">
+                    <div>
+                      <div className="text-sm font-medium text-gray-900">园艺护理服务</div>
+                      <div className="text-sm text-gray-500">专业的园艺护理，包括修剪、施肥、病虫害防治</div>
+                      <div className="text-sm text-gray-500">价格: $40-60/小时</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-[#B22222] rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-semibold">陈</span>
+                      </div>
+                      <div className="ml-3">
+                        <div className="text-sm font-medium text-gray-900">陈师傅</div>
+                        <div className="text-sm text-gray-500">chen@example.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      园艺护理
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">
+                      已通过
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-19 16:45
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed mr-3">通过</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed">拒绝</button>
+                  </td>
+                </tr>
+
+                {/* Service 4 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4">
+                    <div>
+                      <div className="text-sm font-medium text-gray-900">宠物护理服务</div>
+                      <div className="text-sm text-gray-500">专业的宠物护理，包括遛狗、喂食、清洁等</div>
+                      <div className="text-sm text-gray-500">价格: $20-30/小时</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-[#4A90E2] rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-semibold">刘</span>
+                      </div>
+                      <div className="ml-3">
+                        <div className="text-sm font-medium text-gray-900">刘女士</div>
+                        <div className="text-sm text-gray-500">liu@example.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-pink-100 text-pink-800">
+                      宠物护理
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800">
+                      已拒绝
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-18 14:20
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed mr-3">通过</button>
+                    <button type="button" className="text-gray-400 cursor-not-allowed">拒绝</button>
+                  </td>
+                </tr>
+
+                {/* Service 5 */}
+                <tr className="hover:bg-gray-50">
+                  <td className="px-6 py-4">
+                    <div>
+                      <div className="text-sm font-medium text-gray-900">搬家服务</div>
+                      <div className="text-sm text-gray-500">专业的搬家服务，包括包装、搬运、安装等</div>
+                      <div className="text-sm text-gray-500">价格: $80-150/次</div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <div className="flex items-center">
+                      <div className="w-8 h-8 bg-[#50C878] rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs font-semibold">赵</span>
+                      </div>
+                      <div className="ml-3">
+                        <div className="text-sm font-medium text-gray-900">赵师傅</div>
+                        <div className="text-sm text-gray-500">zhao@example.com</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800">
+                      搬家服务
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                    <span className="inline-flex px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                      待审核
+                    </span>
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    2024-01-20 11:30
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <button type="button" className="text-[#2E8B57] hover:text-[#276947] mr-3">查看详情</button>
+                    <button type="button" className="text-green-600 hover:text-green-900 mr-3">通过</button>
+                    <button type="button" className="text-red-600 hover:text-red-900">拒绝</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Pagination */}
+          <div className="px-6 py-4 border-t border-gray-200">
+            <div className="flex items-center justify-between">
+              <div className="text-sm text-gray-500">
+                显示 1-5 条，共 23 条记录
+              </div>
+              <div className="flex items-center space-x-2">
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                  上一页
+                </button>
+                <button type="button" className="px-3 py-1 bg-[#2E8B57] text-white rounded text-sm">1</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">2</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">3</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">4</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">5</button>
+                <button type="button" className="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+                  下一页
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+import { SignUp } from '@clerk/nextjs';
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getI18nPath } from '@/utils/Helpers';
+
+export function generateStaticParams() {
+  return [
+    { locale: 'en', signUp: [] },
+    { locale: 'zh', signUp: [] },
+    { locale: 'fr', signUp: [] },
+  ];
+}
+
+export async function generateMetadata() {
+  return {
+    title: 'Sign up',
+    description: 'Effortlessly create an account through our intuitive sign-up process.',
+  };
+}
+
+export default async function SignUpPage({ params }: { params: any }) {
+  const { locale } = params;
+  // setRequestLocale(locale);
+
+  return (
+    <SignUp path={getI18nPath('/sign-up', locale)} />
+  );
+};
+
+
+import { SignIn } from '@clerk/nextjs';
+// import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { getI18nPath } from '@/utils/Helpers';
+
+export function generateStaticParams() {
+  return [
+    { locale: 'en', signIn: [] },
+    { locale: 'zh', signIn: [] },
+    { locale: 'fr', signIn: [] },
+  ];
+}
+
+export async function generateMetadata() {
+  return {
+    title: 'Sign in',
+    description: 'Seamlessly sign in to your account with our user-friendly login process.',
+  };
+}
+
+export default async function SignInPage({ params }: { params: any }) {
+  const { locale } = params;
+  // setRequestLocale(locale);
+
+  return (
+    <SignIn path={getI18nPath('/sign-in', locale)} />
+  );
+};
+
+
+import { redirect } from 'next/navigation';
+
+export default async function LocaleHome({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  redirect(`/${locale}/dashboard`);
+}
+
+
+import { redirect } from 'next/navigation';
+
+export default function Home() {
+  redirect('/zh');
+}
+
+

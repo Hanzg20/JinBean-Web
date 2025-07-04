@@ -4,6 +4,14 @@ type IContentProps = {
   params: Promise<{ locale: string }>;
 };
 
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'zh' },
+    { locale: 'fr' },
+  ];
+}
+
 export async function generateMetadata(props: IContentProps) {
   await props.params;
   return {

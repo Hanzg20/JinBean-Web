@@ -45,3 +45,4 @@ export default async function UserProfilePage({ params: _params }: IUserProfileP
     </div>
   );
 }
+

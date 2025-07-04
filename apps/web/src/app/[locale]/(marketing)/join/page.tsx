@@ -254,3 +254,4 @@ export default async function Join(/* props: IJoinProps */) {
     </div>
   );
 }
+

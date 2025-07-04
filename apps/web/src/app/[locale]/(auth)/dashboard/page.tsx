@@ -34,3 +34,4 @@ export default async function DashboardPage(props: IDashboardProps) {
     </div>
   );
 }
+

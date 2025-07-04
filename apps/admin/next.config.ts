@@ -12,9 +12,14 @@ const baseConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   serverExternalPackages: ['@electric-sql/pglite'],
-  output: 'export',
+  output: 'standalone', // 使用 SSR 模式，避免静态导出的预渲染问题
   trailingSlash: true,
   distDir: 'out',
+  // 禁用预渲染以避免构建错误
+  experimental: {
+    workerThreads: false,
+    cpus: 1,
+  },
 };
 
 // Initialize the Next-Intl plugin

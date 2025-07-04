@@ -1,6 +1,8 @@
-import { redirect } from 'next/navigation';
-
-export default async function LocaleHome({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  redirect(`/${locale}/dashboard`);
+export default function Home() {
+  return (
+    <div>
+      <h1>Admin Dashboard</h1>
+      <p>Welcome to JinBean Admin</p>
+    </div>
+  );
 }
