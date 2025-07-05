@@ -9,6 +9,7 @@
     "dev:next": "next dev -p 3001",
     "dev": "run-p db-server:file dev:*",
     "build": "next build",
+    "build:cf": "next build && npx @cloudflare/next-on-pages",
     "postbuild": "cp -r out ../../out-admin",
     "export": "next export",
     "start": "next start -p 3001",
@@ -52,6 +53,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^4.15.0",
     "@chromatic-com/playwright": "^0.12.5",
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "@commitlint/prompt-cli": "^19.8.1",
