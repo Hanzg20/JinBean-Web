@@ -17,7 +17,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': '关于我们',
     
     // Hero
-    'hero.badge': '多伦多试运行中',
+    'hero.badge': 'Ottawa 试运行中',
     'hero.title': '北美华人家庭的一站式生活服务平台',
     'hero.titleHighlight': '生活服务平台',
     'hero.subtitle': '连接优质服务者与华人家庭，家政清洁、搬家维修、兴趣辅导，让生活更简单',
@@ -67,8 +67,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Social Proof
     'proof.title': '平台动态',
-    'proof.cities': '首批开放城市：多伦多（试运行）',
-    'proof.upcoming': '后续将开放温哥华、卡尔加里',
+    'proof.cities': '首批开放城市：Ottawa（试运行）',
+    'proof.upcoming': '后续将开放多伦多、温哥华',
     
     // CTA
     'cta.title': '开启您的金豆荚之旅',
@@ -135,9 +135,9 @@ const translations: Record<Language, Record<string, string>> = {
     'form.email.placeholder': '请输入邮箱地址',
     'form.city': '所在城市',
     'form.city.placeholder': '请选择或输入城市',
+    'form.city.ottawa': 'Ottawa',
     'form.city.toronto': '多伦多',
     'form.city.vancouver': '温哥华',
-    'form.city.calgary': '卡尔加里',
     'form.city.other': '其他城市',
     'form.services': '服务类型（可多选）',
     'form.services.cleaning': '家政/清洁',
@@ -166,7 +166,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About',
     
     // Hero
-    'hero.badge': 'Now in Toronto',
+    'hero.badge': 'Now in Ottawa',
     'hero.title': 'Life Services for Chinese Families in North America',
     'hero.titleHighlight': 'for Chinese Families',
     'hero.subtitle': 'Connecting quality service providers with Chinese families. Cleaning, moving, repair, tutoring and more.',
@@ -216,8 +216,8 @@ const translations: Record<Language, Record<string, string>> = {
     
     // Social Proof
     'proof.title': 'Updates',
-    'proof.cities': 'Now available: Toronto (Pilot)',
-    'proof.upcoming': 'Coming soon: Vancouver, Calgary',
+    'proof.cities': 'Now available: Ottawa (Pilot)',
+    'proof.upcoming': 'Coming soon: Toronto, Vancouver',
     
     // CTA
     'cta.title': 'Get Started with JinBeanPod',
@@ -284,9 +284,9 @@ const translations: Record<Language, Record<string, string>> = {
     'form.email.placeholder': 'Email address',
     'form.city': 'City',
     'form.city.placeholder': 'Select or enter city',
+    'form.city.ottawa': 'Ottawa',
     'form.city.toronto': 'Toronto',
     'form.city.vancouver': 'Vancouver',
-    'form.city.calgary': 'Calgary',
     'form.city.other': 'Other',
     'form.services': 'Service Types (select all that apply)',
     'form.services.cleaning': 'Cleaning',
@@ -312,7 +312,7 @@ const translations: Record<Language, Record<string, string>> = {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('zh');
+  const [language, setLanguage] = useState<Language>('en');
 
   useEffect(() => {
     const savedLang = localStorage.getItem('language') as Language;
