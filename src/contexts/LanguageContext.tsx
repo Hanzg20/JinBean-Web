@@ -176,7 +176,7 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.stats.providers': 'Verified Providers',
     'hero.stats.rating': 'Avg Rating',
     'hero.stats.cities': 'Cities',
-    'hero.card.title': 'GoldPod Services',
+    'hero.card.title': 'JinBeanPod Services',
     'hero.card.subtitle': 'Book with confidence',
     'hero.card.trust': '1000+ families trust us',
     
@@ -197,7 +197,7 @@ const translations: Record<Language, Record<string, string>> = {
     'services.other.desc': 'More services coming soon',
     
     // Value Props - Users
-    'value.users.title': 'Why GoldPod?',
+    'value.users.title': 'Why JinBeanPod?',
     'value.users.trust': 'Trusted',
     'value.users.trust.desc': 'Verified service providers you can trust',
     'value.users.chinese': 'Chinese-Friendly',
@@ -220,7 +220,7 @@ const translations: Record<Language, Record<string, string>> = {
     'proof.upcoming': 'Coming soon: Vancouver, Calgary',
     
     // CTA
-    'cta.title': 'Get Started with GoldPod',
+    'cta.title': 'Get Started with JinBeanPod',
     'cta.subtitle': 'Whether you need services or provide them, we welcome you',
     'cta.download': 'Download App',
     'cta.provider': 'Apply as Provider',
@@ -237,7 +237,7 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.rights': 'All rights reserved',
     
     // Provider Page
-    'provider.hero.title': 'Join GoldPod',
+    'provider.hero.title': 'Join JinBeanPod',
     'provider.hero.subtitle': 'Serve Chinese families in North America with us',
     'provider.who.title': "Who We're Looking For",
     'provider.who.cleaning': 'Cleaners',
