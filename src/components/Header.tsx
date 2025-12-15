@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -15,6 +19,14 @@ const Header = () => {
     if (shouldBeDark) {
       document.documentElement.classList.add("dark");
     }
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleTheme = () => {
@@ -30,64 +42,82 @@ const Header = () => {
     }
   };
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'zh' ? 'en' : 'zh');
+  };
+
   return (
-    <header className="sticky top-0 z-50 py-2 sm:py-4">
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14 sm:h-16 pill-nav px-4 sm:px-6">
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <div className="flex items-center min-w-0">
-            <a href="/" className="flex items-center gap-1.5 sm:gap-2">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-primary-foreground font-bold text-base sm:text-lg">P</span>
-              </div>
-              <span className="text-base sm:text-xl font-bold font-serif truncate">Perspective</span>
-            </a>
-          </div>
+          <Link to="/" className="flex items-center gap-2">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-gold rounded-xl flex items-center justify-center shadow-gold">
+              <span className="text-primary-foreground font-bold text-lg sm:text-xl">金</span>
+            </div>
+            <span className="text-lg sm:text-xl font-bold">
+              {language === 'zh' ? '金豆荚' : 'GoldPod'}
+            </span>
+          </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-2">
-            <a href="/" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Home
-            </a>
-            <a href="/#articles" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Articles
-            </a>
-            <a href="/wellness" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Wellness
-            </a>
-            <a href="/travel" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              Travel
-            </a>
-            <a href="/about" className="text-sm font-medium hover:bg-muted/60 rounded-full px-4 py-2 transition-all">
-              About
-            </a>
+          <nav className="hidden md:flex items-center gap-1">
+            <Link 
+              to="/" 
+              className="text-sm font-medium hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/60"
+            >
+              {t('nav.home')}
+            </Link>
+            <Link 
+              to="/providers" 
+              className="text-sm font-medium hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/60"
+            >
+              {t('nav.providers')}
+            </Link>
+            <Link 
+              to="/apply" 
+              className="text-sm font-medium hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/60"
+            >
+              {t('nav.join')}
+            </Link>
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className="px-3 py-1.5 text-sm font-medium rounded-lg border border-border hover:bg-muted/60 transition-all"
+            >
+              {language === 'zh' ? 'EN' : '中文'}
+            </button>
+
             <button
               onClick={toggleTheme}
-              className="p-1.5 sm:p-2 rounded-full hover:bg-muted/60 transition-all"
+              className="p-2 rounded-lg hover:bg-muted/60 transition-all"
               aria-label="Toggle theme"
             >
               {isDark ? (
-                <Sun className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Sun className="h-5 w-5" />
               ) : (
-                <Moon className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Moon className="h-5 w-5" />
               )}
             </button>
             
-            <Button className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-8 py-2 hover:scale-105 transition-all">
-              Join Now
+            <Button 
+              asChild
+              className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-6 shadow-gold hover:shadow-lg transition-all"
+            >
+              <Link to="/apply">{t('nav.join')}</Link>
             </Button>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-1.5 sm:p-2"
+              className="md:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X className="h-5 w-5 sm:h-6 sm:w-6" /> : <Menu className="h-5 w-5 sm:h-6 sm:w-6" />}
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
@@ -95,24 +125,33 @@ const Header = () => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-4">
-              <a href="/" className="text-sm font-medium hover:text-accent transition-colors">
-                Home
-              </a>
-              <a href="/#articles" className="text-sm font-medium hover:text-accent transition-colors">
-                Articles
-              </a>
-              <a href="/wellness" className="text-sm font-medium hover:text-accent transition-colors">
-                Wellness
-              </a>
-              <a href="/travel" className="text-sm font-medium hover:text-accent transition-colors">
-                Travel
-              </a>
-              <a href="/about" className="text-sm font-medium hover:text-accent transition-colors">
-                About
-              </a>
-              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full">
-                Join Now
+            <nav className="flex flex-col gap-2">
+              <Link 
+                to="/" 
+                className="text-sm font-medium hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted/60"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.home')}
+              </Link>
+              <Link 
+                to="/providers" 
+                className="text-sm font-medium hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted/60"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.providers')}
+              </Link>
+              <Link 
+                to="/apply" 
+                className="text-sm font-medium hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted/60"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {t('nav.join')}
+              </Link>
+              <Button 
+                asChild
+                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg mt-2 shadow-gold"
+              >
+                <Link to="/apply" onClick={() => setIsMenuOpen(false)}>{t('nav.join')}</Link>
               </Button>
             </nav>
           </div>
