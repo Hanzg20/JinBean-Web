@@ -1,24 +1,46 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Star, MapPin } from "lucide-react";
+import { ArrowRight, Users, Star, MapPin, Sparkles } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
+import decorativeBg from "@/assets/decorative-bg.jpg";
 
 const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-gold-50 via-background to-green-50 dark:from-gold-950/20 dark:via-background dark:to-green-950/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32">
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40 dark:from-background/98 dark:via-background/90 dark:to-background/60" />
+      </div>
+
+      {/* Floating particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-gold-400 rounded-full animate-float opacity-60" />
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-green-400 rounded-full animate-float opacity-40" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-gold-300 rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-2/3 right-1/4 w-4 h-4 bg-green-300 rounded-full animate-float opacity-30" style={{ animationDelay: '0.5s' }} />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Content */}
           <div className="space-y-8 animate-fade-in">
-            <div className="space-y-4">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gold-100 dark:bg-gold-900/30 rounded-full text-gold-700 dark:text-gold-300 text-sm font-medium">
-                <MapPin className="w-4 h-4" />
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500/20 dark:bg-gold-500/30 backdrop-blur-sm border border-gold-400/30 rounded-full text-gold-600 dark:text-gold-300 text-sm font-medium shadow-lg">
+                <Sparkles className="w-4 h-4" />
                 {t('hero.badge')}
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground">
-                {t('hero.title')}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
+                <span className="text-foreground">{t('hero.title').split('一站式')[0]}</span>
+                <span className="text-gradient-gold">一站式</span>
+                <span className="text-foreground">{t('hero.title').split('一站式')[1]?.split('生活服务')[0]}</span>
+                <span className="text-gradient-green">生活服务</span>
+                <span className="text-foreground">平台</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 {t('hero.subtitle')}
@@ -29,7 +51,7 @@ const HeroSection = () => {
               <Button 
                 asChild
                 size="lg" 
-                className="bg-gradient-gold hover:opacity-90 text-primary-foreground shadow-gold rounded-full px-8 py-6 text-base font-semibold transition-all hover:scale-105"
+                className="bg-gradient-gold hover:opacity-90 text-primary-foreground shadow-gold rounded-full px-8 py-7 text-lg font-semibold transition-all hover:scale-105 hover:shadow-xl"
               >
                 <Link to="/apply">
                   {t('hero.cta.provider')}
@@ -40,7 +62,7 @@ const HeroSection = () => {
                 asChild
                 variant="outline" 
                 size="lg"
-                className="rounded-full px-8 py-6 text-base font-semibold border-2 hover:bg-accent"
+                className="rounded-full px-8 py-7 text-lg font-semibold border-2 border-gold-300/50 hover:bg-gold-50 dark:hover:bg-gold-950/30 backdrop-blur-sm"
               >
                 <Link to="/providers">
                   {t('hero.cta.learn')}
@@ -49,23 +71,23 @@ const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-4">
-              <div className="text-center sm:text-left">
-                <div className="flex items-center justify-center sm:justify-start gap-1 text-gold-600 dark:text-gold-400">
+            <div className="grid grid-cols-3 gap-6 pt-6">
+              <div className="glass-card p-4 rounded-2xl text-center">
+                <div className="flex items-center justify-center gap-1 text-gold-600 dark:text-gold-400">
                   <Users className="w-5 h-5" />
                   <span className="text-2xl md:text-3xl font-bold">500+</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">{t('hero.stats.providers')}</p>
               </div>
-              <div className="text-center sm:text-left">
-                <div className="flex items-center justify-center sm:justify-start gap-1 text-green-600 dark:text-green-400">
+              <div className="glass-card p-4 rounded-2xl text-center">
+                <div className="flex items-center justify-center gap-1 text-green-600 dark:text-green-400">
                   <Star className="w-5 h-5" />
                   <span className="text-2xl md:text-3xl font-bold">4.9</span>
                 </div>
                 <p className="text-sm text-muted-foreground mt-1">{t('hero.stats.rating')}</p>
               </div>
-              <div className="text-center sm:text-left">
-                <div className="flex items-center justify-center sm:justify-start gap-1 text-gold-600 dark:text-gold-400">
+              <div className="glass-card p-4 rounded-2xl text-center">
+                <div className="flex items-center justify-center gap-1 text-gold-600 dark:text-gold-400">
                   <MapPin className="w-5 h-5" />
                   <span className="text-2xl md:text-3xl font-bold">3</span>
                 </div>
@@ -75,42 +97,58 @@ const HeroSection = () => {
           </div>
 
           {/* Right side - Visual */}
-          <div className="relative animate-scale-in">
-            <div className="relative aspect-square max-w-lg mx-auto">
-              {/* Background decorative elements */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gold-200 to-green-200 dark:from-gold-800/30 dark:to-green-800/30 rounded-3xl transform rotate-3"></div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-green-200 to-gold-200 dark:from-green-800/30 dark:to-gold-800/30 rounded-3xl transform -rotate-3"></div>
+          <div className="relative animate-scale-in hidden lg:block">
+            <div className="relative">
+              {/* Decorative background image */}
+              <div className="absolute -inset-8 opacity-60 blur-sm">
+                <img 
+                  src={decorativeBg} 
+                  alt="" 
+                  className="w-full h-full object-cover rounded-[3rem] transform rotate-6"
+                />
+              </div>
               
               {/* Main content card */}
-              <div className="relative bg-card rounded-3xl shadow-elegant p-8 space-y-6">
+              <div className="relative glass-card rounded-3xl p-8 space-y-6 shadow-elegant">
                 <div className="text-center space-y-4">
-                  <div className="w-20 h-20 mx-auto bg-gradient-gold rounded-2xl flex items-center justify-center shadow-gold">
-                    <span className="text-3xl font-bold text-primary-foreground">金</span>
+                  <div className="w-24 h-24 mx-auto bg-gradient-gold rounded-3xl flex items-center justify-center shadow-gold transform hover:scale-110 transition-transform">
+                    <span className="text-4xl font-bold text-primary-foreground">金</span>
                   </div>
-                  <h3 className="text-xl font-semibold">{t('hero.card.title')}</h3>
-                  <p className="text-muted-foreground text-sm">{t('hero.card.subtitle')}</p>
+                  <h3 className="text-2xl font-bold text-foreground">{t('hero.card.title')}</h3>
+                  <p className="text-muted-foreground">{t('hero.card.subtitle')}</p>
                 </div>
                 
                 {/* Service icons grid */}
                 <div className="grid grid-cols-3 gap-4">
-                  {['🏠', '🧹', '🚚', '🔧', '🎨', '📚'].map((emoji, index) => (
+                  {[
+                    { emoji: '🏠', label: 'Home' },
+                    { emoji: '🧹', label: 'Clean' },
+                    { emoji: '🚚', label: 'Move' },
+                    { emoji: '🔧', label: 'Repair' },
+                    { emoji: '🎨', label: 'Art' },
+                    { emoji: '📚', label: 'Tutor' }
+                  ].map((item, index) => (
                     <div 
                       key={index}
-                      className="aspect-square bg-muted rounded-xl flex items-center justify-center text-2xl hover:scale-110 transition-transform cursor-pointer"
+                      className="aspect-square bg-gradient-to-br from-gold-50 to-green-50 dark:from-gold-950/50 dark:to-green-950/50 rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all cursor-pointer shadow-sm hover:shadow-md"
+                      style={{ animationDelay: `${index * 0.1}s` }}
                     >
-                      {emoji}
+                      {item.emoji}
                     </div>
                   ))}
                 </div>
 
                 {/* Trust badge */}
-                <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
-                  <div className="flex -space-x-2">
-                    {[1, 2, 3, 4].map((i) => (
-                      <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 border-2 border-card"></div>
+                <div className="flex items-center justify-center gap-3 pt-2">
+                  <div className="flex -space-x-3">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <div 
+                        key={i} 
+                        className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 border-3 border-card shadow-md"
+                      />
                     ))}
                   </div>
-                  <span>{t('hero.card.trust')}</span>
+                  <span className="text-sm font-medium text-muted-foreground">{t('hero.card.trust')}</span>
                 </div>
               </div>
             </div>
