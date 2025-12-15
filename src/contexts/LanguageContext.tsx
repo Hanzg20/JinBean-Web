@@ -17,11 +17,19 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': '关于我们',
     
     // Hero
-    'hero.title': '北美华人家庭的',
+    'hero.badge': '多伦多试运行中',
+    'hero.title': '北美华人家庭的一站式生活服务平台',
     'hero.titleHighlight': '生活服务平台',
-    'hero.subtitle': '连接优质服务者与华人家庭，让生活更简单',
+    'hero.subtitle': '连接优质服务者与华人家庭，家政清洁、搬家维修、兴趣辅导，让生活更简单',
     'hero.cta.download': '下载 App',
     'hero.cta.provider': '成为服务者',
+    'hero.cta.learn': '了解更多',
+    'hero.stats.providers': '认证服务者',
+    'hero.stats.rating': '平均评分',
+    'hero.stats.cities': '开放城市',
+    'hero.card.title': '金豆荚服务',
+    'hero.card.subtitle': '一键预约，安心服务',
+    'hero.card.trust': '已有 1000+ 家庭信赖',
     
     // Services
     'services.title': '我们提供的服务',
@@ -158,11 +166,19 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.about': 'About',
     
     // Hero
-    'hero.title': 'Life Services Platform',
+    'hero.badge': 'Now in Toronto',
+    'hero.title': 'Life Services for Chinese Families in North America',
     'hero.titleHighlight': 'for Chinese Families',
-    'hero.subtitle': 'Connecting quality service providers with Chinese families in North America',
+    'hero.subtitle': 'Connecting quality service providers with Chinese families. Cleaning, moving, repair, tutoring and more.',
     'hero.cta.download': 'Download App',
     'hero.cta.provider': 'Become a Provider',
+    'hero.cta.learn': 'Learn More',
+    'hero.stats.providers': 'Verified Providers',
+    'hero.stats.rating': 'Avg Rating',
+    'hero.stats.cities': 'Cities',
+    'hero.card.title': 'GoldPod Services',
+    'hero.card.subtitle': 'Book with confidence',
+    'hero.card.trust': '1000+ families trust us',
     
     // Services
     'services.title': 'Our Services',
