@@ -32,10 +32,10 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
-                <span>{t('footer.email')}: contact@goldpod.ca</span>
+                <span>{t('footer.email')}: contact@jinbeanpod.com</span>
               </li>
               <li>
-                <span>{t('footer.wechat')}: GoldPodService</span>
+                <span>{t('footer.wechat')}: JinBeanPodService</span>
               </li>
             </ul>
           </div>
