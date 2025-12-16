@@ -3,7 +3,7 @@ import { Menu, X, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import Logo from "@/components/Logo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,9 +52,9 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="JinBeanPod" className="h-10 sm:h-12 w-auto" />
-            <span className="text-lg sm:text-xl font-bold">
+          <Link to="/" className="flex items-center gap-3 group">
+            <Logo size="md" className="transition-transform duration-300 group-hover:scale-110" />
+            <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary via-amber-500 to-emerald-600 bg-clip-text text-transparent">
               {language === 'zh' ? '金豆荚' : 'JinBeanPod'}
             </span>
           </Link>
