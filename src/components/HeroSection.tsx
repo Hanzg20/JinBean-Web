@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Users, Star, MapPin, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 import decorativeBg from "@/assets/decorative-bg.jpg";
+import Logo from "@/components/Logo";
 
 const HeroSection = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <section className="relative overflow-hidden min-h-[90vh] flex items-center">
@@ -18,12 +19,12 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40 dark:from-background/98 dark:via-background/90 dark:to-background/60" />
       </div>
 
-      {/* Floating particles */}
+      {/* Floating particles - using design tokens */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-gold-400 rounded-full animate-float opacity-60" />
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-green-400 rounded-full animate-float opacity-40" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-gold-300 rounded-full animate-float opacity-50" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-2/3 right-1/4 w-4 h-4 bg-green-300 rounded-full animate-float opacity-30" style={{ animationDelay: '0.5s' }} />
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/60 rounded-full animate-float" />
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-secondary/40 rounded-full animate-float" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-primary/50 rounded-full animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-2/3 right-1/4 w-4 h-4 bg-secondary/30 rounded-full animate-float" style={{ animationDelay: '0.5s' }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 w-full">
@@ -36,11 +37,21 @@ const HeroSection = () => {
                 {t('hero.badge')}
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
-                <span className="text-foreground">{t('hero.title').split('一站式')[0]}</span>
-                <span className="text-gradient-gold">一站式</span>
-                <span className="text-foreground">{t('hero.title').split('一站式')[1]?.split('生活服务')[0]}</span>
-                <span className="text-gradient-green">生活服务</span>
-                <span className="text-foreground">平台</span>
+                {language === 'zh' ? (
+                  <>
+                    <span className="text-foreground">北美华人家庭的</span>
+                    <span className="text-gradient-gold">一站式</span>
+                    <span className="text-gradient-green">生活服务</span>
+                    <span className="text-foreground">平台</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-foreground">Life Services </span>
+                    <span className="text-gradient-green">for Chinese Families </span>
+                    <span className="text-foreground">in </span>
+                    <span className="text-gradient-gold">North America</span>
+                  </>
+                )}
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
                 {t('hero.subtitle')}
@@ -111,8 +122,8 @@ const HeroSection = () => {
               {/* Main content card */}
               <div className="relative glass-card rounded-3xl p-8 space-y-6 shadow-elegant">
                 <div className="text-center space-y-4">
-                  <div className="w-24 h-24 mx-auto bg-gradient-gold rounded-3xl flex items-center justify-center shadow-gold transform hover:scale-110 transition-transform">
-                    <span className="text-4xl font-bold text-primary-foreground">金</span>
+                  <div className="w-24 h-24 mx-auto flex items-center justify-center transform hover:scale-110 transition-transform">
+                    <Logo size="lg" className="w-20 h-20" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground">{t('hero.card.title')}</h3>
                   <p className="text-muted-foreground">{t('hero.card.subtitle')}</p>
@@ -130,7 +141,7 @@ const HeroSection = () => {
                   ].map((item, index) => (
                     <div 
                       key={index}
-                      className="aspect-square bg-gradient-to-br from-gold-50 to-green-50 dark:from-gold-950/50 dark:to-green-950/50 rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all cursor-pointer shadow-sm hover:shadow-md"
+                      className="aspect-square bg-gradient-to-br from-muted to-muted/50 dark:from-muted/50 dark:to-muted/30 rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all cursor-pointer shadow-sm hover:shadow-md border border-border/50"
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       {item.emoji}
@@ -141,11 +152,13 @@ const HeroSection = () => {
                 {/* Trust badge */}
                 <div className="flex items-center justify-center gap-3 pt-2">
                   <div className="flex -space-x-3">
-                    {[1, 2, 3, 4, 5].map((i) => (
+                    {['李', '王', '张', '刘', '陈'].map((initial, i) => (
                       <div 
                         key={i} 
-                        className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-300 to-gold-500 border-3 border-card shadow-md"
-                      />
+                        className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/80 to-secondary/80 border-2 border-card shadow-md flex items-center justify-center text-xs font-semibold text-primary-foreground"
+                      >
+                        {initial}
+                      </div>
                     ))}
                   </div>
                   <span className="text-sm font-medium text-muted-foreground">{t('hero.card.trust')}</span>
