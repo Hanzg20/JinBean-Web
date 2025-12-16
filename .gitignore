@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Apps
+apps/*/node_modules
+apps/*/dist
+
 # Lock files (use npm)
 bun.lockb
 yarn.lock

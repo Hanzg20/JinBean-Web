@@ -1,8 +1,8 @@
 {
   "build": {
-    "command": "npm run build",
-    "cwd": ".",
-    "watch": "npm run dev"
+    "command": "cd apps/web && npm install && npm run build",
+    "cwd": "apps/web",
+    "watch": "cd apps/web && npm run dev"
   },
   "routes": {
     "/*": "/index.html"

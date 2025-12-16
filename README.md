@@ -1,73 +1,103 @@
-# Welcome to your Lovable project
+# JinBean Web Monorepo
 
-## Project info
+本仓库采用 Monorepo 管理 JinBean 官网项目，基于 Vite + React + TypeScript + Tailwind CSS 开发。
 
-**URL**: https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2
+## 项目结构
 
-## How can I edit this code?
+```
+/jinbean-web/
+│
+├── apps/
+│   └── web/        # 官网项目（jinbean.com）
+│       ├── src/    # 源代码
+│       ├── public/ # 静态资源
+│       ├── dist/   # 构建输出
+│       └── ...
+│
+├── README.md
+├── package.json    # Monorepo 根配置
+└── cloudflare.json # Cloudflare Pages 配置
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## 开发指南
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 安装依赖
 
-**Use GitHub Codespaces**
+```bash
+# 在根目录安装所有工作区的依赖
+npm install
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# 或者在 apps/web 目录安装
+cd apps/web && npm install
+```
 
-## What technologies are used for this project?
+### 开发模式
 
-This project is built with:
+```bash
+# 从根目录运行
+npm run dev
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# 或者从 apps/web 目录运行
+cd apps/web && npm run dev
+```
 
-## How can I deploy this project?
+### 构建
 
-Simply open [Lovable](https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2) and click on Share -> Publish.
+```bash
+# 从根目录构建
+npm run build
 
-## Can I connect a custom domain to my Lovable project?
+# 或者从 apps/web 目录构建
+cd apps/web && npm run build
+```
 
-Yes, you can!
+构建输出在 `apps/web/dist` 目录。
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### 预览构建结果
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```bash
+cd apps/web && npm run preview
+```
+
+## Cloudflare Pages 部署
+
+### 构建设置
+
+在 Cloudflare Pages Dashboard 中配置：
+
+- **Build command**: `cd apps/web && npm install && npm run build`
+- **Build output directory**: `apps/web/dist`
+- **Root directory**: `/`（留空）
+- **Node.js version**: `20`（根据 .nvmrc）
+
+### 自动部署
+
+连接 GitHub 仓库后，每次推送到主分支都会自动触发部署。
+
+## 技术栈
+
+* **构建工具**: Vite 5
+* **框架**: React 18
+* **语言**: TypeScript
+* **样式**: Tailwind CSS
+* **UI 组件**: shadcn/ui (Radix UI)
+* **路由**: React Router DOM
+* **状态管理**: React Context API
+* **包管理**: npm
+
+## 端口配置
+
+* **开发服务器**: http://localhost:8080
+
+## 其他命令
+
+```bash
+npm run lint        # 代码检查
+```
+
+## 关于
+
+金豆荚（JinBeanPod）是面向北美华人家庭的一站式生活服务平台。
+
+© 2025 GoldSky Technologies
