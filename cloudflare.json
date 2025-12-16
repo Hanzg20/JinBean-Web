@@ -2,7 +2,8 @@
   "build": {
     "command": "cd apps/web && npm install && npm run build",
     "cwd": "apps/web",
-    "watch": "cd apps/web && npm run dev"
+    "watch": "cd apps/web && npm run dev",
+    "output_directory": "apps/web/dist"
   },
   "routes": {
     "/*": "/index.html"

@@ -1,0 +1,6 @@
+name = "jinbean-web"
+compatibility_date = "2024-12-16"
+
+[site]
+bucket = "./apps/web/dist"
+
