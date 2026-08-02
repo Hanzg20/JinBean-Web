@@ -30,6 +30,12 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        tech: {
+          blue: {
+            DEFAULT: "hsl(var(--tech-blue))",
+            foreground: "hsl(var(--tech-blue-foreground))",
+          },
+        },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",

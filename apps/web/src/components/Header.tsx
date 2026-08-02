@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X, Moon, Sun, PhoneCall, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
@@ -48,71 +48,92 @@ const Header = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/80 backdrop-blur-lg shadow-sm' : 'bg-transparent'}`}>
+    <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/95 backdrop-blur-lg shadow-md' : 'bg-background/80 backdrop-blur-sm'}`}>
+      {/* Top Hotline Bar (Optional but common in CN B2B) */}
+      <div className="hidden lg:block bg-tech-blue py-1.5 text-white/70 text-xs">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-end items-center gap-6">
+          <div className="flex items-center gap-2">
+            <PhoneCall className="h-3 w-3 text-secondary" />
+            <span>服务热线：15663626777</span>
+          </div>
+          <div className="h-3 w-[1px] bg-white/20" />
+          <Link to="/about" className="hover:text-secondary transition-colors">关于金宏天</Link>
+          <div className="h-3 w-[1px] bg-white/20" />
+          <button onClick={toggleLanguage} className="hover:text-secondary transition-colors">
+            {language === 'zh' ? 'English' : '中文'}
+          </button>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 sm:h-20">
+        <div className="flex items-center justify-between h-16 sm:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <Logo size="md" className="transition-transform duration-300 group-hover:scale-110" />
-            <span className="text-lg sm:text-xl font-bold bg-gradient-to-r from-primary via-amber-500 to-emerald-600 bg-clip-text text-transparent">
-              {language === 'zh' ? '金豆荚' : 'JinBeanPod'}
-            </span>
+          <Link to="/" className="flex items-center gap-3 group shrink-0">
+            <div className="flex items-center gap-2">
+              <Logo size="md" className="transition-transform duration-300 group-hover:scale-105" />
+              <div className="flex flex-col">
+                <span className="text-lg lg:text-xl font-bold text-foreground leading-tight tracking-tight">
+                  {language === 'zh' ? '金宏天科技' : 'Jinhongtian Tech'}
+                </span>
+                <span className="text-[9px] text-muted-foreground tracking-widest uppercase font-semibold">
+                  Payment & IoT Solutions
+                </span>
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-2">
             <Link 
               to="/" 
-              className="text-sm font-medium hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/60"
+              className="text-[15px] font-semibold hover:text-primary transition-colors px-4 py-2"
             >
-              {t('nav.home')}
+              {language === 'zh' ? '首页' : 'Home'}
             </Link>
             <Link 
-              to="/providers" 
-              className="text-sm font-medium hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/60"
+              to="/solutions"
+              className="text-[15px] font-semibold hover:text-primary transition-colors px-4 py-2"
             >
-              {t('nav.providers')}
+              {language === 'zh' ? '产品与解决方案' : 'Solutions'}
             </Link>
             <Link 
-              to="/apply" 
-              className="text-sm font-medium hover:text-primary transition-colors px-4 py-2 rounded-lg hover:bg-muted/60"
+              to="/innovation"
+              className="text-[15px] font-semibold hover:text-primary transition-colors px-4 py-2"
             >
-              {t('nav.join')}
+              {language === 'zh' ? '创新中心' : 'Innovation'}
+            </Link>
+            <Link
+              to="/cases"
+              className="text-[15px] font-semibold hover:text-primary transition-colors px-4 py-2"
+            >
+              {language === 'zh' ? '案例展示' : 'Cases'}
+            </Link>
+            <Link
+              to="/partners"
+              className="text-[15px] font-semibold hover:text-primary transition-colors px-4 py-2"
+            >
+              {language === 'zh' ? '生态合作' : 'Partners'}
             </Link>
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Language Toggle */}
-            <button
-              onClick={toggleLanguage}
-              className="px-3 py-1.5 text-sm font-medium rounded-lg border border-border hover:bg-muted/60 transition-all"
-            >
-              {language === 'zh' ? 'EN' : '中文'}
-            </button>
-
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-muted/60 transition-all"
-              aria-label="Toggle theme"
-            >
-              {isDark ? (
-                <Sun className="h-5 w-5" />
-              ) : (
-                <Moon className="h-5 w-5" />
-              )}
+          <div className="flex items-center gap-3">
+            <button className="hidden sm:flex p-2 rounded-full hover:bg-muted transition-colors">
+              <Search className="h-5 w-5 text-muted-foreground" />
             </button>
             
-            <Button 
+            <div className="h-6 w-[1px] bg-border mx-2 hidden sm:block" />
+
+            <Button
               asChild
-              className="hidden md:flex bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg px-6 shadow-gold hover:shadow-lg transition-all"
+              className="hidden sm:flex bg-primary hover:bg-primary/90 text-white rounded-md px-6 font-bold tracking-wide"
             >
-              <Link to="/apply">{t('nav.join')}</Link>
+              <Link to="/apply">{language === 'zh' ? '预约演示' : 'Request Demo'}</Link>
             </Button>
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden p-2"
+              className="lg:hidden p-2"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -123,35 +144,39 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-2">
+          <div className="lg:hidden py-6 border-t border-border animate-fade-in bg-background">
+            <nav className="flex flex-col gap-1">
               <Link 
                 to="/" 
-                className="text-sm font-medium hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted/60"
+                className="text-base font-semibold hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('nav.home')}
+                {language === 'zh' ? '首页' : 'Home'}
               </Link>
               <Link 
-                to="/providers" 
-                className="text-sm font-medium hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted/60"
+                to="/solutions"
+                className="text-base font-semibold hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('nav.providers')}
+                {language === 'zh' ? '产品与解决方案' : 'Solutions'}
               </Link>
               <Link 
-                to="/apply" 
-                className="text-sm font-medium hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted/60"
+                to="/innovation"
+                className="text-base font-semibold hover:text-primary transition-colors px-4 py-3 rounded-lg hover:bg-muted"
                 onClick={() => setIsMenuOpen(false)}
               >
-                {t('nav.join')}
+                {language === 'zh' ? '创新中心' : 'Innovation'}
               </Link>
               <Button 
                 asChild
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg mt-2 shadow-gold"
+                className="bg-primary hover:bg-primary/90 text-white w-full mt-4"
               >
-                <Link to="/apply" onClick={() => setIsMenuOpen(false)}>{t('nav.join')}</Link>
+                <Link to="/apply" onClick={() => setIsMenuOpen(false)}>{language === 'zh' ? '预约演示' : 'Request Demo'}</Link>
               </Button>
+              <div className="flex items-center gap-2 mt-6 px-4 py-3 bg-muted rounded-xl">
+                <PhoneCall className="h-4 w-4 text-primary" />
+                <span className="text-sm font-bold">15663626777</span>
+              </div>
             </nav>
           </div>
         )}

@@ -1,169 +1,133 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Users, Star, MapPin, Sparkles } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
-import decorativeBg from "@/assets/decorative-bg.jpg";
-import Logo from "@/components/Logo";
+import { ArrowRight, ShieldCheck, Zap, Activity, Cpu, Laptop, Smartphone, CreditCard } from "lucide-react";
 
 const HeroSection = () => {
-  const { language, t } = useLanguage();
+  const { language } = useLanguage();
 
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40 dark:from-background/98 dark:via-background/90 dark:to-background/60" />
+    <section className="relative overflow-hidden min-h-[85vh] flex items-center bg-tech-blue">
+      {/* Background Effect */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-hero" />
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
+        }} />
       </div>
 
-      {/* Floating particles - using design tokens */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/60 rounded-full animate-float" />
-        <div className="absolute top-1/3 right-1/3 w-3 h-3 bg-secondary/40 rounded-full animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute bottom-1/3 left-1/3 w-2 h-2 bg-primary/50 rounded-full animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-2/3 right-1/4 w-4 h-4 bg-secondary/30 rounded-full animate-float" style={{ animationDelay: '0.5s' }} />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left side - Content */}
-          <div className="space-y-8 animate-fade-in">
+          <div className="space-y-10 animate-fade-in">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-500/20 dark:bg-gold-500/30 backdrop-blur-sm border border-gold-400/30 rounded-full text-gold-600 dark:text-gold-300 text-sm font-medium shadow-lg">
-                <Sparkles className="w-4 h-4" />
-                {t('hero.badge')}
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-xs font-bold tracking-widest uppercase">
+                JINHONGTIAN × GOLDSKY TECHNOLOGY
               </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-white">
                 {language === 'zh' ? (
                   <>
-                    <span className="text-foreground">北美华人家庭的</span>
-                    <span className="text-gradient-gold">一站式</span>
-                    <span className="text-gradient-green">生活服务</span>
-                    <span className="text-foreground">平台</span>
+                    <span className="block mb-2">收钱稳、管账准</span>
+                    <span className="text-gradient-gold">活儿省心</span>
                   </>
                 ) : (
                   <>
-                    <span className="text-foreground">Life Services </span>
-                    <span className="text-gradient-green">for Chinese Families </span>
-                    <span className="text-foreground">in </span>
-                    <span className="text-gradient-gold">North America</span>
+                    <span className="block mb-2">Reliable Payments</span>
+                    <span className="text-gradient-gold">Effortless Ops</span>
                   </>
                 )}
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-                {t('hero.subtitle')}
+              <p className="text-xl md:text-2xl text-slate-300 font-medium leading-relaxed max-w-xl">
+                {language === 'zh'
+                  ? '懂业务的智慧支付与物联专家，帮您省下人工，守好账目。'
+                  : 'Expert smart payment & IoT solutions. Save labor, secure accounts.'}
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-5">
               <Button 
                 asChild
                 size="lg" 
-                className="bg-gradient-gold hover:opacity-90 text-primary-foreground shadow-gold rounded-full px-8 py-7 text-lg font-semibold transition-all hover:scale-105 hover:shadow-xl"
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-xl rounded-md px-10 py-8 text-xl font-bold transition-all hover:scale-105"
               >
                 <Link to="/apply">
-                  {t('hero.cta.provider')}
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  {language === 'zh' ? '获取解决方案' : 'Get Solutions'}
+                  <ArrowRight className="ml-2 w-6 h-6" />
                 </Link>
               </Button>
               <Button 
                 asChild
                 variant="outline" 
                 size="lg"
-                className="rounded-full px-8 py-7 text-lg font-semibold border-2 border-gold-300/50 hover:bg-gold-50 dark:hover:bg-gold-950/30 backdrop-blur-sm"
+                className="rounded-md px-10 py-8 text-xl font-bold border-2 border-white/20 text-white hover:bg-white/10 backdrop-blur-sm"
               >
-                <Link to="/providers">
-                  {t('hero.cta.learn')}
+                <Link to="/demo">
+                  {language === 'zh' ? '预约演示' : 'Watch Demo'}
                 </Link>
               </Button>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-6">
-              <div className="glass-card p-4 rounded-2xl text-center">
-                <div className="flex items-center justify-center gap-1 text-gold-600 dark:text-gold-400">
-                  <Users className="w-5 h-5" />
-                  <span className="text-2xl md:text-3xl font-bold">500+</span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-1">{t('hero.stats.providers')}</p>
-              </div>
-              <div className="glass-card p-4 rounded-2xl text-center">
-                <div className="flex items-center justify-center gap-1 text-green-600 dark:text-green-400">
-                  <Star className="w-5 h-5" />
-                  <span className="text-2xl md:text-3xl font-bold">4.9</span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-1">{t('hero.stats.rating')}</p>
-              </div>
-              <div className="glass-card p-4 rounded-2xl text-center">
-                <div className="flex items-center justify-center gap-1 text-gold-600 dark:text-gold-400">
-                  <MapPin className="w-5 h-5" />
-                  <span className="text-2xl md:text-3xl font-bold">3</span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-1">{t('hero.stats.cities')}</p>
-              </div>
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center gap-x-12 gap-y-6 pt-4 grayscale opacity-50 contrast-125">
+              <div className="text-white font-mono text-sm tracking-tighter border border-white/20 px-2 py-1">银联标准集成</div>
+              <div className="text-white font-mono text-sm tracking-tighter border border-white/20 px-2 py-1">20年行业经验</div>
+              <div className="text-white font-mono text-sm tracking-tighter border border-white/20 px-2 py-1">金融级安全</div>
             </div>
           </div>
 
-          {/* Right side - Visual */}
-          <div className="relative animate-scale-in hidden lg:block">
-            <div className="relative">
-              {/* Decorative background image */}
-              <div className="absolute -inset-8 opacity-60 blur-sm">
-                <img 
-                  src={decorativeBg} 
-                  alt="" 
-                  className="w-full h-full object-cover rounded-[3rem] transform rotate-6"
-                />
-              </div>
-              
-              {/* Main content card */}
-              <div className="relative glass-card rounded-3xl p-8 space-y-6 shadow-elegant">
-                <div className="text-center space-y-4">
-                  <div className="w-24 h-24 mx-auto flex items-center justify-center transform hover:scale-110 transition-transform">
-                    <Logo size="lg" className="w-20 h-20" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-foreground">{t('hero.card.title')}</h3>
-                  <p className="text-muted-foreground">{t('hero.card.subtitle')}</p>
-                </div>
-                
-                {/* Service icons grid */}
-                <div className="grid grid-cols-3 gap-4">
-                  {[
-                    { emoji: '🏠', label: 'Home' },
-                    { emoji: '🧹', label: 'Clean' },
-                    { emoji: '🚚', label: 'Move' },
-                    { emoji: '🔧', label: 'Repair' },
-                    { emoji: '🎨', label: 'Art' },
-                    { emoji: '📚', label: 'Tutor' }
-                  ].map((item, index) => (
-                    <div 
-                      key={index}
-                      className="aspect-square bg-gradient-to-br from-muted to-muted/50 dark:from-muted/50 dark:to-muted/30 rounded-2xl flex items-center justify-center text-3xl hover:scale-110 transition-all cursor-pointer shadow-sm hover:shadow-md border border-border/50"
-                      style={{ animationDelay: `${index * 0.1}s` }}
-                    >
-                      {item.emoji}
-                    </div>
-                  ))}
-                </div>
+          {/* Right side - Multi-device Synergy Visualization */}
+          <div className="relative hidden lg:block h-[500px]">
+            {/* Desktop Shadow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]" />
 
-                {/* Trust badge */}
-                <div className="flex items-center justify-center gap-3 pt-2">
-                  <div className="flex -space-x-3">
-                    {['李', '王', '张', '刘', '陈'].map((initial, i) => (
-                      <div 
-                        key={i} 
-                        className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/80 to-secondary/80 border-2 border-card shadow-md flex items-center justify-center text-xs font-semibold text-primary-foreground"
-                      >
-                        {initial}
-                      </div>
-                    ))}
+            {/* Desktop Mockup */}
+            <div className="absolute top-10 left-0 w-[420px] bg-slate-800 rounded-xl border-4 border-slate-700 shadow-2xl overflow-hidden animate-slide-up stagger-1">
+              <div className="bg-slate-700 px-3 py-1 flex gap-1">
+                <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
+              </div>
+              <div className="p-4 bg-slate-900 h-60 flex flex-col gap-4">
+                <div className="h-4 w-1/3 bg-slate-800 rounded" />
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="h-20 bg-slate-800 rounded border border-white/5 p-3 flex flex-col justify-between">
+                    <Activity className="h-4 w-4 text-green-400" />
+                    <div className="h-2 w-full bg-slate-700 rounded" />
                   </div>
-                  <span className="text-sm font-medium text-muted-foreground">{t('hero.card.trust')}</span>
+                  <div className="h-20 bg-slate-800 rounded border border-white/5 p-3 flex flex-col justify-between">
+                    <Zap className="h-4 w-4 text-secondary" />
+                    <div className="h-2 w-full bg-slate-700 rounded" />
+                  </div>
                 </div>
               </div>
+            </div>
+
+            {/* Smartphone Mockup */}
+            <div className="absolute bottom-10 right-20 w-[180px] h-[360px] bg-black rounded-[2.5rem] border-8 border-slate-800 shadow-2xl overflow-hidden z-20 animate-slide-up stagger-2">
+              <div className="h-full bg-slate-900 p-6 flex flex-col gap-6">
+                <div className="w-8 h-8 rounded-lg bg-secondary/20 flex items-center justify-center">
+                  <CreditCard className="h-4 w-4 text-secondary" />
+                </div>
+                <div className="space-y-3">
+                  <div className="h-2 w-full bg-slate-800 rounded" />
+                  <div className="h-2 w-3/4 bg-slate-800 rounded" />
+                </div>
+                <div className="mt-auto h-12 w-full bg-secondary rounded-xl" />
+              </div>
+            </div>
+
+            {/* Floating POS/Card Icon */}
+            <div className="absolute top-1/4 right-0 bg-white p-4 rounded-2xl shadow-2xl z-30 animate-float">
+               <div className="flex items-center gap-3">
+                 <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center text-white">
+                   <ShieldCheck className="h-6 w-6" />
+                 </div>
+                 <div className="text-slate-900">
+                   <div className="text-[10px] font-bold uppercase text-slate-400">Payment Success</div>
+                   <div className="text-sm font-extrabold">￥1,280.00</div>
+                 </div>
+               </div>
             </div>
           </div>
         </div>

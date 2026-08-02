@@ -1,0 +1,13 @@
+- [x] **Task 1: 核心架构与导航重组**
+    - [x] 修改 `Header.tsx`：更新 B2B 菜单，添加“客服热线”
+- [x] **Task 2: 首页内容“白皮书”化重写**
+    - [x] 修改 `HeroSection.tsx`：更换为“收钱稳、管账准、活儿省心”标语，优化视觉区域
+    - [x] 修改 `ServicesSection.tsx`：重构为“底层能力 + 行业方案”双矩阵布局，增加核心功能点
+    - [x] 修改 `ValuePropsSection.tsx`：转型为“企业优势与核心竞争力”
+    - [x] 创建 `NewsSection.tsx`：增加企业动态板块
+- [x] **Task 3: 响应式与体验优化**
+    - [x] 优化 Footer：五列式详细页脚，添加二维码占位
+    - [x] 检查并调整页面间距，提高信息展示密度
+- [x] **Task 4: 验证与构建**
+    - [x] 运行 `npm run build`
+    - [x] 编写 `walkthrough.artifact.md`

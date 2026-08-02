@@ -6,51 +6,55 @@
 
 @layer base {
   :root {
-    /* Modern SaaS palette - Gold/Green theme for 金豆荚 */
-    --background: 48 30% 98%;
+    /* Modern SaaS palette - Gold/Green theme for 金宏天科技 (V1.0 Update) */
+    --background: 210 20% 98%;
     --foreground: 220 20% 15%;
 
-    --card: 48 25% 96%;
+    --card: 0 0% 100%;
     --card-foreground: 220 20% 15%;
 
-    --popover: 48 30% 98%;
+    --popover: 0 0% 100%;
     --popover-foreground: 220 20% 15%;
 
-    /* Gold primary - represents 金 */
-    --primary: 42 85% 50%;
-    --primary-foreground: 220 20% 10%;
+    /* Brand Green (#2D7A5D) - represents Jinhongtian */
+    --primary: 157 46% 33%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Green secondary - represents 豆荚 (pod) */
-    --secondary: 150 45% 45%;
+    /* Brand Gold (#D4A359) - accent and CTA */
+    --secondary: 37 58% 59%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 45 20% 92%;
+    --muted: 210 20% 94%;
     --muted-foreground: 220 10% 45%;
 
-    --accent: 150 40% 50%;
+    --accent: 37 58% 59%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 45 15% 88%;
-    --input: 45 15% 88%;
-    --ring: 42 85% 50%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 157 46% 33%;
 
     --radius: 0.75rem;
 
+    /* Custom Tech Blue (#1A2530) */
+    --tech-blue: 210 30% 15%;
+    --tech-blue-foreground: 0 0% 100%;
+
     /* Custom design tokens */
-    --gold: 42 85% 50%;
-    --gold-light: 45 80% 70%;
-    --gold-dark: 40 90% 40%;
-    --green: 150 45% 45%;
-    --green-light: 150 40% 60%;
-    --green-dark: 150 50% 35%;
+    --gold: 37 58% 59%;
+    --gold-light: 37 96% 50%; /* #F59E0B */
+    --gold-dark: 37 58% 45%;
+    --green: 157 46% 33%;
+    --green-light: 157 46% 45%;
+    --green-dark: 157 46% 25%;
     
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(45, 80%, 60%) 0%, hsl(42, 85%, 50%) 100%);
-    --gradient-green: linear-gradient(135deg, hsl(150, 40%, 55%) 0%, hsl(150, 45%, 40%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(48, 30%, 98%) 0%, hsl(45, 25%, 94%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(37, 58%, 59%) 0%, hsl(37, 96%, 50%) 100%);
+    --gradient-green: linear-gradient(135deg, hsl(157, 46%, 45%) 0%, hsl(157, 46%, 33%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210, 30%, 15%) 0%, hsl(220, 40%, 10%) 100%);
     
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220 20% 15% / 0.05);
