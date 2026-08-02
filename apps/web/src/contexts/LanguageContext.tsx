@@ -106,6 +106,21 @@ const translations: Record<Language, Record<string, string>> = {
     'partners.hero.title': '生态合作伙伴',
     'partners.hero.subtitle': '与全球硬件厂商、支付机构及渠道商共建智慧物联生态',
 
+    // Solutions Landing
+    'solutions.landing.title': '无人值守微商业落地方案',
+    'solutions.landing.subtitle': '基于“三端协同”架构，将任何硬件终端转化为智能无感零售节点',
+    'solutions.landing.flow.step1.title': '身份识别',
+    'solutions.landing.flow.step1.desc': '刷脸或扫码开启设备',
+    'solutions.landing.flow.step2.title': '开门自取',
+    'solutions.landing.flow.step2.desc': '高精度传感器感知挑选过程',
+    'solutions.landing.flow.step3.title': '关门结算',
+    'solutions.landing.flow.step3.desc': 'AI 视觉与重量多重校验',
+    'solutions.landing.flow.step4.title': '无感支付',
+    'solutions.landing.flow.step4.desc': '自动扣款并推送电子小票',
+    'solutions.landing.layer.cloud': '云端管理 SaaS',
+    'solutions.landing.layer.platform': 'AI 支付底座 (GoldSky)',
+    'solutions.landing.layer.edge': '边缘硬件适配层',
+
     // Application Form (B2B Refined)
     'form.title': '业务咨询与合作申请',
     'form.subtitle': '请填写您的需求，我们的专家将在 24 小时内与您联系',
@@ -253,6 +268,21 @@ const translations: Record<Language, Record<string, string>> = {
     // Partners Page
     'partners.hero.title': 'Ecosystem Partners',
     'partners.hero.subtitle': 'Building a smart IoT ecosystem with hardware vendors and payment institutions.',
+
+    // Solutions Landing
+    'solutions.landing.title': 'Autonomous Micro-Commerce Solution',
+    'solutions.landing.subtitle': 'Leveraging "Terminal-Platform-App" synergy to turn any hardware into a frictionless retail node.',
+    'solutions.landing.flow.step1.title': 'Identification',
+    'solutions.landing.flow.step1.desc': 'Face-ID or QR to unlock',
+    'solutions.landing.flow.step2.title': 'Pick Items',
+    'solutions.landing.flow.step2.desc': 'High-precision sensors track picking',
+    'solutions.landing.flow.step3.title': 'Auto Settlement',
+    'solutions.landing.flow.step3.desc': 'Visual AI & weight dual-verification',
+    'solutions.landing.flow.step4.title': 'Frictionless Pay',
+    'solutions.landing.flow.step4.desc': 'Auto-deduction & digital receipt',
+    'solutions.landing.layer.cloud': 'Management Cloud SaaS',
+    'solutions.landing.layer.platform': 'AI & Payment Base (GoldSky)',
+    'solutions.landing.layer.edge': 'Edge Hardware Adaptation',
 
     // Application Form (B2B Refined)
     'form.title': 'Business Inquiry',

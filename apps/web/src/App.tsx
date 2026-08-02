@@ -12,6 +12,8 @@ import Partners from "./pages/Partners";
 import Apply from "./pages/Apply";
 import Docs from "./pages/Docs";
 import About from "./pages/About";
+import News from "./pages/News";
+import NewsDetail from "./pages/NewsDetail";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
@@ -39,6 +41,8 @@ const App = () => (
             <Route path="/apply" element={<Apply />} />
             <Route path="/docs" element={<Docs />} />
             <Route path="/about" element={<About />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/news/:id" element={<NewsDetail />} />
 
             <Route path="/products" element={<Solutions />} /> {/* Point products to solutions for now */}
 

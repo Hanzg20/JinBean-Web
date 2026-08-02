@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import logoImg from "@/assets/logo.png";
 
 interface LogoProps {
   className?: string;
@@ -14,7 +15,7 @@ const Logo = ({ className, size = "md" }: LogoProps) => {
 
   return (
     <img
-      src="/src/assets/logo.png"
+      src={logoImg}
       alt="JinBean Logo"
       className={cn(sizeClasses[size], "object-contain", className)}
     />
