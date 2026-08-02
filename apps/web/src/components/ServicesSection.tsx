@@ -1,67 +1,63 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Link } from "react-router-dom";
-import { CreditCard, Cpu, MessageSquare, Landmark, Construction, School, Database, Smartphone, ShieldCheck, ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  Droplet,
+  ShoppingCart,
+  Building2,
+  ShieldCheck,
+  BookOpen,
+  PlusCircle,
+  Smartphone,
+  Cpu,
+  Database
+} from "lucide-react";
 
 const ServicesSection = () => {
-  const { language } = useLanguage();
-
-  const techStack = [
-    {
-      icon: Database,
-      title: language === 'zh' ? '5G 业务支撑底座' : '5G Business Engine',
-      points: language === 'zh' ? ['高并发支付网关', '银联/银行直连标准', '金融级加密传输'] : ['High-concurrency gateway', 'Bank direct connection', 'Secure transmission'],
-      desc: language === 'zh' ? '为公用事业提供稳如泰山的交易支撑。' : 'Solid transaction support for utilities.',
-    },
-    {
-      icon: Smartphone,
-      title: language === 'zh' ? 'POS/NFC 协议适配' : 'POS/NFC Protocols',
-      points: language === 'zh' ? ['多品牌 POS SDK', 'NFC 写卡交互中间件', '嵌入式系统定制'] : ['Multi-brand POS SDK', 'NFC interaction', 'Embedded systems'],
-      desc: language === 'zh' ? '打通软硬件连接的“最后一公里”。' : 'Bridge the gap between hardware & software.',
-    },
-    {
-      icon: ShieldCheck,
-      title: language === 'zh' ? '聚合支付集成' : 'Payment Integration',
-      points: language === 'zh' ? ['微信/支付宝公用事业接口', '线下扫码与刷卡聚合', '自动对账与清算'] : ['WeChat/Alipay utility API', 'QR & Card aggregation', 'Auto-reconciliation'],
-      desc: language === 'zh' ? '一站式解决所有收款与管账难题。' : 'One-stop solution for collection & accounting.',
-    }
-  ];
+  const { language, t } = useLanguage();
 
   const solutions = [
     {
-      icon: CreditCard,
-      title: language === 'zh' ? '水电气暖交费系统' : 'Utility Payment',
-      desc: language === 'zh' ? '客户少跑腿，收钱更快。支持自助机、App、小程序全渠道交费。' : 'Less travel for customers, faster collection.',
-      image: "bg-green-500/5",
+      icon: Droplet,
+      title: t('solutions.utility'),
+      desc: t('solutions.utility.desc'),
+      path: "/solutions/utility",
+      color: "bg-blue-500",
     },
     {
-      icon: Cpu,
-      title: language === 'zh' ? '无人值守店系统' : 'AI Self-Service',
-      desc: language === 'zh' ? '省去人工费，24小时卖货。智能识别商品，扫码/刷脸即走。' : 'Save labor, 24/7 sales. Smart recognition.',
-      image: "bg-amber-500/5",
+      icon: ShoppingCart,
+      title: t('solutions.retail'),
+      desc: t('solutions.retail.desc'),
+      path: "/solutions/retail",
+      color: "bg-orange-500",
     },
     {
-      icon: MessageSquare,
-      title: language === 'zh' ? '24小时自动客服' : 'AI Support',
-      desc: language === 'zh' ? '报修/催费电话一个不漏。AI 语音精准识别需求，自动派单。' : 'Never miss a report. AI voice recognition.',
-      image: "bg-green-500/5",
+      icon: Building2,
+      title: t('solutions.construction'),
+      desc: t('solutions.construction.desc'),
+      path: "/solutions/construction",
+      color: "bg-emerald-500",
     },
     {
-      icon: Landmark,
-      title: language === 'zh' ? '房产维修金管理' : 'Fund Management',
-      desc: language === 'zh' ? '账目清清楚楚，合规好用。全流程监管资金流向，透明高效。' : 'Clear accounts, regulatory compliance.',
-      image: "bg-amber-500/5",
+      icon: ShieldCheck,
+      title: t('solutions.fund'),
+      desc: t('solutions.fund.desc'),
+      path: "/solutions/fund",
+      color: "bg-indigo-500",
     },
     {
-      icon: Construction,
-      title: language === 'zh' ? '工地实名制监控' : 'Site Monitoring',
-      desc: language === 'zh' ? '刷脸进场，违规自动报警。利用 5G+AI 提升工地安全等级。' : 'Face-ID entry, auto-alerts for violations.',
-      image: "bg-green-500/5",
+      icon: BookOpen,
+      title: t('solutions.edtech'),
+      desc: t('solutions.edtech.desc'),
+      path: "/solutions/edtech",
+      color: "bg-rose-500",
     },
     {
-      icon: School,
-      title: language === 'zh' ? 'AI 助学机器人' : 'EdTech AI',
-      desc: language === 'zh' ? '孩子身边的全天候辅导老师。基于大模型的个性化知识库管理。' : 'All-day tutor for students. personalized KB.',
-      image: "bg-amber-500/5",
+      icon: PlusCircle,
+      title: t('solutions.other'),
+      desc: t('solutions.other.desc'),
+      path: "/solutions/custom",
+      color: "bg-slate-500",
     },
   ];
 
@@ -69,74 +65,95 @@ const ServicesSection = () => {
     <section className="py-24 bg-white dark:bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Section 1: Tech Foundation (Matrix A) */}
-        <div className="mb-32">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        {/* Header */}
+        <div className="mb-20">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-slate-900 dark:text-white flex items-center gap-3">
-                <div className="w-2 h-8 bg-primary rounded-full" />
-                {language === 'zh' ? '核心支付与协议底座' : 'Core Payment Foundation'}
+              <h2 className="text-4xl sm:text-5xl font-black mb-6 text-slate-900 dark:text-white leading-tight">
+                {t('solutions.title')}
               </h2>
               <p className="text-slate-500 text-lg">
-                {language === 'zh' ? '20年技术沉淀，构建稳健、安全、合规的软硬件交互基石。' : '20 years of tech expertise for secure hardware-software interaction.'}
+                {t('solutions.subtitle')}
               </p>
             </div>
-            <Link to="/innovation" className="text-primary font-bold flex items-center gap-2 hover:underline">
-              {language === 'zh' ? '查看技术文档' : 'View Docs'} <ArrowRight className="w-4 h-4" />
+            <Link to="/solutions" className="group text-primary font-bold flex items-center gap-2">
+              {language === 'zh' ? '查看所有场景' : 'Explore All'}
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {techStack.map((item) => (
-              <div key={item.title} className="p-8 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-white/5 hover:shadow-xl transition-all">
-                <div className="w-14 h-14 bg-white dark:bg-slate-800 rounded-xl shadow-sm flex items-center justify-center mb-6">
-                  <item.icon className="w-7 h-7 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-4">{item.title}</h3>
-                <p className="text-slate-500 text-sm mb-6 leading-relaxed">{item.desc}</p>
-                <ul className="space-y-3">
-                  {item.points.map(point => (
-                    <li key={point} className="flex items-center gap-2 text-xs font-semibold text-slate-600 dark:text-slate-400">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary/40" />
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
         </div>
 
-        {/* Section 2: Industry Solutions (Matrix B) */}
-        <div>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-slate-900 dark:text-white">
-              {language === 'zh' ? '垂直行业场景解决方案' : 'Vertical Industry Solutions'}
-            </h2>
-            <div className="w-24 h-1 bg-secondary mx-auto rounded-full" />
-          </div>
+        {/* Solutions Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {solutions.map((item) => (
+            <Link
+              key={item.title}
+              to={item.path}
+              className="group relative overflow-hidden rounded-3xl border border-slate-100 dark:border-white/5 bg-white dark:bg-slate-900 p-8 hover:shadow-2xl hover:border-primary/20 transition-all duration-500"
+            >
+              {/* Background Accent */}
+              <div className={`absolute top-0 right-0 w-32 h-32 ${item.color} opacity-[0.03] rounded-bl-[100px] transition-all group-hover:opacity-[0.08]`} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {solutions.map((item, index) => (
-              <div
-                key={item.title}
-                className="group relative overflow-hidden rounded-2xl border border-slate-100 dark:border-white/5 bg-white dark:bg-slate-900 hover:border-primary/50 transition-all duration-300"
-              >
-                <div className={`h-40 ${item.image} flex items-center justify-center transition-transform duration-500 group-hover:scale-105`}>
-                  <item.icon className="w-16 h-16 text-slate-200 dark:text-slate-800" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors">{item.title}</h3>
-                  <p className="text-slate-500 text-sm leading-relaxed mb-4">
-                    {item.desc}
-                  </p>
-                  <Link to={`/solutions/${index}`} className="text-xs font-bold text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    {language === 'zh' ? '了解方案详情' : 'Learn More'} <ArrowRight className="w-3 h-3" />
-                  </Link>
-                </div>
+              <div className={`w-14 h-14 rounded-2xl ${item.color} flex items-center justify-center text-white mb-8 shadow-lg shadow-current/20 transform transition-transform group-hover:scale-110 group-hover:rotate-3`}>
+                <item.icon className="w-7 h-7" />
               </div>
-            ))}
-          </div>
+
+              <h3 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white group-hover:text-primary transition-colors">
+                {item.title}
+              </h3>
+
+              <p className="text-slate-500 dark:text-slate-400 leading-relaxed mb-8">
+                {item.desc}
+              </p>
+
+              <div className="flex items-center gap-2 text-primary font-bold text-sm">
+                <span>{language === 'zh' ? '了解方案详情' : 'Solution Details'}</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Infrastructure Layer (Summary) */}
+        <div className="mt-32 p-10 rounded-[40px] bg-slate-900 text-white relative overflow-hidden">
+           <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
+              <Cpu className="w-full h-full transform translate-x-1/4 translate-y-1/4" />
+           </div>
+
+           <div className="relative z-10 grid lg:grid-cols-3 gap-12 items-center">
+              <div className="lg:col-span-1">
+                 <h3 className="text-3xl font-bold mb-4">{language === 'zh' ? '全链路支付物联底座' : 'End-to-End Infrastructure'}</h3>
+                 <p className="text-slate-400 leading-relaxed">
+                   {language === 'zh'
+                     ? '从终端硬件到云端平台，提供一站式支付与数据管理服务。'
+                     : 'From terminal hardware to cloud platform, providing one-stop payment and data services.'}
+                 </p>
+              </div>
+
+              <div className="lg:col-span-2 grid sm:grid-cols-3 gap-8">
+                 <div className="space-y-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                       <Smartphone className="w-5 h-5" />
+                    </div>
+                    <div className="font-bold">{language === 'zh' ? '多终端适配' : 'Multi-Terminal'}</div>
+                    <div className="text-xs text-slate-500">POS, Kiosks, Mobile</div>
+                 </div>
+                 <div className="space-y-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                       <Database className="w-5 h-5" />
+                    </div>
+                    <div className="font-bold">{language === 'zh' ? '分布式网关' : 'Distributed Gateway'}</div>
+                    <div className="text-xs text-slate-500">High-concurrency Ready</div>
+                 </div>
+                 <div className="space-y-4">
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                       <ShieldCheck className="w-5 h-5" />
+                    </div>
+                    <div className="font-bold">{language === 'zh' ? '金融级合规' : 'Financial Security'}</div>
+                    <div className="text-xs text-slate-500">UnionPay & PCI DSS</div>
+                 </div>
+              </div>
+           </div>
         </div>
       </div>
     </section>

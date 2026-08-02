@@ -4,12 +4,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
 import { Helmet } from "react-helmet";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Building2, User, Mail, Phone, Briefcase, MessageSquare } from "lucide-react";
 
 const Apply = () => {
   const { language, t } = useLanguage();
@@ -17,71 +16,28 @@ const Apply = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    phone: '',
-    wechat: '',
+    company: '',
+    industry: '',
     email: '',
-    city: '',
-    services: [] as string[],
-    availability: [] as string[],
-    intro: '',
+    phone: '',
+    interest: '',
+    message: '',
   });
-
-  const serviceOptions = [
-    { id: 'cleaning', label: t('form.services.cleaning') },
-    { id: 'moving', label: t('form.services.moving') },
-    { id: 'repair', label: t('form.services.repair') },
-    { id: 'tutoring', label: t('form.services.tutoring') },
-    { id: 'rental', label: t('form.services.rental') },
-    { id: 'other', label: t('form.services.other') },
-  ];
-
-  const availabilityOptions = [
-    { id: 'weekday', label: t('form.availability.weekday') },
-    { id: 'weekend', label: t('form.availability.weekend') },
-    { id: 'daytime', label: t('form.availability.daytime') },
-    { id: 'evening', label: t('form.availability.evening') },
-  ];
-
-  const cityOptions = [
-    { value: 'toronto', label: t('form.city.toronto') },
-    { value: 'vancouver', label: t('form.city.vancouver') },
-    { value: 'calgary', label: t('form.city.calgary') },
-    { value: 'other', label: t('form.city.other') },
-  ];
-
-  const handleServiceToggle = (serviceId: string) => {
-    setFormData(prev => ({
-      ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(s => s !== serviceId)
-        : [...prev.services, serviceId]
-    }));
-  };
-
-  const handleAvailabilityToggle = (availId: string) => {
-    setFormData(prev => ({
-      ...prev,
-      availability: prev.availability.includes(availId)
-        ? prev.availability.filter(a => a !== availId)
-        : [...prev.availability, availId]
-    }));
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     // Basic validation
-    if (!formData.name.trim() || !formData.email.trim() || formData.services.length === 0) {
+    if (!formData.name.trim() || !formData.email.trim() || !formData.company.trim()) {
       toast({
         title: language === 'zh' ? '请填写必填项' : 'Please fill required fields',
-        description: language === 'zh' ? '姓名、邮箱和服务类型为必填' : 'Name, email and service types are required',
+        description: language === 'zh' ? '姓名、公司和邮箱为必填' : 'Name, Company and Email are required',
         variant: 'destructive',
       });
       return;
     }
 
-    // In a real app, this would send to a backend
-    console.log('Form submitted:', formData);
+    console.log('B2B Inquiry submitted:', formData);
     setIsSubmitted(true);
   };
 
@@ -89,20 +45,20 @@ const Apply = () => {
     return (
       <>
         <Helmet>
-          <title>{language === 'zh' ? '申请已提交 - 金豆荚' : 'Application Submitted - GoldPod'}</title>
+          <title>{t('form.success')} - {t('brand.name')}</title>
         </Helmet>
         <div className="min-h-screen bg-background">
           <Header />
           <main className="py-20 sm:py-32">
             <div className="max-w-md mx-auto px-4 text-center">
-              <div className="w-20 h-20 bg-gradient-green rounded-full flex items-center justify-center mx-auto mb-6 animate-scale-in">
-                <CheckCircle className="h-10 w-10 text-secondary-foreground" />
+              <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 animate-scale-in">
+                <CheckCircle className="h-10 w-10 text-primary" />
               </div>
               <h1 className="text-3xl font-bold mb-4 animate-slide-up">{t('form.success')}</h1>
-              <p className="text-muted-foreground mb-8 animate-slide-up stagger-1">{t('form.success.desc')}</p>
+              <p className="text-slate-500 mb-8 animate-slide-up stagger-1">{t('form.success.desc')}</p>
               <Button 
                 asChild
-                className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl animate-slide-up stagger-2"
+                className="bg-slate-900 text-white rounded-xl px-10 py-6 font-bold animate-slide-up stagger-2"
               >
                 <a href="/">{language === 'zh' ? '返回首页' : 'Back to Home'}</a>
               </Button>
@@ -117,177 +73,151 @@ const Apply = () => {
   return (
     <>
       <Helmet>
-        <title>{language === 'zh' ? '服务者申请 - 金豆荚' : 'Provider Application - GoldPod'}</title>
-        <meta 
-          name="description" 
-          content={language === 'zh' 
-            ? '申请成为金豆荚服务者，填写您的信息，我们将尽快与您联系。' 
-            : 'Apply to become a GoldPod service provider. Fill in your details and we will contact you soon.'
-          } 
-        />
+        <title>{t('form.title')} - {t('brand.name')}</title>
+        <meta name="description" content={t('form.subtitle')} />
       </Helmet>
 
       <div className="min-h-screen bg-background">
         <Header />
         
-        <main className="py-12 sm:py-20">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-10">
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4">{t('form.title')}</h1>
-              <p className="text-muted-foreground">{t('form.subtitle')}</p>
-              <p className="text-sm text-muted-foreground mt-2 italic">{t('form.note')}</p>
+        <main className="py-20 bg-slate-50 dark:bg-slate-950">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-16 bg-white dark:bg-slate-900 rounded-[40px] overflow-hidden shadow-2xl border border-slate-100 dark:border-white/5">
+
+              {/* Left side - Context */}
+              <div className="p-12 bg-slate-900 text-white flex flex-col justify-between">
+                <div>
+                  <h1 className="text-3xl font-bold mb-6">{t('form.title')}</h1>
+                  <p className="text-slate-400 mb-10 leading-relaxed">
+                    {t('form.subtitle')}
+                  </p>
+
+                  <div className="space-y-6">
+                    <div className="flex gap-4">
+                      <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                        <Phone className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">{language === 'zh' ? '热线' : 'Hotline'}</div>
+                        <div className="font-bold">15663626777</div>
+                      </div>
+                    </div>
+                    <div className="flex gap-4">
+                      <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                        <Mail className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-xs text-slate-500 uppercase font-bold tracking-widest">Email</div>
+                        <div className="font-bold">support@jinhongtian.com</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="pt-10 border-t border-white/10 mt-10">
+                   <div className="text-sm text-slate-500 italic">
+                     {language === 'zh' ? '“我们深知您的业务需求，致力于提供最精准的物联集成方案。”' : '"We understand your business needs and are committed to providing precise IoT integration."'}
+                   </div>
+                </div>
+              </div>
+
+              {/* Right side - Form */}
+              <div className="p-12">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name */}
+                  <div className="space-y-2">
+                    <Label htmlFor="name" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+                      <User className="w-3 h-3" /> {t('form.name')} *
+                    </Label>
+                    <Input
+                      id="name"
+                      value={formData.name}
+                      onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
+                      placeholder={t('form.name.placeholder')}
+                      className="rounded-xl border-slate-200"
+                      required
+                    />
+                  </div>
+
+                  {/* Company */}
+                  <div className="space-y-2">
+                    <Label htmlFor="company" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+                      <Building2 className="w-3 h-3" /> {t('form.company')} *
+                    </Label>
+                    <Input
+                      id="company"
+                      value={formData.company}
+                      onChange={(e) => setFormData(prev => ({ ...prev, company: e.target.value }))}
+                      placeholder={t('form.company.placeholder')}
+                      className="rounded-xl border-slate-200"
+                      required
+                    />
+                  </div>
+
+                  {/* Industry & Email */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="industry" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+                        <Briefcase className="w-3 h-3" /> {t('form.industry')}
+                      </Label>
+                      <Input
+                        id="industry"
+                        value={formData.industry}
+                        onChange={(e) => setFormData(prev => ({ ...prev, industry: e.target.value }))}
+                        className="rounded-xl border-slate-200"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="email" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+                        <Mail className="w-3 h-3" /> {t('form.email')} *
+                      </Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
+                        className="rounded-xl border-slate-200"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  {/* Interest */}
+                  <div className="space-y-2">
+                    <Label htmlFor="interest" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+                      <Briefcase className="w-3 h-3" /> {t('form.interest')}
+                    </Label>
+                    <Input
+                      id="interest"
+                      value={formData.interest}
+                      onChange={(e) => setFormData(prev => ({ ...prev, interest: e.target.value }))}
+                      className="rounded-xl border-slate-200"
+                    />
+                  </div>
+
+                  {/* Message */}
+                  <div className="space-y-2">
+                    <Label htmlFor="message" className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400">
+                      <MessageSquare className="w-3 h-3" /> {language === 'zh' ? '详细需求描述' : 'Requirements'}
+                    </Label>
+                    <Textarea
+                      id="message"
+                      value={formData.message}
+                      onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
+                      className="rounded-xl min-h-[100px] border-slate-200"
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full bg-primary hover:bg-primary/90 text-white rounded-xl py-7 text-lg font-bold shadow-xl shadow-primary/20 transition-all hover:translate-y-[-2px]"
+                  >
+                    {t('form.submit')}
+                  </Button>
+                </form>
+              </div>
             </div>
-
-            <form onSubmit={handleSubmit} className="space-y-8 bg-card rounded-2xl p-6 sm:p-8 border border-border">
-              {/* Name */}
-              <div className="space-y-2">
-                <Label htmlFor="name">{t('form.name')} *</Label>
-                <Input
-                  id="name"
-                  value={formData.name}
-                  onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                  placeholder={t('form.name.placeholder')}
-                  className="rounded-xl"
-                  required
-                />
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-4">
-                <Label>{t('form.contact')}</Label>
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-sm text-muted-foreground">{t('form.phone')}</Label>
-                    <Input
-                      id="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={(e) => setFormData(prev => ({ ...prev, phone: e.target.value }))}
-                      placeholder={t('form.phone.placeholder')}
-                      className="rounded-xl"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="wechat" className="text-sm text-muted-foreground">{t('form.wechat')}</Label>
-                    <Input
-                      id="wechat"
-                      value={formData.wechat}
-                      onChange={(e) => setFormData(prev => ({ ...prev, wechat: e.target.value }))}
-                      placeholder={t('form.wechat.placeholder')}
-                      className="rounded-xl"
-                    />
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-sm text-muted-foreground">{t('form.email')} *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                    placeholder={t('form.email.placeholder')}
-                    className="rounded-xl"
-                    required
-                  />
-                </div>
-              </div>
-
-              {/* City */}
-              <div className="space-y-2">
-                <Label>{t('form.city')}</Label>
-                <div className="flex flex-wrap gap-2">
-                  {cityOptions.map((city) => (
-                    <button
-                      key={city.value}
-                      type="button"
-                      onClick={() => setFormData(prev => ({ ...prev, city: city.value }))}
-                      className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
-                        formData.city === city.value
-                          ? 'bg-primary text-primary-foreground shadow-gold'
-                          : 'bg-muted hover:bg-muted/80'
-                      }`}
-                    >
-                      {city.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Services */}
-              <div className="space-y-3">
-                <Label>{t('form.services')} *</Label>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {serviceOptions.map((service) => (
-                    <div 
-                      key={service.id}
-                      className={`flex items-center gap-3 p-3 rounded-xl border cursor-pointer transition-all ${
-                        formData.services.includes(service.id)
-                          ? 'border-primary bg-primary/5'
-                          : 'border-border hover:border-primary/50'
-                      }`}
-                      onClick={() => handleServiceToggle(service.id)}
-                    >
-                      <Checkbox 
-                        id={service.id}
-                        checked={formData.services.includes(service.id)}
-                        onCheckedChange={() => handleServiceToggle(service.id)}
-                      />
-                      <Label htmlFor={service.id} className="cursor-pointer text-sm">
-                        {service.label}
-                      </Label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Availability */}
-              <div className="space-y-3">
-                <Label>{t('form.availability')}</Label>
-                <div className="flex flex-wrap gap-3">
-                  {availabilityOptions.map((avail) => (
-                    <div 
-                      key={avail.id}
-                      className={`flex items-center gap-2 px-4 py-2 rounded-xl border cursor-pointer transition-all ${
-                        formData.availability.includes(avail.id)
-                          ? 'border-secondary bg-secondary/10'
-                          : 'border-border hover:border-secondary/50'
-                      }`}
-                      onClick={() => handleAvailabilityToggle(avail.id)}
-                    >
-                      <Checkbox 
-                        id={avail.id}
-                        checked={formData.availability.includes(avail.id)}
-                        onCheckedChange={() => handleAvailabilityToggle(avail.id)}
-                      />
-                      <Label htmlFor={avail.id} className="cursor-pointer text-sm">
-                        {avail.label}
-                      </Label>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Introduction */}
-              <div className="space-y-2">
-                <Label htmlFor="intro">{t('form.intro')}</Label>
-                <Textarea
-                  id="intro"
-                  value={formData.intro}
-                  onChange={(e) => setFormData(prev => ({ ...prev, intro: e.target.value }))}
-                  placeholder={t('form.intro.placeholder')}
-                  className="rounded-xl min-h-[120px]"
-                />
-              </div>
-
-              {/* Submit */}
-              <Button 
-                type="submit"
-                size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl py-6 text-base shadow-gold hover:shadow-lg transition-all"
-              >
-                {t('form.submit')}
-              </Button>
-            </form>
           </div>
         </main>
 

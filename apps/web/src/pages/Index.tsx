@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import ServicesSection from "@/components/ServicesSection";
+import ProductsSection from "@/components/ProductsSection";
+import PlatformSection from "@/components/PlatformSection";
 import ValuePropsSection from "@/components/ValuePropsSection";
 import CTASection from "@/components/CTASection";
 import NewsSection from "@/components/NewsSection";
@@ -9,17 +11,17 @@ import { Helmet } from "react-helmet";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
-  const { language } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <>
       <Helmet>
-        <title>{language === 'zh' ? '哈尔滨金宏天科技 - AI自助支付与物联解决方案' : 'Jinhongtian Tech - AI Payment & IoT Solutions'}</title>
+        <title>{t('brand.name')} - {t('brand.tagline')}</title>
         <meta 
           name="description" 
           content={language === 'zh' 
-            ? '专注于公用事业自助支付、POS/网关协议打通、AI 自助购物机系统及 5G+智慧工地解决方案。'
-            : 'Focusing on public utility self-service payments, POS protocols, and AI retail systems.'
+            ? '专注于公用事业自助支付、智能 POS、AI 无人零售系统及 5G 智慧物联解决方案。'
+            : 'Focusing on utility self-service payments, smart POS, AI retail systems, and 5G IoT solutions.'
           } 
         />
       </Helmet>
@@ -28,10 +30,25 @@ const Index = () => {
         <Header />
         
         <main>
+          {/* Main Hero & Introduction */}
           <HeroSection />
-          <ServicesSection />
+
+          {/* Core Value Pillars */}
           <ValuePropsSection />
+
+          {/* Industry Solutions (The "Software" Logic) */}
+          <ServicesSection />
+
+          {/* Professional Platform Capabilities */}
+          <PlatformSection />
+
+          {/* Smart Hardware Terminals */}
+          <ProductsSection />
+
+          {/* Latest Insights & Updates */}
           <NewsSection />
+
+          {/* Action Call */}
           <CTASection />
         </main>
 
