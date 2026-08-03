@@ -1,7 +1,9 @@
-# Task: Implement Autonomous Micro-Commerce Landing Solution
+# Task: Update Favicon and Enrich Blog with Images
 
-- [x] Update `LanguageContext.tsx` with landing solution content
-- [x] Design & Implement Architecture Diagram Component in `Solutions.tsx`
-- [x] Implement "Grab-and-Go" Flow Walkthrough in `Solutions.tsx`
-- [x] Add Hardware Bridge Integration Details
-- [x] Final Verification & Linting
+- [x] Update Browser Icon (Favicon)
+    - [x] Copy `logo.png` to `public/`
+    - [x] Update `index.html`
+- [x] Add 3 Thematic Images to AI Blog Post
+    - [x] Update `newsData.ts` with image markers/HTML
+    - [x] Refine `NewsDetail.tsx` styling for embedded images
+- [x] Final Verification
